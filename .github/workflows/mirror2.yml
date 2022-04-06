@@ -1,0 +1,31 @@
+name: Mirror2
+
+on:
+  schedule:
+    - cron: '10 18 * * *'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: temp
+    
+    - name: Configure environment
+      run: |
+        git config --global user.name GitHub_Action
+        git checkout temp
+
+    - name: Install Dependencies
+      run: python3 -m pip install -r requirements.txt
+
+    - name: Cloning and Mirroring site
+      run: python3 ./mirror_site.py --min=101 --max=200
+        
+    - name: Commit and push changes
+      run: |
+        git add .
+        git commit -m "Scheduled update (page101-200)"
+        git push origin temp

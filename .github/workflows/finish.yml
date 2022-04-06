@@ -1,0 +1,37 @@
+name: Finish
+
+on:
+  schedule:
+    - cron: '10 20 * * *'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: Configure environment
+      run: git config --global user.name GitHub_Action
+    
+    - name: Merge branch temp
+      run: |
+        git checkout temp
+        git checkout main
+        git merge --squash temp
+
+    - name: Add Timestamp
+      run: echo $(date -I -u) > TIMESTAMP
+    
+    - name: Commit changes
+      run: |
+        git add .
+        git commit -m "daily update (`echo $(date -I -u)`)"
+        git push origin --delete temp
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PUSH_TOKEN }}
