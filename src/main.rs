@@ -42,12 +42,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     if min_page > max_page {
         return Ok(());
     }
+
     let client = Client::new();
     stream::iter(min_page..=max_page)
         .map(|page| download(&client, page))
-        .buffered(threads)
+        .buffer_unordered(threads)
         .collect::<Vec<_>>()
         .await;
+
     Ok(())
 }
 
