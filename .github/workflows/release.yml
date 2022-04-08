@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  workflow_run:
+    workflows: [Finish]
+    types: [completed]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Configure environment
+      run: git config --global user.name GitHub_Action
+    
+    - name: Build release
+      uses: edgarrc/action-7z@v1
+      with:
+        args: 7z a -t7z -mx=9 "release/`echo $(date -I -u)`.7z" ./icourse.club/
+
+    - name: Create release
+      uses: ncipollo/release-action@v1
+      with:
+        commit: main
+        tag: "daily_update"
+        artifacts: "release/*"
+        artifactErrorsFailBuild: true
+        omitBody: true
+        token: ${{ secrets.GITHUB_TOKEN }}
