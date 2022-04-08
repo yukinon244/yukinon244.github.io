@@ -2,7 +2,7 @@ name: Finish
 
 on:
   workflow_run:
-    workflows: [Mirror3]
+    workflows: [Mirror2]
     types: [completed]
 
   workflow_dispatch:

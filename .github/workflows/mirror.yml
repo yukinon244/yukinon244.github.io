@@ -22,10 +22,10 @@ jobs:
       run: python3 -m pip install -r requirements.txt
 
     - name: Cloning and Mirroring site
-      run: python3 ./mirror_site.py --min=1 --max=100
+      run: python3 ./mirror_site.py --min=1 --max=150
     
     - name: Commit and push changes
       run: |
         git add .
-        git commit -m "Scheduled update (page1-100)"
+        git commit -m "Scheduled update (page1-150)"
         git push origin temp:temp

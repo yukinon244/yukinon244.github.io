@@ -25,7 +25,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         commit: main
-        tag: "daily_update"
+        tag: "daily_update(`$(date -I -u)`)"
         artifacts: "release/*"
         artifactErrorsFailBuild: true
         omitBody: true
