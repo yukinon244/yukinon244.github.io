@@ -22,11 +22,18 @@ jobs:
         git checkout temp
 
     - name: Install Dependencies
-      run: python3 -m pip install -r requirements.txt
+      run: |
+        git clone https://github.com/YYF233333/mirrorsite.git
+        gh release download --repo YYF233333/mirrorsite -p "mirrorsite" --dir ./mirrorsite
+        python3 -m pip install -r requirements.txt
 
     - name: Cloning and Mirroring site
-      run: python3 ./mirror_site.py --min=151 --max=300 --convert-links --convert-images 
-        
+      run: |
+        mv icourse.club mirrorsite/icourse.club
+        cd mirrorsite
+        python3 ./mirror_site.py --min=1 --max=150 --convert-links --convert-images
+        mv icourse.club ../icourse.club
+              
     - name: Commit and push changes
       run: |
         git add .
