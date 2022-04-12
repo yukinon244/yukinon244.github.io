@@ -6,6 +6,9 @@ on:
   
   workflow_dispatch:
 
+env:
+  GO111MODULE: on
+
 jobs:
 
   build:
@@ -21,13 +24,25 @@ jobs:
     - name: Install Dependencies
       run: |
         git clone https://github.com/YYF233333/mirrorsite.git
-        gh release download --repo YYF233333/mirrorsite -p "mirrorsite" --dir ./mirrorsite
-        python3 -m pip install -r requirements.txt
+        python3 -m pip install -r mirrorsite/requirements.txt
+    
+    - name: Download release
+      uses: robinraju/release-downloader@v1.3
+      with: 
+        repository: "YYF233333/mirrorsite"
+        latest: true
+        fileName: "mirrorsite"
+        # Download the attached tarball (*.tar.gz)
+        tarBall: false
+        # Download the attached zipball (*.zip)
+        zipBall: false
+        out-file-path: "mirrorsite"
 
     - name: Cloning and Mirroring site
       run: |
         mv icourse.club mirrorsite/icourse.club
         cd mirrorsite
+        chmod +x ./mirrorsite
         python3 ./mirror_site.py --min=1 --max=150
         mv icourse.club ../icourse.club
     
