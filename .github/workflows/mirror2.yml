@@ -7,9 +7,6 @@ on:
 
   workflow_dispatch:
 
-env:
-  GO111MODULE: on
-
 jobs:
   build:
     runs-on: ubuntu-latest
