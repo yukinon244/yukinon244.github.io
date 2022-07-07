@@ -43,7 +43,7 @@ jobs:
         mv icourse.club mirrorsite/icourse.club
         cd mirrorsite
         chmod +x ./mirrorsite
-        python3 ./mirror_site.py --min=151 --max=300 --convert-links --convert-images
+        python3 ./mirror_site.py --min=151 --max=310 --convert-links --convert-images
         mv icourse.club ../icourse.club
 
     - name: Commit and push changes
