@@ -162,6 +162,18 @@
 <span class="pull-right">
 </span>
 </div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
 <div class="review-content" id="review-content-32157">
 <p></p><div><p>2021春，后续可能有变化。本科生，此前没有学过任何优化相关的内容（）</p><p>这是一门讲在各种条件下用数值法求最小值的课</p><p>授课内容包括五个部分:</p><ol><li>无约束最优化 （参考书为：袁亚湘、孙文瑜，最优化理论与方法的相应部分）<ul><li>线搜索和全局收敛性</li><li>最速下降法</li><li>牛顿法和拟牛顿法</li><li>共轭梯度法</li><li>信赖域方法</li></ul></li><li>约束最优化（参考书同上）<ul><li>二次规划，包括消去法、积极集方法</li><li>非线性约束最优化，包括乘子牛顿迭代、罚函数法、增广Lagrangian法、障碍函数和内点法</li></ul></li><li>凸优化（参考书为Boyd, Convex Optimization: Chapter 1, 2, 4, 5, 9, 10, 11）<ul><li>凸集、凸函数、广义不等式和最优性条件</li><li>对偶函数、KKT条件</li><li>凸优化算法：牛顿法内点法障碍函数中心路径等等</li></ul></li><li>稀疏优化（参考书为 <a href="https://rd.springer.com/book/10.1007/978-1-4419-7011-4"></a><a href="https://rd.springer.com/book/10.1007/978-1-4419-7011-4" rel="nofollow">https://rd.springer.com/book/10.1007/978-1-4419-7011-4</a>）ADMM部分的PPT文字实在是过于稀疏，建议看一下<a href="https://web.stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf"></a><a href="https://web.stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf" rel="nofollow">https://web.stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf</a>，这一篇讲的比较详细。</li><li>大规模机器学习中的优化方法（随机梯度类算法，参考 <a href="https://arxiv.org/pdf/1606.04838.pdf"></a><a href="https://arxiv.org/pdf/1606.04838.pdf" rel="nofollow">https://arxiv.org/pdf/1606.04838.pdf</a>）</li></ol><p><a href="https://arxiv.org/pdf/1606.04838.pdf">​</a>今年还补充了一点SparseDNN，大概也是从一些论文上摘的内容。老师讲课用的是ppt，内容大部分都是从以上的资料中摘录的。</p><p>除了以上的参考资料和PPT，我个人十分推荐读一下北大的最优化教材<a href="https://bicmr.pku.edu.cn/~wenzw/optbook/opt1.pdf"></a><a href="https://bicmr.pku.edu.cn/~wenzw/optbook/opt1.pdf" rel="nofollow">https://bicmr.pku.edu.cn/~wenzw/optbook/opt1.pdf</a><br/>覆盖了老师讲课的大多数内容，第一部分的优化建模实例对于我这种完全没有接触过具体问题的弱智而言非常友好，复合优化部分也有很多老师没有讲到的内容，阅读难度不高，内容详实具体。</p><p>给分公式为10% Homework + 40% Project + 50% Final</p><p>作业很少，只交了三次，前三章每章一次<s>（有助教版本答案和以前学长写的答案，以及Boyd这本书有官方答案 ）</s>所以作业不是什么很大的问题，但还是建议自己认真完成。</p><p>今年的Project是三选二，要求在稀疏矩阵求解器、自适应线路设计、大规模机器学习中的优化器实现。我选的是二三<s>（因为听说比较简单）</s>。第二个问题是运筹里面的网络流问题的变种，以前有一篇十分经典的paper研究过一个基本一样的问题，找到这篇paper之后只需要实现一遍里面的算法即可。第三个问题需要你写个简单的神经网络，然后自己实现optimizer部分，剩余部分调包。如果你python熟练的话以上都是非常简单的。如果您像我一样啥都不会的话建议上知乎大学看看，里面有很多写好的例子，你可以模仿着搞一个。<br/>（我写的project十分简单弱智，交完之后去看了一下发现同选这门课的两个同学写的东西巨大升级，让我感到非常的焦虑。不过最后发现问题不大，主要看完成度。）</p><p>期末考试均是ppt上的东西，建议熟练背诵。前三章我也不知道有没有重点，毕竟今年出了一个很角落里的东西而我一直以为不太会考。稀疏优化和随机优化的东西很多，但是复习的时候最好熟练掌握Shrinkage和ADMM，Bottou论文前四十页的所有引理和定理的证明。</p><p>基本没有啥prerequisites<s>（如同楼上所说只需要数分线代，其它都可以现场推）</s>，随机优化也只是用到一些简单的期望。不过学过数院运筹的话可能衔接起来会方便很多。</p><p>这个课只能说是在优化这么大一个方向里入个门。由于内容过于庞杂，所以个人感觉课程的体系感不是很好。后半学期的内容有很多都是浅尝辄止...所以速度很快，有空的话可以把老师给的ref好好的看一下。</p><p><s>需要本学期上课用ppt的话可以留个邮箱，老师主页上的ppt已经过期114514年了</s></p><p>课程资源（ppt, 习题课和project讲义）: <a href="https://github.com/beiningwu7/optimization_spring_2021/"></a><a href="https://github.com/beiningwu7/optimization_spring_2021/" rel="nofollow">https://github.com/beiningwu7/optimization_spring_2021/</a></p><p>题外话：扬州王好像不太愿意给本科生审个性化，我刚开始的时候给他发邮件给他，显示已读但迟迟不回。后来课上找他签单直接被拒（本科生？本科生你啥都不懂，你选这门课干什么？），最后绕了一个圈才选上。</p>
 </div>
@@ -272,7 +284,7 @@
 </span>
 </div>
 <div class="solid ud-pd-sm">
-<a href="https://icourse.club/user/6280">yyyyds</a>：
+<a href="https://icourse.club/user/6280">yyssfd</a>：
                   <span>求PPT <a href="mailto:1300770159@qq.com">1300770159@qq.com</a> 救救孩子
 </span>
 <span class="text-muted small float-right">
@@ -297,6 +309,18 @@
 <span class="pull-right">
 </span>
 </div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：中等</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
 <div class="review-content" id="review-content-20702">
 <p></p><div><p>2020年春季学期选的课，网上上数学课用ppt确实是炼狱难度，板书写的比较少，虽然有录像依然感觉学习会比较吃力。有一半的内容本科的运筹学都讲过，如果本科上过杨老师的课感觉就不用上了。作业对于研究生来说有点多，但还是挺锻炼动手能力的。这学期的助教很强，习题课讲的很好，习题 解答做的也非常出色。最后的考试感觉是真的放洪水，一共五道题，三个原题，另外两个在课上都说过一些，最后成绩还没出，所以不清楚给分怎么样。</p><p>感觉这个课放成大数据学院的必修课很不合理。不过这学期的助教是真的强。</p>
 </div>
@@ -367,6 +391,18 @@
 <span class="pull-right">
 </span>
 </div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
 <div class="review-content" id="review-content-19075">
 <p></p><p>为什么没人评课？ 自从信院某老师出走中山大学以后，科大终于又开的出来一门优化相关的课，喜大普奔</p>
 </div>
@@ -404,6 +440,18 @@
 <span class="pull-right">
 </span>
 </div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
 <div class="review-content" id="review-content-32191">
 <p></p><div><p>背    书    考    试</p>
 <p>建议开设每日晨读 朗读背诵yzwppt</p>
@@ -452,6 +500,18 @@
 <span class="pull-right">
 </span>
 </div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
 <div class="review-content" id="review-content-32013">
 <p></p><p>我不是数学学院和信息学院的，专业是工科，数学基础只有考研数学水平。这门课代我领略了实变函数、高等代数、机器学习和运筹学，对我来说是真的开了眼界，接触了一点真正的数学。
 只可惜专业背景相差太大，我们几位工科生的数学水平实在是有限，努力补课，尽力跟进度还是很难掌握这门课程。期末考试非常考验对这门课基础理论的理解深度。最后的期末编程作业也是在各路大神好友的帮助下才勉强度过难关。无论通过与否，已经尽力了不会后悔，很感谢杨老师和助教的辛勤付出。</p>
@@ -490,6 +550,18 @@
 <span class="pull-right">
 </span>
 </div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：简单</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：简单</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
 <div class="review-content" id="review-content-20627">
 <p></p><p>没有听过杨老师讲课，但是自己手撸过了一遍杨老师的讲义。理论和作业难度都不大，但是深入浅出对优化初学者非常友好。数院学完数分A2之后就可以学。想要进一步提升的可以看北大高立的那本数值最优化方法（前置课程：数值线性代数）。</p>
 </div>
