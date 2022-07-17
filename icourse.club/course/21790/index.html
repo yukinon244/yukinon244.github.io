@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="8.9 分，8 人评价" name="description" property="og:description"/>
+<meta content="8.4 分，10 人评价" name="description" property="og:description"/>
 <meta content="USTC,评课,课程" name="keywords"/>
 <meta content="jenny42,aaron1992,boj" name="author"/>
 <link href="/static/image/favicon.ico" rel="icon"/>
@@ -67,8 +67,8 @@
 <span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
 <span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
 <span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star-half glyphicon-lg"></span>
-<span class="rl-pd-sm h4">8.9</span><span class="rl-pd-sm text-muted">(8人评价)</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty glyphicon-lg"></span>
+<span class="rl-pd-sm h4">8.4</span><span class="rl-pd-sm text-muted">(10人评价)</span>
 </div>
 <ul class="text-muted list-inline list-unstyled ud-pd-sm">
 <li class="right-mg-md">课程难度：中等</li>
@@ -118,7 +118,7 @@
 <span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
 <select name="term" onchange="location=this.value">
 <option value="/course/21790/?sort_by=upvote&amp;term=20213#review-anchor">
-			2022夏 (8)
+			2022夏 (10)
 			</option>
 </select>
 <br class="mobile"/>
@@ -130,10 +130,10 @@
 				★★★★★ (7)
 			</option>
 <option value="/course/21790/?sort_by=upvote&amp;rating=4#review-anchor">
-				★★★★ (0)
+				★★★★ (1)
 			</option>
 <option value="/course/21790/?sort_by=upvote&amp;rating=3#review-anchor">
-				★★★ (1)
+				★★★ (2)
 			</option>
 <option value="/course/21790/?sort_by=upvote&amp;rating=2#review-anchor">
 				★★ (0)
@@ -142,7 +142,58 @@
 				★ (0)
 			</option>
 </select>
-<span class="rl-pd-sm text-muted">8条点评</span>
+<span class="rl-pd-sm text-muted">10条点评</span>
+</div>
+<div class="ud-pd-md dashed review" id="review-51642">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/5599">hath</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022夏</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-51642">
+<p></p><div><p>首先讲一下这门课的内容。这门课第一节课由周老师介绍强化学习，但我因为考试没有去上。后面是赵鉴博士来上，第一节课讲了RL的基本概念，第二节课讲了现行强化学习的几乎所有算法，第三节课复习上节课内容并讲了学长做强化学习科研的经历和AI游戏竞赛的经验，第四节课讲了开悟平台、ssh、docker的使用，第五节课没去，应该是答疑，后面的课都是答疑。<br/>课程里穿插交流的强化学习科研和行业情况感觉对了解行情、规划之后的学习非常有帮助。<br/>课程给了用docker镜像打包好的源码（基于<strong>tensorflow</strong>）和运行环境，我们可以直接跑这个代码，也可以在此基础上修改代码继续训练。（当然，这里有一点不好，感觉是这个代码没有多少可以改的地方，具体如下：1.该写好的都写好了；2.网络结构从一开始训练起就不能改了，也许可以做一些小改动之类的，但是由于很多代码被封在了sail包里看不到，在这个体系下部分加载已训练好的模型的方法我还没搞太懂，不知道能不能做到。由此感觉只能调参和写硬编码的规则构造经验来优化训练，学到的强化学习知识没有多少用武之地）<br/>腾讯给我们每个小组的算力是128核CPU和一张A100显卡（一套算力给这么长时间相当于市场价上万了），对于训练来说非常足够。课程后面改成二等级制，要求击败baseline 2就能通过课程，差不多训练1天就可以达到这个水平。稍微良好的调参下，4天能够训出钻石水平的露娜（追平baseline 4）。<br/>这门课最大的收获是学习到工业级的AI是如何编写与部署的。最基本的是生产环境下的部署，如<strong>ssh远程开发、docker容器使用、Linux的基本命令</strong>，这些是未来科研和工作中训练和部署模型非常重要的工具，当然用个git在容器、开发机和本地之间传代码会方便很多。其实还有很多复杂操作，比如编写dockerfile，kubernetes集群的部署，但是原来的docker容器里已经帮我们实现好了，不需要我们操心。剩下的按着教程完成初始配置之后，都是一些最基础的命令，感觉不超过20种，疯狂百度就行了。现学情况下，初始配置大约要3小时，搞明白各种指令并让模型训起来可能要5小时，但这个收益比真心高，并且以后不付钱都很难有这样的学习机会了。<br/>接下来讲讲代码。代码基本就是绝悟论文里的实现，分为CPU和GPU两部分代码，所有和环境交互的代码，包括actor、agent之类的都在CPU端，GPU端主要是训练代码，模型实现和线程间传输模型的程序两端都有一份。<br/>看代码最困难的地方有三点，一个是<strong>不能断点调试</strong>，只能打log，严重影响看代码速度；第二个是涉及巨多脚本等地方传进去的环境变量，不打log根本就猜不出是啥；第三是很多代码封在sail包里面，有一些是非常重要的（当然可以本地安装sail包，用everything找到它的源码来看，但因为要装tensorflow1.14所以我就没有干，这应该只是我自己的问题）<br/>对于代码，确实可以粗略地讲讲每个部分的功能是啥，但具体实现太细了肯定不能讲。没有讲代码是这门课的遗憾。<br/>有同学说不能在已经训练出来的模型基础上修改代码继续训练，这个问题我研究了三天，常规的tensorflow方法saver.restore行不通，最后问助教发现其实是可以的，而且步骤非常简单，他们代码把这些方法都写好封装好了，只用调一个布尔值就行（如下图）。</p><p><img alt="" src="/uploads/images/35a650493c8cac97ba8f54d3d126f19715517af8.webp" style="height:175px; width:1033px"/><br/><strong>最后，还是要强调一下这门课是实践课，不是来学知识的。建议有训练神经网络经验的同学选这门课。</strong>不会强化学习不要紧，在会神经网络的基础上，五个小时应该足够从头学起掌握所有现行强化学习算法的基本思路，当然要搞懂具体实现可能要花超过十个小时。但是不会神经网络甚至不会Python的同学慎选。群里有些同学不会Python也选这课，一进来就兴奋地聊着王者，仿佛这门课是王者课而不是强化学习课，但等到讲完强化学习算法之后，群里就再也没有见到他们发言。根据估计，从不会Python到完全掌握强化学习大约需要60-80小时的时间，按一周45小时的学习时间，从选这门课开始才学起其实挺难的，特别是后半段要花巨量时间来搞具体的王者AI，至少这样效果不好。当然，如果只是要水过这门二等级的课，那还是非常轻松的，只要学习远程开发，让代码跑起来，一两天后去收割成果就可以了，完全不需要深度学习知识。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-51642">
+<span class="small localtime" style="display: none;">07/15/2022 07:46:17</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/15/2022 15:47:17</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-51642">4</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(51642)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-51642">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21790/#review-51642" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-51642-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
 </div>
 <div class="ud-pd-md dashed review" id="review-49962">
 <div class="blue ud-pd-sm">
@@ -221,52 +272,151 @@
 </div>
 </div>
 </div>
-<div class="ud-pd-md dashed review" id="review-51642">
+<div class="ud-pd-md dashed review" id="review-51534">
 <div class="blue ud-pd-sm">
 <span class="right-pd-sm px16">
-<a href="https://icourse.club/user/5599">hath</a>
+<a href="https://icourse.club/user/4168">flxgdsb</a>
 </span>
 <span aria-hidden="true" class="glyphicon glyphicon-star"></span>
 <span aria-hidden="true" class="glyphicon glyphicon-star"></span>
 <span aria-hidden="true" class="glyphicon glyphicon-star"></span>
 <span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
 <span class="left-pd-md">2022夏</span>
 <span class="pull-right">
 </span>
 </div>
 <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：困难</li>
-<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">课程难度：简单</li>
+<li class="right-mg-md">作业多少：很少</li>
 <li class="right-mg-md">给分好坏：超好</li>
 <li class="right-mg-md">收获大小：很多</li>
 </ul>
 <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：困难</li>
-<li>作业：中等</li>
+<li>难度：简单</li>
+<li>作业：很少</li>
 <li>给分：超好</li>
 <li>收获：很多</li>
 </ul>
-<div class="review-content" id="review-content-51642">
-<p></p><div><p>首先讲一下这门课的内容。这门课第一节课由周老师介绍强化学习，但我因为考试没有去上。后面是赵鉴博士来上，第一节课讲了RL的基本概念，第二节课讲了现行强化学习的几乎所有算法，第三节课复习上节课内容并讲了学长做强化学习科研的经历和AI游戏竞赛的经验，第四节课讲了开悟平台、ssh、docker的使用，第五节课没去，应该是答疑，后面的课都是答疑。<br/>课程里穿插交流的强化学习科研和行业情况感觉对了解行情、规划之后的学习非常有帮助。<br/>课程给了用docker镜像打包好的源码（基于<strong>tensorflow</strong>）和运行环境，我们可以直接跑这个代码，也可以在此基础上修改代码继续训练。（当然，这里有一点不好，感觉是这个代码没有多少可以改的地方，具体如下：1.该写好的都写好了；2.网络结构从一开始训练起就不能改了，也许可以做一些小改动之类的，但是由于很多代码被封在了sail包里看不到，在这个体系下部分加载已训练好的模型的方法我还没搞太懂，不知道能不能做到。由此感觉只能调参和写硬编码的规则构造经验来优化训练，学到的强化学习知识没有多少用武之地）<br/>腾讯给我们每个小组的算力是128核CPU和一张A100显卡（一套算力给这么长时间相当于市场价上万了），对于训练来说非常足够。课程后面改成二等级制，要求击败baseline 2就能通过课程，差不多训练1天就可以达到这个水平。稍微良好的调参下，4天能够训出钻石水平的露娜（追平baseline 4）。<br/>这门课最大的收获是学习到工业级的AI是如何编写与部署的。最基本的是生产环境下的部署，如<strong>ssh远程开发、docker容器使用、Linux的基本命令</strong>，这些是未来科研和工作中训练和部署模型非常重要的工具，当然用个git在容器、开发机和本地之间传代码会方便很多。其实还有很多复杂操作，比如编写dockerfile，kubernetes集群的部署，但是原来的docker容器里已经帮我们实现好了，不需要我们操心。剩下的按着教程完成初始配置之后，都是一些最基础的命令，感觉不超过20种，疯狂百度就行了。现学情况下，初始配置大约要3小时，搞明白各种指令并让模型训起来可能要5小时，但这个收益比真心高，并且以后不付钱都很难有这样的学习机会了。<br/>接下来讲讲代码。代码基本就是绝悟论文里的实现，分为CPU和GPU两部分代码，所有和环境交互的代码，包括actor、agent之类的都在CPU端，GPU端主要是训练代码，模型实现和线程间传输模型的程序两端都有一份。<br/>看代码最困难的地方有三点，一个是<strong>不能断点调试</strong>，只能打log，严重影响看代码速度；第二个是涉及巨多脚本等地方传进去的环境变量，不打log根本就猜不出是啥；第三是很多代码封在sail包里面，有一些是非常重要的（当然可以本地安装sail包，用everything找到它的源码来看，但因为要装tensorflow1.14所以我就没有干，这应该只是我自己的问题）<br/>对于代码，确实可以粗略地讲讲每个部分的功能是啥，但具体实现太细了肯定不能讲。没有讲代码是这门课的遗憾。<br/>有同学说不能在已经训练出来的模型基础上修改代码继续训练，这个问题我研究了三天，常规的tensorflow方法saver.restore行不通，最后问助教发现其实是可以的，而且步骤非常简单，他们代码把这些方法都写好封装好了，只用调一个布尔值就行（如下图）。</p><p><img alt="" src="/uploads/images/35a650493c8cac97ba8f54d3d126f19715517af8.webp" style="height:175px; width:1033px"/><br/><strong>最后，还是要强调一下这门课是实践课，不是来学知识的。建议有训练神经网络经验的同学选这门课。</strong>不会强化学习不要紧，在会神经网络的基础上，五个小时应该足够从头学起掌握所有现行强化学习算法的基本思路，当然要搞懂具体实现可能要花超过十个小时。但是不会神经网络甚至不会Python的同学慎选。群里有些同学不会Python也选这课，一进来就兴奋地聊着王者，仿佛这门课是王者课而不是强化学习课，但等到讲完强化学习算法之后，群里就再也没有见到他们发言。根据估计，从不会Python到完全掌握强化学习大约需要60-80小时的时间，按一周45小时的学习时间，从选这门课开始才学起其实挺难的，特别是后半段要花巨量时间来搞具体的王者AI，至少这样效果不好。当然，如果只是要水过这门二等级的课，那还是非常轻松的，只要学习远程开发，让代码跑起来，一两天后去收割成果就可以了，完全不需要深度学习知识。</p>
+<div class="review-content" id="review-content-51534">
+<p></p><div><p>本来打算夏季学期卷两个学分选的这门课，一直也对RL比较感兴趣。周老师第一节课讲的介绍，后面课都是赵鉴博士带的，考虑到各个年级的同学都有，老师没有讲太难的东西，最后也改成了二等级制，只是简单科普了一下RL相关的知识，还顺便吐槽了一下他的研究生生涯和职业规划，这部分对我以后读研究生的选择有很大帮助。非常感谢赵鉴博士分享心路历程。</p><p>腾讯答应给我们算力，128核CPU和一张A100显卡，然鹅大部分本科生都不太熟悉远程开发的操作流程，docker使用之类的东西，大部分同学都卡在拉镜像和上传模型压缩包这种事情上。另一个很难受的点是不能在已经训练出来的模型基础上修改代码继续训练。</p><p>总之，选一下这门课了解一下强化学习还是很好的。</p>
 </div>
 </div>
-<div class="bm-pd-md grey" id="review-51642">
-<span class="small localtime" style="display: none;">07/15/2022 07:46:17</span>
-<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/15/2022 15:47:17</span><span class="small">）</span>
+<div class="bm-pd-md grey" id="review-51534">
+<span class="small localtime" style="display: none;">07/14/2022 14:07:39</span>
 <a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
 <span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-51642">3</span>
+<span id="review-upvote-count-51534">1</span>
 </a>
-<a class="nounderline" href="javascript: show_review_comments(51642)">
+<a class="nounderline" href="javascript: show_review_comments(51534)">
 <span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-51642">0</span>
+<span id="review-comment-count-51534">0</span>
 </a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21790/#review-51642" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21790/#review-51534" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
 <span class="pull-right">
 </span>
 </div>
-<div class="panel panel-default" id="review-51642-comments" style="display:none">
+<div class="panel panel-default" id="review-51534-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-51882">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/7051">Ronin</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2022夏</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：一般</li>
+</ul>
+<div class="review-content" id="review-content-51882">
+<p></p><p>没相关基础的话不建议去选,前置课程应该有一定的要求,不建议低年级同学选(如果是相关大佬除外),在暑假这个四星期的时间说实话有点短</p>
+</div>
+<div class="bm-pd-md grey" id="review-51882">
+<span class="small localtime" style="display: none;">07/17/2022 01:02:58</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-51882">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(51882)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-51882">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21790/#review-51882" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-51882-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-51877">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+              
+              匿名用户
+              
+            </span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2022夏</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：简单</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：没有</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：简单</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：没有</li>
+</ul>
+<div class="review-content" id="review-content-51877">
+<p></p><p>毫无收获，就和你大一去听讲座差不多，实践也没动过，开悟平台都没登录过。</p>
+</div>
+<div class="bm-pd-md grey" id="review-51877">
+<span class="small localtime" style="display: none;">07/16/2022 19:46:24</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-51877">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(51877)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-51877">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21790/#review-51877" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-51877-comments" style="display:none">
 <div class="panel-body">
 <p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
 </div>
@@ -518,56 +668,6 @@
 </span>
 </div>
 <div class="panel panel-default" id="review-51633-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-51534">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/4168">flxgdsb</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
-<span class="left-pd-md">2022夏</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：简单</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：简单</li>
-<li>作业：很少</li>
-<li>给分：超好</li>
-<li>收获：很多</li>
-</ul>
-<div class="review-content" id="review-content-51534">
-<p></p><div><p>本来打算夏季学期卷两个学分选的这门课，一直也对RL比较感兴趣。周老师第一节课讲的介绍，后面课都是赵鉴博士带的，考虑到各个年级的同学都有，老师没有讲太难的东西，最后也改成了二等级制，只是简单科普了一下RL相关的知识，还顺便吐槽了一下他的研究生生涯和职业规划，这部分对我以后读研究生的选择有很大帮助。非常感谢赵鉴博士分享心路历程。</p><p>腾讯答应给我们算力，128核CPU和一张A100显卡，然鹅大部分本科生都不太熟悉远程开发的操作流程，docker使用之类的东西，大部分同学都卡在拉镜像和上传模型压缩包这种事情上。另一个很难受的点是不能在已经训练出来的模型基础上修改代码继续训练。</p><p>总之，选一下这门课了解一下强化学习还是很好的。</p>
-</div>
-</div>
-<div class="bm-pd-md grey" id="review-51534">
-<span class="small localtime" style="display: none;">07/14/2022 14:07:39</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-51534">0</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(51534)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-51534">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21790/#review-51534" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-51534-comments" style="display:none">
 <div class="panel-body">
 <p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
 </div>
