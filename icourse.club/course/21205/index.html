@@ -1,7 +1,378 @@
-<html>
-<head><title>503 Service Temporarily Unavailable</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="10.0 分，1 人评价" name="description" property="og:description"/>
+<meta content="USTC,评课,课程" name="keywords"/>
+<meta content="jenny42,aaron1992,boj" name="author"/>
+<link href="/static/image/favicon.ico" rel="icon"/>
+<title>物理化学B（汪文栋, 邵翔） - USTC评课社区</title>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 <body>
-<center><h1>503 Service Temporarily Unavailable</h1></center>
-<hr/><center>nginx/1.18.0</center>
+<div id="wrap">
+<nav class="navbar navbar-default">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
+<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav desktop">
+<li><a href="https://icourse.club/latest_reviews">点评</a></li>
+<li><a href="https://icourse.club/course/">课程</a></li>
+<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+</ul>
+<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
+<div class="form-group">
+<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
+</div>
+<span class="desktop-wide">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
+</span>
+</form>
+<ul class="nav navbar-nav navbar-right desktop">
+<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+
+<!-- banner -->
+<div class="container">
+<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+</div>
+<!-- end banner -->
+<div class="container">
+<div class="row float-element">
+<div class="row">
+<div class="col-md-8 inline-h3">
+<span class="blue h3">物理化学B</span><span class="h3 blue mobile">（汪文栋, 邵翔）</span>
+<span class="small grey align-bottom left-pd-sm desktop">2022春  课程号：00305601</span>
+<br/><span class="small grey align-bottom mobile">2022春  课程号：00305601</span>
+<hr/>
+<div class="ud-pd-sm blue">
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span class="rl-pd-sm h4">10.0</span><span class="rl-pd-sm text-muted">(1人评价)</span>
+</div>
+<ul class="text-muted list-inline list-unstyled ud-pd-sm">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<table class="table table-condensed no-border">
+<tr>
+<td><strong>选课类别：</strong>计划</td>
+<td><strong>教学类型：</strong>理论课</td>
+</tr>
+<tr>
+<td><strong>课程类别：</strong>本科计划内课程</td>
+<td><strong>开课单位：</strong>化学物理系</td>
+</tr>
+<tr>
+<td><strong>课程层次：</strong>专业基础</td>
+<td><strong>学分：</strong>4.0</td>
+</tr>
+</table>
+<div class="ud-pd-sm">
+<strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
+          
+        </div>
+<div class="ud-pd-md" id="action-btn-group" style="display:none">
+<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+</div>
+<div class="solid ud-pd-md inline-h3">
+<span class="blue h3" id="review-anchor">点评</span>
+<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
+</div>
+<div class="ud-pd-md dashed review" id="review-49688">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/6187">求捞求捞</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-49688">
+<p></p><div><p>先说汪老师，除了低沉的声音容易让人犯困，其实如果坚持听课（可惜我没有），会发老师他讲课其实真的不错，各种难点解释的很清楚，重点课堂都提了，PPT做的非常好，完全涵盖课本内容，可以不用看那么厚一本书，像我这种没啥追求不挂就行的，考试复习PPT和作业题完全就够了。</p>
+<p>邵老师的课安排的内容较少，老师上课讲的比较有意思，也会提重点内容，不过他的PPT需要对照课本拎一拎重点公式。</p>
+<p>总共四次小测加期中期末，跟有机一样“课业繁重”，作业一周一次。感觉只要认真学了，哪怕考得再差老师都会狠捞。期末考试复习时间不够盲压最后两章不考，一个公式没背，结果考了两大题若干小题，全空白了，本以为凉凉，最后意外发现老师狠捞，可能对于很多大佬这分太不堪入目，但对于我已经是意外之喜。</p>
+<p>感谢两位老师！以及两位耐心的助教小姐姐！忍受我一个又一个愚蠢的问题～～～</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-49688">
+<span class="small localtime" style="display: none;">07/07/2022 14:23:17</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-49688">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(49688)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-49688">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21205/#review-49688" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-49688-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 右边栏 -->
+<div class="col-md-4 rl-pd-lg">
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/7a9e6836eed7fbf16e57bc26008fe7f7ceb1e9d1.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/594/">汪文栋</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/28e345d19291a02531d9a9f87ea219b721a54b70.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/14499/">邵翔</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">其他老师的「物理化学B」课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/4255/">马运生</a>
+<span>9.8</span>
+<span class="grey">(5)</span>
+<span class="small grey align-bottom float-right">2022春 2021春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4256/">周晓国, 夏长荣</a>
+<span class="small grey align-bottom float-right">2007春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4257/">夏长荣</a>
+<span class="small grey align-bottom float-right">2011春 2010春...</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">汪文栋老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/12859/">化学原理A</a>
+<span>9.4</span>
+<span class="grey">(7)</span>
+<span class="small grey align-bottom float-right">2022秋 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4267/">物理化学I</a>
+<span>9.6</span>
+<span class="grey">(5)</span>
+<span class="small grey align-bottom float-right">2021秋 2020秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13235/">化学物理实验</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13496/">化学物理实验</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2021秋 2020秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1111/">化学物理实验</a>
+<span class="small grey align-bottom float-right">2013秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1113/">化学物理实验</a>
+<span class="small grey align-bottom float-right">2015秋 2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12837/">化学物理实验</a>
+<span class="small grey align-bottom float-right">2016秋 2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20756/">研究生化学物理专业实验</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21821/">化学物理实验</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/629/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2015秋 2013秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/630/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2018秋 2017秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18458/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20752/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21521/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4241/">物理化学A（上）</a>
+<span class="small grey align-bottom float-right">2013春 2012春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4268/">物理化学I</a>
+<span class="small grey align-bottom float-right">2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21822/">物理化学I</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">邵翔老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/13048/">化学物理进展</a>
+<span>10.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2018春 2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4271/">物理化学I</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12861/">化学原理B</a>
+<span>5.5</span>
+<span class="grey">(15)</span>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/14249/">化学物理进展</a>
+<span class="small grey align-bottom float-right">2018春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13968/">化学物理进展</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/630/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2018秋 2017秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18458/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20752/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21521/">催化作用基础</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12455/">新生“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2019春 2018秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13012/">高等物理化学</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20679/">化学原理B</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+</h4></div>
+</div>
+</div> <!-- row -->
+</div> <!-- float-element  -->
+</div> <!-- container -->
+<a href="#" id="gotop">
+<span>▲</span>
+</a>
+<div id="push"></div>
+</div><!-- ./wrap -->
+<div class="container" id="footer">
+<div class="ud-pd-sm">
+<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
+<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
+<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
+<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
+<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
+<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
+<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
+<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
+<span class="float-right hidden">
+<a class="right-pd-sm">中文</a>
+<a class="left-pd-sm">English</a>
+</span>
+</div>
+<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
+</div><!-- end container -->
 </body>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+
+
+
+
+
+
 </html>

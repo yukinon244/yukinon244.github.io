@@ -1,7 +1,410 @@
-<html>
-<head><title>503 Service Temporarily Unavailable</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="9.0 分，2 人评价" name="description" property="og:description"/>
+<meta content="USTC,评课,课程" name="keywords"/>
+<meta content="jenny42,aaron1992,boj" name="author"/>
+<link href="/static/image/favicon.ico" rel="icon"/>
+<title>有机结构分析（田仕凯） - USTC评课社区</title>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 <body>
-<center><h1>503 Service Temporarily Unavailable</h1></center>
-<hr/><center>nginx/1.18.0</center>
+<div id="wrap">
+<nav class="navbar navbar-default">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
+<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav desktop">
+<li><a href="https://icourse.club/latest_reviews">点评</a></li>
+<li><a href="https://icourse.club/course/">课程</a></li>
+<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+</ul>
+<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
+<div class="form-group">
+<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
+</div>
+<span class="desktop-wide">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
+</span>
+</form>
+<ul class="nav navbar-nav navbar-right desktop">
+<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+
+<!-- banner -->
+<div class="container">
+<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+</div>
+<!-- end banner -->
+<div class="container">
+<div class="row float-element">
+<div class="row">
+<div class="col-md-8 inline-h3">
+<span class="blue h3">有机结构分析</span><span class="h3 blue mobile">（田仕凯）</span>
+<span class="small grey align-bottom left-pd-sm desktop">2021春 2020春 2019春 2018春 2017春  课程号：01917301</span>
+<br/><span class="small grey align-bottom mobile">2021春 2020春 2019春 2018春 2017春  课程号：01917301</span>
+<hr/>
+<div class="ud-pd-sm blue">
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half glyphicon-lg"></span>
+<span class="rl-pd-sm h4">9.0</span><span class="rl-pd-sm text-muted">(2人评价)</span>
+</div>
+<ul class="text-muted list-inline list-unstyled ud-pd-sm">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<table class="table table-condensed no-border">
+<tr>
+<td><strong>选课类别：</strong>计划</td>
+<td><strong>教学类型：</strong>理论课</td>
+</tr>
+<tr>
+<td><strong>课程类别：</strong>本科计划内课程</td>
+<td><strong>开课单位：</strong>化学系</td>
+</tr>
+<tr>
+<td><strong>课程层次：</strong>专业选修</td>
+<td><strong>学分：</strong>3.0</td>
+</tr>
+</table>
+<div class="ud-pd-sm">
+<strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
+          
+        </div>
+<div class="ud-pd-md" id="action-btn-group" style="display:none">
+<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+</div>
+<div class="solid ud-pd-md inline-h3">
+<span class="blue h3" id="review-anchor">点评</span>
+<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
+</div>
+<div class="ud-pd-sm">
+<span class="right-pd-sm weight-heavy">排序</span>
+<select name="sort_by" onchange="location=this.value">
+<option selected="" value="/course/13562/?sort_by=upvote#review-anchor">点赞最多</option>
+<option value="/course/13562/?sort_by=pubtime_desc#review-anchor">最新点评</option>
+<option value="/course/13562/?sort_by=pubtime#review-anchor">最旧点评</option>
+<option value="/course/13562/?sort_by=score_desc#review-anchor">评分: 高-低</option>
+<option value="/course/13562/?sort_by=score#review-anchor">评分: 低-高</option>
+</select>
+<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
+<select name="term" onchange="location=this.value">
+<option selected="" value="/course/13562/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/13562/?sort_by=upvote&amp;term=20202#review-anchor">
+			2021春 (2)
+			</option>
+</select>
+<br class="mobile"/>
+<span class="right-pd-sm weight-heavy mobile">评分</span>
+<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
+<select name="rating" onchange="location=this.value">
+<option selected="" value="/course/13562/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/13562/?sort_by=upvote&amp;rating=5#review-anchor">
+				★★★★★ (2)
+			</option>
+<option value="/course/13562/?sort_by=upvote&amp;rating=4#review-anchor">
+				★★★★ (0)
+			</option>
+<option value="/course/13562/?sort_by=upvote&amp;rating=3#review-anchor">
+				★★★ (0)
+			</option>
+<option value="/course/13562/?sort_by=upvote&amp;rating=2#review-anchor">
+				★★ (0)
+			</option>
+<option value="/course/13562/?sort_by=upvote&amp;rating=1#review-anchor">
+				★ (0)
+			</option>
+</select>
+<span class="rl-pd-sm text-muted">2条点评</span>
+</div>
+<div class="ud-pd-md dashed review" id="review-32639">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/4701">J.D.</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span class="left-pd-md">2021春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：简单</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：简单</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
+<div class="review-content" id="review-content-32639">
+<p></p><div><p>//在隔壁写结晶化学写了快2hr结果没保存。今晚不想复习了。</p><p>老师讲课其实也算是详细，并且内容还是很充足的，奈何实在是说话语气催眠没劲，我可能整个学期就去了几次。课本内容比较细致，我期末的时候为了认真学一遍去听了网课，然后考试前花一天过了一遍书，做了做课后题。实话说第一遍在最后一次课上听最后一章的例题还是很难的，但是过了一遍课本看过前面分章节的习题之后写写题目稍好一些。</p><p>实际上考试内容并不会像后面那么难，前五题是五章内容的分条考察，质谱是一个酮的McLafftery重排、一个醚的氧四元环重排（据说是书本原题），氢谱是迷惑的EDG和EWG两个苯环的氢化学位移指认（后面加时15min我一直都在瞪这个题然而并不确定自己写的对不对），碳谱考了累积二烯这个点有点冷僻，红外和紫外比较常规；后面5个综合分析考完之后听别人说2道是书后原题，并且是氢谱碳谱裸推都能做出来的考试还多给了质谱红外，另外3个一个是环结构氢谱峰叠在一起了有点迷惑人，一个是PhCOEt,BnCOMe二选一（最后可以通过m/z=91判断），一个是芳环连酰胺影响红外和氢谱增加了迷惑性。就，别看书上题这么难，考试还是大部分都很友好的。</p><p>田老师向来不调分，合成化学也是，但是我属实没想到上午考完下午改卷晚上提交第二天就出分，太恐怖了。不管怎样，最后分数比较满意，本来想给8分的多给一分吧。话说回来，我觉得这门课距离实际能用上的还有一段距离，二维谱和别的元素的核磁之类还是要另花功夫，以及课程其实不太强调自旋耦合裂分，本人还是很喜欢在这上面下功夫的。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-32639">
+<span class="small localtime" style="display: none;">07/05/2021 13:23:08</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-32639">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(32639)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-32639">2</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/13562/#review-32639" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-32639-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/1954">带带小学弟</a>：
+                  <span>1.5k～2k字.jpg
+</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/05/2021 13:53:04</span>
+</span>
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4701">J.D.</a>：
+                  <span>回复 <a href="https://icourse.club/user/1954">＠带带小学弟</a>: 你再骂？
+</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/06/2021 02:09:41</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-32011">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/3683">Cesare Z</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span class="left-pd-md">2021春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-32011">
+<p></p><div><p>@2022.6.24</p><p>传一份自己整理的资料，之前给了同级的22年修读这门课的同学们也不知道有没有帮助，但是个人觉得查起来比翻书方便。</p><p><a href="https://icourse.club/uploads/files/97719b77b44137466bf982906dfbf7114c9cea5d.pdf">有机结构分析开卷资料.pdf</a></p><p>@2021.6.21</p><p>复习有感，这门课虽然题不会做，但是看看课本还是蛮有意思的，很多基础有机里面一带而过的谱图知识这里都有解释，看得心生欢喜。（但是题依然不会做…救命啊）</p><p> </p><p>@2021.7.3</p><p>妈的，玩脱了。常在河边走，哪有不湿鞋。步子迈大了难免扯着蛋。哭(இдஇ; )</p><p> </p><p>@2021.7.5</p><p>4号上午考完5号上午教务系统出分，太速度了。卷面分直出不调分，他妈的烦死了=。=</p><p>生气气。</p><p> </p><p>@2021.7.15</p><p>平复了心情，来贴一下情绪激动时写下的试题回忆：</p><blockquote><p>考完感觉向下调分的那种</p><p>前五题五大谱图各十分，质谱两道小题出自课本“两次麦氏重排”与p50-51页的例子；</p><p>氢谱是两个苯环加一个共轭二烯，一个是单取代芳香胺，一个是对二取代芳香硝基，给出了各个峰裂分开的delta让求五类氢的化学位移；</p><p>碳谱也是归峰，没有裂分就好多了，出了个累计二烯烃（200+），和碳酸二取代衍生物（150±），累计二烯烃两头的碳都是九十多不好分；</p><p>第四题第一小问振动偶合，书上原例子，第二小问三个化合物问哪个明显不可能是这个振动频率（1600+），应该是有一个羰基没有和苯环共轭上的，另外俩都是芳香环酮。</p><p>第五题第一问问极性溶剂（己烷→己醇）对共轭二烯吸收波长的影响，pai→pai*这种跃迁属于是基态极性小激发态极性大，ΔE变小了，吸收红移，第二问问对硝基苯甲酸和邻硝基苯甲酸，给出两个吸收峰（强度）【差别在个位数】，问哪个是哪个，一开始以为是考氢键，后来没找到，懵了个位阻影响共轭</p><p>第六题是溴代环戊烷的推断，从碳谱DEPT上上看出来2*2个亚甲基，一个CH，一个不饱和度一个溴，全是sp3碳，那只能说溴代环戊烷嘛；</p><p>第七题是啥，给忘了。好像是单取代苯环，一个4+的亚甲基，一个羰基，一个二多的甲基，推的是甲基苄基酮（卧槽写到这害怕起来了……4+的苄基这合理吗……我不会少看了个氧叭……不会是酯吧……不过我记得好像红外是1700+……他还有一个乙酰基的质谱峰）</p><p>第八题是俩甲基，俩氧，一个不饱和度，一个溴，两个4+的C，那俩甲基一个和CH耦合一个和CH2耦合，有一个羰基，感觉应该是α-溴代丙酸乙酯</p><p>第九题是一边端位炔基一边胺基的直链脂肪族化合物（这玩意质谱先掉了一个28，很奇怪没对上，有点担心）</p><p>第十题是俩2+的甲基，对二取代的苯环，氮，一个活泼氢，160的羰基，感觉应该是乙酰对甲苯胺</p><p>感觉第二题是最难的，也不是说难吧，就是他妈的怪，不敢写反正，第一题一上来有点懵逼，第三题也有一个不确定的点</p><p>评论：第二题不对不对，我真是傻了md，先分大类嘛！位移比裂分更可靠！裂分可以用玄学来解释的，硝基芳环一定位移更高！还有一个思路，BC峰考的太近而ADE太远，作为同一环上的氢均不合理！</p></blockquote>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-32011">
+<span class="small localtime" style="display: none;">06/21/2021 03:06:05</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/24/2022 03:06:07</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-32011">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(32011)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-32011">1</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/13562/#review-32011" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-32011-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/1873">Strider</a>：
+                  <span>蹲一个，期待好消息:D
+</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">06/29/2021 09:19:51</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 右边栏 -->
+<div class="col-md-4 rl-pd-lg">
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/da6aab3850a5daedc42f98708d7bab6bc5805f23.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/381/">田仕凯</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">其他老师的「有机结构分析」课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/3529/">谷永红</a>
+<span>10.0</span>
+<span class="grey">(3)</span>
+<span class="small grey align-bottom float-right">2022春 2011秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/9285/">未知</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3528/">田仕凯, 许毓</a>
+<span class="small grey align-bottom float-right">2017春 2016春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3530/">谷永红, 许毓</a>
+<span class="small grey align-bottom float-right">2020春 2019秋...</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">田仕凯老师的其他课
+          
+          
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/3475/">有机化学(A1)</a>
+<span>7.5</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2016秋 2015秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1299/">合成化学</a>
+<span>4.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20680/">合成化学</a>
+<span>1.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022秋 2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3446/">有机化学 I</a>
+<span class="small grey align-bottom float-right">2011秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3450/">有机化学(1)</a>
+<span class="small grey align-bottom float-right">2012秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3476/">有机化学(A1)</a>
+<span class="small grey align-bottom float-right">2013秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3497/">有机化学B</a>
+<span class="small grey align-bottom float-right">2006春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3498/">有机化学B</a>
+<span class="small grey align-bottom float-right">2012春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3523/">有机合成化学</a>
+<span class="small grey align-bottom float-right">2011秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3528/">有机结构分析</a>
+<span class="small grey align-bottom float-right">2017春 2016春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12946/">累积考核</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13286/">累积考核</a>
+<span class="small grey align-bottom float-right">2021秋 2020秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20281/">立体有机化学</a>
+<span class="small grey align-bottom float-right">2021春</span>
+</div>
+</h4></div>
+</div>
+</div> <!-- row -->
+</div> <!-- float-element  -->
+</div> <!-- container -->
+<a href="#" id="gotop">
+<span>▲</span>
+</a>
+<div id="push"></div>
+</div><!-- ./wrap -->
+<div class="container" id="footer">
+<div class="ud-pd-sm">
+<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
+<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
+<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
+<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
+<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
+<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
+<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
+<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
+<span class="float-right hidden">
+<a class="right-pd-sm">中文</a>
+<a class="left-pd-sm">English</a>
+</span>
+</div>
+<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
+</div><!-- end container -->
 </body>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+
+
+
+
+
+
 </html>
