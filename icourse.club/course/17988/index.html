@@ -1,7 +1,392 @@
-<html>
-<head><title>503 Service Temporarily Unavailable</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="10.0 分，1 人评价" name="description" property="og:description"/>
+<meta content="USTC,评课,课程" name="keywords"/>
+<meta content="jenny42,aaron1992,boj" name="author"/>
+<link href="/static/image/favicon.ico" rel="icon"/>
+<title>代数II（许金兴, 梁永祺） - USTC评课社区</title>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 <body>
-<center><h1>503 Service Temporarily Unavailable</h1></center>
-<hr/><center>nginx/1.18.0</center>
+<div id="wrap">
+<nav class="navbar navbar-default">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
+<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav desktop">
+<li><a href="https://icourse.club/latest_reviews">点评</a></li>
+<li><a href="https://icourse.club/course/">课程</a></li>
+<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+</ul>
+<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
+<div class="form-group">
+<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
+</div>
+<span class="desktop-wide">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
+</span>
+</form>
+<ul class="nav navbar-nav navbar-right desktop">
+<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+
+<!-- banner -->
+<div class="container">
+<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+</div>
+<!-- end banner -->
+<div class="container">
+<div class="row float-element">
+<div class="row">
+<div class="col-md-8 inline-h3">
+<span class="blue h3">代数II</span><span class="h3 blue mobile">（许金兴, 梁永祺）</span>
+<span class="small grey align-bottom left-pd-sm desktop">2020春  课程号：00166401</span>
+<br/><span class="small grey align-bottom mobile">2020春  课程号：00166401</span>
+<hr/>
+<div class="ud-pd-sm blue">
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span class="rl-pd-sm h4">10.0</span><span class="rl-pd-sm text-muted">(1人评价)</span>
+</div>
+<ul class="text-muted list-inline list-unstyled ud-pd-sm">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<table class="table table-condensed no-border">
+<tr>
+<td><strong>选课类别：</strong>计划</td>
+<td><strong>教学类型：</strong>理论课</td>
+</tr>
+<tr>
+<td><strong>课程类别：</strong>本科计划内课程</td>
+<td><strong>开课单位：</strong>数学科学学院</td>
+</tr>
+<tr>
+<td><strong>课程层次：</strong>学科群</td>
+<td><strong>学分：</strong>4.0</td>
+</tr>
+</table>
+<div class="ud-pd-sm">
+<strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
+          
+        </div>
+<div class="ud-pd-md" id="action-btn-group" style="display:none">
+<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+</div>
+<div class="solid ud-pd-md inline-h3">
+<span class="blue h3" id="review-anchor">点评</span>
+<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
+</div>
+<div class="ud-pd-md dashed review" id="review-23475">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/2832">真的仏了</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2020春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：中等</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-23475">
+<p></p><div><p>感觉仏班就我一个人写评课的()</p><p>照例,来回顾一下这学期讲了什么.第一学期的代数学后半部分讲述了线性空间理论,基本概念都讲到了,这学期就正式开始讲线代了.首先是有限维线性空间的具体描述,主要是具体描述线性映射,自然地引入了矩阵的概念;为了换基就有过渡阵.然后从交错n-线性型中自然引入行列式的概念,作为不变量同时介绍了迹和秩,其中的对称群(置换群)部分在第一学期末尾就予以介绍了.前半学期最大的想法就是在维护线性映射本身不变的时候通过选取恰当的基底简化矩阵,自然引入了特征值和特征向量还有特征多项式.(法语中特征值除了表达为eigenvalue还有一个valeur propre,前一个德语词缀的味道还挺重的.)后面进一步引入极小多项式,并且表述和证明了Cayley-Hamilton定理和加法形式Jordan标准型的存在唯一性.</p><p>后半学期开始给线性空间加结构,一个非常重要的结构是内积结构.使用内积可以阐述一些平时位于欧氏空间的想法和概念,两个自然的概念随之诞生:保持内积结构的映射和可以在内积中移动的算符,前者就是所谓等距同构,后者就是所谓对称方阵.(类似的问题将在代数III中再次碰到,只不过变成了复空间上,虽然分析III的Fourier分析已经涉及了.)自然的,总是希望等距同构和对称方阵具有最简单的相似标准型,最后就有诸如对称方阵总可对角化这样的结论,等距同构也总是可以拆成旋转和伸缩.当然,勾股定理,Schmidt正交化算法和Parseval-Bessel恒等式这些东西都是必然会讲授的内容.同时讲了解析几何,这个部分的内容和数院普班华班大一第一学期的解析几何内容没什么区别,主要是各种几何概念的讲述和一些关系.此后是二次型的内容,是作为对称双线性型的表示自然引入的,然后是自然的合同标准型存在性和惯性指标(p,q)等必然有的概念以及挺自然的Sylvester惯性定理,我们还是可以自然提出维护二次型的方阵具有什么样的性质,这就是正交群:这里体现了用对称双线性型的好处,交错双线性型上可以自然引入辛群.然后有二次型就开始研究平面上的二次曲线和空间里的二次曲面,背诵不堪.(本人考试的时候就想不起来名字,但是想到诸如抛物双曲面这些,于是自 然 想 到应该就是这些东西拼起来的名字吧,一看,嗐,截面是椭圆和双曲线,椭 圆 双 曲 面!1分拜拜~)最后一部分是对偶空间的一些小东西,主要是拓展了内积的概念,虽然只是在有限维空间上(利用了X和X**自然的同构).</p><p>习题课自然是老升级了,,,前面是一些计算,后面有诸如K[x]-左模的观点来证明加法形式Jordan标准型,当然说加法也有乘法,包括巨大使用拓扑概念来整各种群的道路连通性(配备以自然的欧氏空间的范数).包括结式Res(f,g)等,内容之丰富我确实一时半会儿不能全部说完,包括有些东西我也就记得个结论,比如和某个方阵A交换的全体方阵交换的全体方阵必然是A的多项式这些(</p><p>学生助教是胡广学长,工作尽职尽责.</p><p>给分不说了,反正你选这门课肯定是置课.</p><p>就这样力!</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-23475">
+<span class="small localtime" style="display: none;">09/18/2020 11:25:32</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-23475">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(23475)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-23475">1</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/17988/#review-23475" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-23475-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/3137">QuantumSlayer</a>：
+                  <span>安布，，，
+</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">09/18/2020 11:34:10</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 右边栏 -->
+<div class="col-md-4 rl-pd-lg">
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/f094952ac2ae0cead435c6a7631c52b6e47c9afd.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/14561/">许金兴</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/7dcb81f35de976924eaaae0c5d113102f09ea46a.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/16764/">梁永祺</a></h3>
+<p></p>
+<p>教师主页：
+            
+            <a href="http://staff.ustc.edu.cn/~yqliang/" target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-link"></span> 戳这里</a>
+</p>
+</div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">其他老师的「代数II」课
+          
+          
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/19977/">梁永祺</a>
+<span class="small grey align-bottom float-right">2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21192/">梁永祺, 曹阳</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">许金兴老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/2626/">拓扑学(H)</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19808/">代数I</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19985/">代数IV（习题）</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022春 2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/16031/">代数I</a>
+<span>9.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13828/">近世代数</a>
+<span>8.3</span>
+<span class="grey">(10)</span>
+<span class="small grey align-bottom float-right">2019春 2018春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1188/">单变量微积分</a>
+<span>8.3</span>
+<span class="grey">(3)</span>
+<span class="small grey align-bottom float-right">2018秋 2017秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/336/">代数几何</a>
+<span class="small grey align-bottom float-right">2017春 2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/2986/">数理方程B</a>
+<span class="small grey align-bottom float-right">2013秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5471/">线性代数(B1)</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12974/">代数几何引论</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18131/">新生“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2020春 2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18278/">代数I</a>
+<span class="small grey align-bottom float-right">2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18954/">代数III</a>
+<span class="small grey align-bottom float-right">2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20629/">代数III</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21082/">代数III（习题）</a>
+<span class="small grey align-bottom float-right">2022秋 2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21593/">代数几何进阶</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">梁永祺老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/14539/">纯粹数学前沿</a>
+<span>10.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2019夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19808/">代数I</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18951/">代数I</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022秋 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/16031/">代数I</a>
+<span>9.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/14056/">代数学</a>
+<span>8.0</span>
+<span class="grey">(4)</span>
+<span class="small grey align-bottom float-right">2019秋 2018秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18636/">纯粹数学前沿</a>
+<span class="small grey align-bottom float-right">2019夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18278/">代数I</a>
+<span class="small grey align-bottom float-right">2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18660/">线性代数(B1)</a>
+<span class="small grey align-bottom float-right">2019春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18956/">华罗庚讨论班(H)</a>
+<span class="small grey align-bottom float-right">2021春 2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19977/">代数II</a>
+<span class="small grey align-bottom float-right">2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20866/">“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21083/">算术与代数（习题）</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21192/">代数II</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21193/">代数II（习题）</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+</h4></div>
+</div>
+</div> <!-- row -->
+</div> <!-- float-element  -->
+</div> <!-- container -->
+<a href="#" id="gotop">
+<span>▲</span>
+</a>
+<div id="push"></div>
+</div><!-- ./wrap -->
+<div class="container" id="footer">
+<div class="ud-pd-sm">
+<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
+<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
+<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
+<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
+<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
+<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
+<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
+<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
+<span class="float-right hidden">
+<a class="right-pd-sm">中文</a>
+<a class="left-pd-sm">English</a>
+</span>
+</div>
+<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
+</div><!-- end container -->
 </body>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+
+
+
+
+
+
 </html>
