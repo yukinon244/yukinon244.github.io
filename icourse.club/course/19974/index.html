@@ -1,689 +1,1730 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="9.7 分，7 人评价" name="description" property="og:description"/>
-<meta content="USTC,评课,课程" name="keywords"/>
-<meta content="jenny42,aaron1992,boj" name="author"/>
-<link href="/static/image/favicon.ico" rel="icon"/>
-<title>实分析（王兵） - USTC评课社区</title>
-<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="/static/css/style.css" rel="stylesheet"/>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="og:description" content="9.7 分，7 人评价">
+    <meta name="keywords" content="USTC,评课,课程">
+    <meta name="author" content="jenny42,aaron1992,boj">
+    <link rel="icon" href="/static/image/favicon.ico">
+
+    <title>实分析（王兵） - USTC评课社区</title>
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css?ver=20220706" rel="stylesheet">
+
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
-<body>
-<div id="wrap">
-<nav class="navbar navbar-default">
-<div class="container">
-<!-- Brand and toggle get grouped for better mobile display -->
-<div class="navbar-header">
-<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
-<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
-</div>
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="navbar">
-<ul class="nav navbar-nav desktop">
-<li><a href="https://icourse.club/latest_reviews">点评</a></li>
-<li><a href="https://icourse.club/course/">课程</a></li>
-<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
-</ul>
-<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
-<div class="form-group">
-<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
-</div>
-<span class="desktop-wide">
-<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
-</span>
-</form>
-<ul class="nav navbar-nav navbar-right desktop">
-<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
-</ul>
-</div><!--/.nav-collapse -->
-</div>
-</nav>
+  </head>
 
-<!-- banner -->
+<body>
+  <div id="wrap">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        
+        <button type="button" class="mobile btn btn-default navbar-btn pull-right right-mg-md" style="outline:none" data-toggle="modal" data-target="#signin">登录</button>
+        
+        <a class="navbar-brand" href="/">USTC评课社区</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav desktop">
+          <li ><a href="/latest_reviews">点评</a></li>
+	  <li ><a href="/course/">课程</a></li>
+          
+          <li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+        </ul>
+
+	
+        <form class="navbar-form navbar-left desktop" action="/search/" method="get" role="search">
+	
+          <div class="form-group">
+            <input type="text" name="q" class="form-control" id="search" placeholder="搜索课程、老师" style="width: 235px" value="">
+          </div>
+          <span class="desktop-wide">
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey"></span></button>
+          </span>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right desktop">
+          
+          <li><button type="button" class="btn btn-default navbar-btn left-mg-md" data-toggle="modal" data-target="#signin">登录</button></li>
+          
+        </ul>
+
+        
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  
+  <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-signin">
+      <div class="modal-content">
+        <form id="signin-form" class="form-signin">
+          <input type="hidden" name="csrf_token" value="IjFjZGFhN2Q4NjIyMDQ2Y2NkZWU1YmIzOTNiYmUxZjVjNTVhMWNlMDki.YtlzEQ.aRrN-Sz2a--ihTZ2JnVUsNOf8Pc" />
+          <div class="form-signin-heading">
+            <span class="h2">请登录</span>
+            <a class="btn btn-default float-right" href="/signup">注册</a>
+          </div>
+          <div id="signin-alert" role="alert" class="display: none"></div>
+          <label for="inputEmail" class="sr-only">用户名</label>
+          <input type="text" name="username" id="inputEmail" class="form-control" placeholder="用户名或邮箱" required autofocus>
+          <label for="inputPassword" class="sr-only">密码</label>
+          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="remember">记住我
+            </label>
+            <a class="float-right" href="/reset-password/">忘记密码</a>
+          </div>
+          <button class="btn btn-lg btn-blue btn-block" type="submit">登录</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- banner -->
+    
+    <div class="container">
+      
+      <div class="text-center banner mobile">新增 <a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
+      
+
+      
+      <div class="text-center banner desktop">评课社区推出<a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
+      
+    </div>
+    <!-- end banner -->
+    
+
+  
+
 <div class="container">
-<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
-<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
-</div>
-<!-- end banner -->
-<div class="container">
-<div class="row float-element">
-<div class="row">
-<div class="col-md-8 inline-h3">
-<span class="blue h3">实分析</span><span class="h3 blue mobile">（王兵）</span>
-<span class="small grey align-bottom left-pd-sm desktop">2021春  课程号：00125001</span>
-<br/><span class="small grey align-bottom mobile">2021春  课程号：00125001</span>
-<hr/>
-<div class="ud-pd-sm blue">
-<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
-<span class="rl-pd-sm h4">9.7</span><span class="rl-pd-sm text-muted">(7人评价)</span>
-</div>
-<ul class="text-muted list-inline list-unstyled ud-pd-sm">
-<li class="right-mg-md">课程难度：中等</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<table class="table table-condensed no-border">
-<tr>
-<td><strong>选课类别：</strong>计划</td>
-<td><strong>教学类型：</strong>理论课</td>
-</tr>
-<tr>
-<td><strong>课程类别：</strong>本科计划内课程</td>
-<td><strong>开课单位：</strong>数学科学学院</td>
-</tr>
-<tr>
-<td><strong>课程层次：</strong>专业基础</td>
-<td><strong>学分：</strong>4.0</td>
-</tr>
-</table>
-<div class="ud-pd-sm">
-<strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
+
+  <div class="row float-element">
+    <div class="row">
+      <div class="col-md-8 inline-h3">
+        <span class="blue h3">实分析</span><span class="h3 blue mobile">（王兵）</span>
+        <span class="small grey align-bottom left-pd-sm desktop">2021春 &nbsp;课程号：00125001</span>
+        <br><span class="small grey align-bottom mobile">2021春 &nbsp;课程号：00125001</span>
+
+        
+        <hr>
+        
+        <div class="ud-pd-sm blue">
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+          <span class="rl-pd-sm h4">9.7</span><span class="rl-pd-sm text-muted">(7人评价)</span>
+        </div>
+        
+        <ul class="text-muted list-inline list-unstyled ud-pd-sm">
+          <li class="right-mg-md">课程难度：中等</li>
+          <li class="right-mg-md">作业多少：很少</li>
+          <li class="right-mg-md">给分好坏：超好</li>
+          <li class="right-mg-md">收获大小：很多</li>
+        </ul>
+
+        <table class="table table-condensed no-border">
+          <tr>
+            <td><strong>选课类别：</strong>计划</td>
+            <td><strong>教学类型：</strong>理论课</td>
+          </tr>
+          <tr>
+            <td><strong>课程类别：</strong>本科计划内课程</td>
+            <td><strong>开课单位：</strong>数学科学学院</td>
+          </tr>
+          <tr>
+            <td><strong>课程层次：</strong>专业基础</td>
+            <td><strong>学分：</strong>4.0</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="ud-pd-sm">
+          
+          <strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
           
         </div>
-<div class="ud-pd-md" id="action-btn-group" style="display:none">
-<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
-<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
-<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
-<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
-<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
-<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
-</div>
-<div class="ud-pd-md">
-<div class="solid ud-pd-sm inline-h3">
-<span class="blue h3">简介</span>
-<span class="text-muted pull-right small" style="padding-top: 1em;">
-<span aria-hidden="true" class="glyphicon glyphicon-time grey left-pd-sm"></span>
+
+        <div id="action-btn-group" class="ud-pd-md" style="display:none">
+          <button class="btn btn-white btn-flat btn-follow btn-do"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> 关注 <small>(<span class="count"></span>)</small></button>
+          <button class="btn btn-blue btn-flat btn-follow btn-undo"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+
+          <button class="btn btn-white btn-flat btn-upvote btn-do"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+          <button class="btn btn-blue btn-flat btn-upvote btn-undo"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+
+          <button class="btn btn-white btn-flat btn-downvote btn-do"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+          <button class="btn btn-blue btn-flat btn-downvote btn-undo"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+
+          
+        </div>
+
+	
+	<div class="ud-pd-md">
+	  <div class="solid ud-pd-sm inline-h3">
+          <span class="blue h3">简介</span>
+          <span class="text-muted pull-right small" style="padding-top: 1em;">
+             
+             
+             <span class="glyphicon glyphicon-time grey left-pd-sm" aria-hidden="true" ></span>
              最后更新：<span class="localtime" style="display: none;">07/17/2021 05:39:00</span>
-</span>
-</div>
-<div class="showmore-text" id="course-intro">
-<div><p>教材：Elias M. Stein, Rami Shakarchi: Real Analysis</p><p>参考书：周民强《实变函数》，第三版</p><p>课程内容：教材第1～3章（不含打*号内容），第6章部分；依测度收敛和部分定理的证明参考周民强上相应内容</p></div>
-</div>
-<div class="showmore-wrapper">
-<div class="showmore-shadow">
-<div class="showmore-btn-wrapper">
-<button class="showmore-btn">展开全部课程简介 <span aria-hidden="true" class="glyphicon glyphicon-chevron-down"></span></button>
-</div>
-</div>
-</div>
-</div>
-<div class="solid ud-pd-md inline-h3">
-<span class="blue h3" id="review-anchor">点评</span>
-<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
-</div>
-<div class="ud-pd-sm">
-<span class="right-pd-sm weight-heavy">排序</span>
-<select name="sort_by" onchange="location=this.value">
-<option selected="" value="/course/19974/?sort_by=upvote#review-anchor">点赞最多</option>
-<option value="/course/19974/?sort_by=pubtime_desc#review-anchor">最新点评</option>
-<option value="/course/19974/?sort_by=pubtime#review-anchor">最旧点评</option>
-<option value="/course/19974/?sort_by=score_desc#review-anchor">评分: 高-低</option>
-<option value="/course/19974/?sort_by=score#review-anchor">评分: 低-高</option>
-</select>
-<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
-<select name="term" onchange="location=this.value">
-<option value="/course/19974/?sort_by=upvote&amp;term=20202#review-anchor">
+             
+          </span>
+	  </div>
+      <div class="showmore-text" id="course-intro">
+	    <div><p>教材：Elias M. Stein, Rami Shakarchi: Real Analysis</p><p>参考书：周民强《实变函数》，第三版</p><p>课程内容：教材第1～3章（不含打*号内容），第6章部分；依测度收敛和部分定理的证明参考周民强上相应内容</p></div>
+      </div>
+      <div class="showmore-wrapper">
+        <div class="showmore-shadow">
+          <div class="showmore-btn-wrapper">
+            <button class="showmore-btn">展开全部课程简介 <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div>
+	</div>
+	
+	
+
+	<div class="solid ud-pd-md inline-h3">
+	  <span class="blue h3" id="review-anchor">点评</span>
+          
+          <a type="button" data-toggle="modal" data-target="#signin" class="btn btn-white float-right blue"><span class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm" aria-hidden="true"></span>写点评</a>
+          
+        </div>
+
+
+        
+        
+	
+
+	
+	<div class="ud-pd-sm">
+		<span class="right-pd-sm weight-heavy">排序</span>
+		<select name="sort_by" onchange="location=this.value">
+			
+			<option value="/course/19974/?sort_by=upvote#review-anchor" selected>点赞最多</option>
+			
+			<option value="/course/19974/?sort_by=pubtime_desc#review-anchor" >最新点评</option>
+			
+			<option value="/course/19974/?sort_by=pubtime#review-anchor" >最旧点评</option>
+			
+			<option value="/course/19974/?sort_by=score_desc#review-anchor" >评分: 高-低</option>
+			
+			<option value="/course/19974/?sort_by=score#review-anchor" >评分: 低-高</option>
+			
+		</select>
+		<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
+		<select name="term" onchange="location=this.value">
+			
+			
+			<option value="/course/19974/?sort_by=upvote&amp;term=20202#review-anchor" >
 			2021春 (7)
 			</option>
-</select>
-<br class="mobile"/>
-<span class="right-pd-sm weight-heavy mobile">评分</span>
-<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
-<select name="rating" onchange="location=this.value">
-<option selected="" value="/course/19974/?sort_by=upvote#review-anchor">全部</option>
-<option value="/course/19974/?sort_by=upvote&amp;rating=5#review-anchor">
+			
+		</select>
+		<br class="mobile">
+		<span class="right-pd-sm weight-heavy mobile">评分</span>
+		<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
+		<select name="rating" onchange="location=this.value">
+			<option value="/course/19974/?sort_by=upvote#review-anchor" selected>全部</option>
+			
+			<option value="/course/19974/?sort_by=upvote&amp;rating=5#review-anchor" >
 				★★★★★ (6)
 			</option>
-<option value="/course/19974/?sort_by=upvote&amp;rating=4#review-anchor">
+			
+			<option value="/course/19974/?sort_by=upvote&amp;rating=4#review-anchor" >
 				★★★★ (1)
 			</option>
-<option value="/course/19974/?sort_by=upvote&amp;rating=3#review-anchor">
+			
+			<option value="/course/19974/?sort_by=upvote&amp;rating=3#review-anchor" >
 				★★★ (0)
 			</option>
-<option value="/course/19974/?sort_by=upvote&amp;rating=2#review-anchor">
+			
+			<option value="/course/19974/?sort_by=upvote&amp;rating=2#review-anchor" >
 				★★ (0)
 			</option>
-<option value="/course/19974/?sort_by=upvote&amp;rating=1#review-anchor">
+			
+			<option value="/course/19974/?sort_by=upvote&amp;rating=1#review-anchor" >
 				★ (0)
 			</option>
-</select>
-<span class="rl-pd-sm text-muted">7条点评</span>
-</div>
-<div class="ud-pd-md dashed review" id="review-28259">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/2829">PB18纯数-田JH</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：中等</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：中等</li>
-<li>作业：很少</li>
-<li>给分：超好</li>
-<li>收获：很多</li>
-</ul>
-<div class="review-content" id="review-content-28259">
-<p></p><div><p>我是这门课的助教。我于大一下学期学习了实分析<span>(H)</span>的内容（任课老师是任广斌），大二上学期旁听了科大高等实分析的课程（任课老师是赵立丰），并在大三下学期担任了这门课的助教（主讲老师是王兵老师）。作为这门课的助教，我仅以自己的学习经验，给选这门课的学弟学妹们写一些学习建议，希望能给大家提供或多或少的帮助。</p><p> </p><p><span><strong>写在前言：</strong></span></p><p>实分析是近代分析学的起点，在分析学大厦中起着<span>“</span>地基<span>”</span>的作用。我们学习任何一门数学课，都要明确两个问题，一是这门课所要研究的数学对象，二是为了研究这个数学对象我们引进了哪些数学工具。在数学分析中我们的研究对象是一个单独的函数，所使用的数学工具是微分、积分、极限理论。实分析提出了一个全新的观点：我们不再单独研究一个函数，而是把一些函数打包成一个集合，组成<span>“</span>函数空间<span>”</span>这样一个整体。我们的研究对象就是各种<span>“</span>函数空间<span>”</span>，所使用的工具是<span>“</span>测度论<span>”</span>与<span>“</span>积分论<span>”</span>。分析学大厦中的一个重要支柱是利用<span>“</span>函数空间<span>”</span>去解<span>“</span>偏微分方程<span>”</span>，实分析将教会我们两个研究<span>“</span>函数空间<span>”</span>的重要数学工具。所以说，实分析是分析学大厦的一个重要地基。</p><p> </p><p><span><strong>教材与参考资料：</strong></span></p><p><span>Rudin</span>的<span>“</span>实分析与复分析<span>”</span>建议作为参考书，这本书内容很全，但在没有老师讲解的情况下，不太建议当作教材直接阅读（我个人认为不适合用于自学）。<span>Folland</span>写的<span>“</span>实分析<span>”</span>是我所有读过的实分析书中质量最高，写的最好的，也很适合自学，强烈推荐大家认真阅读。但这本书书写的难度对初学者较大，如果大家直接读<span>Folland</span>感觉很困难，可以先看看<span>Stein</span>或周民强的实分析教材找找感觉。王兵老师本学期使用教材为Stein，相关内容我已经发布在课程群。不过以我个人的经验，我还是要建议大家认真阅读一下<span>Folland</span>这本书。</p><p><strong>考核方式：平时成绩（</strong><span><strong>10%</strong></span><strong>）</strong><span><strong>+</strong></span><strong>期中考试（</strong><span><strong>30%</strong></span><strong>）</strong><span><strong>+</strong></span><strong>期末考试（</strong><span><strong>60%</strong></span><strong>）</strong></p><p><strong>总评：由于期中期末的卷面分都不太好，按照原定的比例没有一人能上85，所以在上述考核方式的基础上又进行了调分，最高分95（给了三个），优秀率给到了29.4%，后面能捞的基本也都捞到60，总体来说给分还是相当不错了。</strong></p><p> </p><p><span><strong>实分析这门课的核心内容是：</strong></span></p><p><span><strong>（</strong></span><span><strong>1</strong></span><span><strong>）测度论。</strong></span></p><p><span><strong>（</strong></span><span><strong>2</strong></span><span><strong>）积分论。</strong></span></p><p><span><strong>（</strong></span><span><strong>3</strong></span><span><strong>）利用测度与积分去研究函数空间（主要研究</strong></span><span><strong>Lp</strong></span><span><strong>空间与</strong></span><span><strong>L2</strong></span><span><strong>空间）。</strong></span></p><p><span><strong>（</strong></span><span><strong>4</strong></span><span><strong>）傅立叶分析与广义函数。</strong></span></p><p> </p><p> </p><p><span><strong>集合论的引入：</strong></span></p><p>一些教材会在最开始花笔墨讲解集合论的东西，引入集合论的原因是我们在这门课的学习中会遇到不可数的集合，进行不可数次的运算，为了避免逻辑上的自相矛盾，我们需要引入选择公里。事实上如果你承认一些基本事实，那么即使不学这部分的内容也无伤大雅。但是对于一些有精神洁癖的同学，凡事都想刨根问底，那么跳过这部分直接学测度论可能就会有一些难受（比如用一些给定的集族生成一个<span>sigma</span>代数，它的良定性就需要集合论的相关知识）。我个人建议先开始进入测度论的学习，需要用到集合论的知识时再边用边学。知道后面需要用哪些集合论，然后再回过头补充。毕竟集合论绝不是实分析这门课的重点，如果一上来就纠结在数理逻辑的地方，容易死绕进去。</p><p> </p><p>分析是极限的艺术，我们在数学分析中学过数列的极限，在这里我们要学习集合列的极限（类似地，当极限不存在时我们要定义上极限与下极限）。这样我们在后面学习<span>“</span>测度到积分的提升<span>”</span>时，就可以很自然的打通可测集与特征函数之间的一一对应。也正因为有了这个观点，我们便可以非常清晰的看到：集合是特殊的函数，测度是特殊的积分。</p><p> </p><p><span><strong>测度论：</strong></span></p><p>测度，顾名思义，就是指如何测量一个集合的<span>“</span>度<span>”</span>，这个<span>“</span>度<span>”</span>是<span>“</span>长度<span>”</span>、<span>“</span>面积<span>”</span>、<span>“</span>体积<span>”</span>等概念的推广。<span>Stein</span>和周民强是从欧式空间的<span>Lebesgue</span>测度讲起，它是欧式空间上最自然最<span>canonical</span>的测度，是最符合我们直觉的测度。它的构造测度的步骤是：<span>“</span>（长方体的）体积<span>-&gt;</span>（任意集合的）外测度<span>/</span>内测度<span>-&gt;</span>（<span>Lebesgue</span>可测集的）<span>Lebesgue</span>测度<span>”</span>。<span>Folland</span>则是着重讲解抽象测度，在最一般的集合上建立测度理论，把<span>Lebesgue</span>测度作为一个具体例子。具体步骤为：<span>“</span>（长方体的）体积<span>-&gt;</span>（可构造集的）准测度<span>-&gt;</span>（<span>Borel</span>可测集的）<span>Borel</span>测度<span>-&gt;</span>（<span>Lebesgue</span>可测集的）<span>Lebesgue</span>测度<span>”</span>。这两种方法都是需要熟练掌握的，前者可以推广到几何测度论，后者可以推广到抽象测度论，而在欧氏空间上，<span>Caratheodory</span>定理告诉我们这两种方法构造出来的测度是等价的。我个人更加倾向于<span>Folland</span>的讲法，因为实分析就是要学习最一般的测度，为后续课程打下基础。例如我们在数学分析中学过的<span>Jordan</span>测度，在概率论中学过的概率测度。在以后的学习中，微分流形中会学到李群的<span>Haar</span>测度，几何测度论中会学到<span>Hausdoff</span>测度，黎曼几何中会学到黎曼体积测度，辛几何中会学到<span>Liouville</span>测度，量子混沌中会学到半经典缺失测度，等等。这些都是抽象测度论的具体例子。</p><p> </p><p>在对一个具体的空间定义好了什么是测度后，我们很自然地要考虑更加整体的性质，即把所有带有测度结构的空间放到一起研究。注意到可测函数的复合依然是可测函数，这是一个范畴性质！所以所有带有测度结构的空间放到一起就不单单是一个真类，更是一个范畴！我们会在课堂上听到老师经常讲这样一句话：很多年后你们会忘记实分析这门课具体内容，但你们应该会记得<span>Littleword</span>三原理。这是一种哲学上的观点：可测集差不多是开集，可测函数差不多是连续函数，依测度收敛差不多是一致收敛。如果我们用范畴论的观点去看，<span>Littleword</span>三原理其实就是在比较拓扑范畴与测度范畴的关系。作为范畴中的对象，拓扑结构由开集刻画，测度结构由可测集刻画，<span>Littleword</span>第一原理（也就是<span>Caratheodory</span>定理）描述了这两个结构的关系。作为范畴中的态射，拓扑范畴的态射是连续函数，测度范畴的态射是可测函数，<span>Littleword</span>第二原理（也就是<span>Lusin</span>定理）描述了这两个态射的关系。这两个范畴中又都有极限结构，<span>Littleword</span>第三原理（也就是<span>Egorov</span>定理）描述了这两种收敛的关系。</p><p> </p><p><span><strong>从测度论到积分论的提升：</strong></span></p><p>对比较特殊的欧式空间，我们会学习<span>Lebesgue</span>积分，它是数学分析中黎曼积分的推广。这里大家要理解：数学分析中学的黎曼积分有哪些不足，<span>Lebesgue</span>积分如何弥补了这些不足；黎曼积分中的许多定理如何推广到<span>Lebesgue</span>积分上去。但还是那句话，实分析不要只盯着欧式空间，要学习最一般集合上的积分，才能为后续课程打下基础。在微分流形中会用<span>“</span>形式张量<span>”</span>定义积分，在几何量子化中会对<span>“</span>半密度函数空间<span>”</span>定义积分，在广义函数理论中会利用<span>“</span>积分核<span>”</span>去定义广义算子，等等。</p><p> </p><p>对于最一般的空间，如何从测度定义积分，是实分析积分论要掌握的核心知识。正如前文集合论中所讲，集合一一对应于特征函数，所以我们可以定义特征函数的积分，再由<span>sigma</span>可加性，我们可以定义简单函数的积分，再利用<span>Levi</span>单调收敛定理，我们进而可以定义非负可测函数的积分，最后利用绝对值可积，我们定义一般可测函数的积分。值得注意的是，这一系列提升的过程是非常标准的，它不仅做到了<span>“</span>把测度的定义提升到积分的定义<span>”</span>，这个提升还将测度结构下很多良好的性质与定理保持到了积分中。例如：测度论中的<span>Fatou</span>引理可以提升到积分论中的<span>Fatou</span>引理；测度论中的控制收敛定理可以提升到积分论中的<span>Lebesgue</span>控制收敛定理；测度论中的<span>Fubini</span>定理可以提升到积分论中的<span>Fubini</span>定理<span>……</span>更一般的，比方说一个测度空间满足定理<span>A</span>（这个定理<span>A</span>可以是刚刚提到<span>Fatou</span>引理、控制收敛定理、<span>Fubini</span>定理，也可以是其他的定理或只依赖于测度结构的性质），那么由这个测度结构所定义的积分也必然满足定理<span>A</span>。证明是标准化的，就是走一遍<span>“</span>从测度到积分的提升<span>”</span>，先证明特征函数满足定理<span>A</span>，然后证明简单函数满足定理<span>A</span>，再证明非负可测函数满足定理<span>A</span>，最后证明一般的可测函数满足定理<span>A</span>。</p><p> </p><p><span><strong>从积分的观点看测度：</strong></span></p><p>在学完积分论后，我们以一种事后诸葛亮的方式回头再看测度论：测度论本质就是三条公理，而积分也满足那三条公理。唯一不同的是测度只能为正，而积分可正可负。我们只要将测度的定义拓展到可以取负值，那么测度与积分便统一起来了，<span>Hahn</span>分解定理告诉我们这样的拓展是可以做到的。在这种意义下，积分与测度就是一回事了。就像<span>“</span>鸡<span>”</span>和<span>“</span>蛋<span>”</span>的关系一样，积分可以看成测度（<span>Lebesgue</span>定理），测度也可以定义积分（单调收敛定理），二者相辅相成。从整体的观点看，我们可以把所有的测度结构放到一起（也是所有的积分结构），这便组成一个线性空间。在这个线性空间中任意取出两个不同的测度（记为<span>u</span>、<span>v</span>），由于测度与积分是一回事，我们不妨将<span>u</span>看成测度，将<span>v</span>看成积分，那么一个自然的问题便是：<span>v</span>这个积分是否是由<span>u</span>这个测度提升得到的？<span>Radon-Nikodym</span>分解回答了这个问题，它给出了<span>v</span>的一个直和分解，能由<span>u</span>提升得到的部分（即完全取决于<span>u</span>的部分），和与<span>u</span>相互奇异的部分（也就是与<span>u</span>完全无关的部分）。</p><p> </p><p><span><strong>注记</strong></span><span><strong>2</strong></span><span><strong>：关于泛函分析内容的补充</strong></span></p><p>在函数空间的学习中，我们需要少许泛函分析的知识。正如前言中所说，实分析教会了我们两个研究<span>“</span>函数空间<span>”</span>的工具，泛函分析也是如此。泛函分析的研究对象是<span>“</span>赋范线性空间<span>”</span>与<span>“</span>线性算子<span>”</span>，研究工具是<span>“</span>拓扑<span>”</span>与<span>“</span>算子谱理论<span>”</span>，也就是说，泛函分析提供了另一种研究函数空间的工具。关于这部分，我个人建议，即使本学期没有泛函分析这门课，也希望大家通过业余时间自学一点泛函分析的内容（知道什么是<span>Banach</span>空间、什么是<span>Hilbert</span>空间）。</p><p> </p><p><strong>Lebesgue</strong><span><strong>积分与</strong></span><strong>Riemann</strong><span><strong>积分的比较：</strong></span></p><p>我们在前文提到欧氏空间中的<span>Lebesgue</span>积分是黎曼积分的推广，黎曼可积函数一定<span>Lebesgue</span>可积，<span>L^1[a,b]</span>是<span>R[a,b]</span>的完备化。那么我们很自然地会问，黎曼积分中的一些定理和性质是不是在<span>Lebesgue</span>积分的框架下依然成立呢？我们在数学分析中学过以下四个理论：牛顿莱布尼兹定理、局部积分公式、中值定理、链式法则。在推广到<span>Lebesgue</span>积分论的过程中，最重要的一定要知道，我们是在什么框架下推广的！！！在黎曼积分中，这四套理论都是在<span>C^1[a,b]</span>框架下建立的。在实分析中，局部积分公式可以建立在有界变差函数<span>BV[a,b]</span>的框架中，中值定理可以建立在绝对连续函数<span>AC[a,b]</span>或<span>Lip[a,b]</span>框架中，链式法则可以建立<span>Lip[a,b]</span>框架中，牛顿莱布尼兹定理可以建立在<span>AC[a,b]/R~L^1[a,b]/a.e.</span>，或<span>Lip[a,b]/R~L^\infity[a,b]/a.e.</span>框架下。如果框架选择错误，就会出现反例，例如有界变差函数<span>BV[a,b]</span>的框架中是没有链式法则的，也没牛顿莱布尼兹定理！</p><p> </p><p><span><strong>关于具体的计算：</strong></span></p><p>这门课的计算题大致有三类：计算<span>Lebesgue</span>积分、计算有界变差、计算抽象测度。计算<span>Lebesgue</span>积分的常见方法有换元法、局部积分公式、中值定理、单调收敛定理、<span>Lebesgue</span>控制收敛定理。计算有界变差的常见方法有导函数的黎曼积分、计数函数的积分。计算抽象测度的积分，要么是直接使用定义，要么利用分布函数转化为黎曼积分。每种计算的每种方法都可以在书上找到课后习题，这部分的内容就是靠做题练的，没有捷径。</p><p> </p><p><span><strong>函数空间及其上面的拓扑：</strong></span></p><p>在分析学的大厦中，我们会遇到各种各样的函数空间，这门课我们主要学习两种最为基础的函数空间：<span>Lp</span>空间，它是一个<span>Banach</span>空间；<span>L2</span>空间，它是一个<span>Hilbert</span>空间。<span>Lp</span>空间的对偶，以及各种积分不等式的估计，是这一部分的学习重点。到了这个阶段，大家必须明白：<span>“</span>理解定理<span>”</span>比掌握<span>“</span>定理的证明<span>”</span>更重要。大家必须自己体会为什么这个定理有资格叫作定理，它为什么重要，有哪些应用？<span>“</span>掌握定理本身<span>”</span>比<span>“</span>会做题<span>”</span>更重要，这与我们之前学习的数学分析、线性代数等课，在学习模式上有着本质不同。举个例子：在积分不等式的学习中，我们会遇到一个重要的定理，<span>Riesz-Thorin</span>插值不等式。它的证明用到了调和分析的技巧，在这门课中是不做要求的，而且在后续的学习中，也基本没有地方会用到它的证明。大家初学的时候，可以直接跳过证明，但必须要理解它为什么重要（它刻画了当<span>p</span>在一个区间上连续变化时，一个线性算子在这一系列不同的<span>Lp</span>空间上，有着怎样的联系）以及它有什么应用（在傅立叶变换与广义算子的有界性控制中，起着重要作用）。</p><p> </p><p>研究函数空间的各种拓扑结构之间的关系，事实上就是各种收敛性之间的互推。我们这门课常见的收敛大致有：几乎一致收敛、依测度收敛、几乎处处收敛、依<span>L^1</span>范数收敛、控制收敛<span>……</span>它们之间的关系大致为：</p><p><img src="/uploads/images/46d4a1f1a94af549c2dd89a98f4c94c667bbd77c.webp" style="height:605px; width:1510px"/></p><p>而对于那些没有包含关系的收敛，我们要能举出反例，常见的范例大致有以下几种（应该可以应对<span>90%</span>举反例的题目）：</p><p><img src="/uploads/images/82a375723d94f21f07945b07ff9114ae95e9972d.webp" style="height:1171px; width:822px"/></p><p><span><strong>傅立叶分析与广义函数：</strong></span></p><p>这一部分并不是实分析的标准内容，只是作为实分析的拓展和应用。为我们后续学习更深入的分析课程打基础。这部分的内容包括卷积，带有参数的傅立叶变换，以及在此变换下，函数的<span>Lp</span>范数是如何控制的（这就涉及到一些不等式），以及傅立叶变换有哪些应用（将求导转化为乘法），等等。广义函数也叫<span>“</span>分布理论<span>”</span>，它是一个非常重要的函数空间。当我们把微分算子看成从一个函数空间到另一个函数空间的映射时，我们很自然地会问，这个映射的定义域是什么？紧支撑的光滑函数是很好的函数空间，几乎所有的微分算子都可以作用上去，它包含在这个映射的定义域中。但我们要真正搞清楚这个映射的定义域，就必须扩大我们已知的函数空间。事实上，我们所能涉及到的最大的函数空间就是广义函数空间。例如傅立叶变换的定义域是<span>“</span>缓增分布空间<span>”</span>，半经典拟微分算子的定义域是广义<span>Sobolev</span>空间，等等。这些函数空间都是广义函数空间的子集。学习广义函数，我们所能处理的函数空间就更大了，这也就方便我们进行各种操作。</p><p> </p><p>傅立叶变换其实本质上是一种泛函演算，是对求导算子进行的演算，将微分算子与多项式一一对应起来。算子是复杂的，而多项式是简单的。进一步观察我们可以发现，傅立叶变换将<span>k</span>次求导转化为了<span>x^k</span>，而作为函数我们不需要要求<span>k</span>是整数，所以我们可以对一般的实数<span>k</span>（例如<span>k=1.5</span>），利用傅立叶逆变换，便可得到<span>“</span>求<span>1.5</span>次导数<span>”</span>这种操作，这种对导数的推广就是拟微分算子。学过微分流形的同学，可以进一步学习流形上的广义函数，利用单位分拆的技巧，傅立叶变换可以自然地推广到流形上。</p>
-</div>
-</div>
-<div class="bm-pd-md grey" id="review-28259">
-<span class="small localtime" style="display: none;">03/01/2021 08:27:23</span>
-<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/18/2022 08:17:19</span><span class="small">）</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-28259">39</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(28259)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
-<span id="review-comment-count-28259">2</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-28259" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-28259-comments" style="display:block">
-<div class="panel-body">
-<div class="solid ud-pd-sm">
-<a href="https://icourse.club/user/2384">本系垫底</a>：
+			
+		</select>
+		<span class="rl-pd-sm text-muted">7条点评</span>
+	</div>
+	
+
+    
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-28259">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/2829>PB18纯数-田JH</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：很少</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：很少</li>
+            <li>给分：超好</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-28259">
+            <p><div><p>我是这门课的助教。我于大一下学期学习了实分析<span>(H)</span>的内容（任课老师是任广斌），大二上学期旁听了科大高等实分析的课程（任课老师是赵立丰），并在大三下学期担任了这门课的助教（主讲老师是王兵老师）。作为这门课的助教，我仅以自己的学习经验，给选这门课的学弟学妹们写一些学习建议，希望能给大家提供或多或少的帮助。</p><p> </p><p><span><strong>写在前言：</strong></span></p><p>实分析是近代分析学的起点，在分析学大厦中起着<span>“</span>地基<span>”</span>的作用。我们学习任何一门数学课，都要明确两个问题，一是这门课所要研究的数学对象，二是为了研究这个数学对象我们引进了哪些数学工具。在数学分析中我们的研究对象是一个单独的函数，所使用的数学工具是微分、积分、极限理论。实分析提出了一个全新的观点：我们不再单独研究一个函数，而是把一些函数打包成一个集合，组成<span>“</span>函数空间<span>”</span>这样一个整体。我们的研究对象就是各种<span>“</span>函数空间<span>”</span>，所使用的工具是<span>“</span>测度论<span>”</span>与<span>“</span>积分论<span>”</span>。分析学大厦中的一个重要支柱是利用<span>“</span>函数空间<span>”</span>去解<span>“</span>偏微分方程<span>”</span>，实分析将教会我们两个研究<span>“</span>函数空间<span>”</span>的重要数学工具。所以说，实分析是分析学大厦的一个重要地基。</p><p> </p><p><span><strong>教材与参考资料：</strong></span></p><p><span>Rudin</span>的<span>“</span>实分析与复分析<span>”</span>建议作为参考书，这本书内容很全，但在没有老师讲解的情况下，不太建议当作教材直接阅读（我个人认为不适合用于自学）。<span>Folland</span>写的<span>“</span>实分析<span>”</span>是我所有读过的实分析书中质量最高，写的最好的，也很适合自学，强烈推荐大家认真阅读。但这本书书写的难度对初学者较大，如果大家直接读<span>Folland</span>感觉很困难，可以先看看<span>Stein</span>或周民强的实分析教材找找感觉。王兵老师本学期使用教材为Stein，相关内容我已经发布在课程群。不过以我个人的经验，我还是要建议大家认真阅读一下<span>Folland</span>这本书。</p><p><strong>考核方式：平时成绩（</strong><span><strong>10%</strong></span><strong>）</strong><span><strong>+</strong></span><strong>期中考试（</strong><span><strong>30%</strong></span><strong>）</strong><span><strong>+</strong></span><strong>期末考试（</strong><span><strong>60%</strong></span><strong>）</strong></p><p><strong>总评：由于期中期末的卷面分都不太好，按照原定的比例没有一人能上85，所以在上述考核方式的基础上又进行了调分，最高分95（给了三个），优秀率给到了29.4%，后面能捞的基本也都捞到60，总体来说给分还是相当不错了。</strong></p><p> </p><p><span><strong>实分析这门课的核心内容是：</strong></span></p><p><span><strong>（</strong></span><span><strong>1</strong></span><span><strong>）测度论。</strong></span></p><p><span><strong>（</strong></span><span><strong>2</strong></span><span><strong>）积分论。</strong></span></p><p><span><strong>（</strong></span><span><strong>3</strong></span><span><strong>）利用测度与积分去研究函数空间（主要研究</strong></span><span><strong>Lp</strong></span><span><strong>空间与</strong></span><span><strong>L2</strong></span><span><strong>空间）。</strong></span></p><p><span><strong>（</strong></span><span><strong>4</strong></span><span><strong>）傅立叶分析与广义函数。</strong></span></p><p> </p><p> </p><p><span><strong>集合论的引入：</strong></span></p><p>一些教材会在最开始花笔墨讲解集合论的东西，引入集合论的原因是我们在这门课的学习中会遇到不可数的集合，进行不可数次的运算，为了避免逻辑上的自相矛盾，我们需要引入选择公里。事实上如果你承认一些基本事实，那么即使不学这部分的内容也无伤大雅。但是对于一些有精神洁癖的同学，凡事都想刨根问底，那么跳过这部分直接学测度论可能就会有一些难受（比如用一些给定的集族生成一个<span>sigma</span>代数，它的良定性就需要集合论的相关知识）。我个人建议先开始进入测度论的学习，需要用到集合论的知识时再边用边学。知道后面需要用哪些集合论，然后再回过头补充。毕竟集合论绝不是实分析这门课的重点，如果一上来就纠结在数理逻辑的地方，容易死绕进去。</p><p> </p><p>分析是极限的艺术，我们在数学分析中学过数列的极限，在这里我们要学习集合列的极限（类似地，当极限不存在时我们要定义上极限与下极限）。这样我们在后面学习<span>“</span>测度到积分的提升<span>”</span>时，就可以很自然的打通可测集与特征函数之间的一一对应。也正因为有了这个观点，我们便可以非常清晰的看到：集合是特殊的函数，测度是特殊的积分。</p><p> </p><p><span><strong>测度论：</strong></span></p><p>测度，顾名思义，就是指如何测量一个集合的<span>“</span>度<span>”</span>，这个<span>“</span>度<span>”</span>是<span>“</span>长度<span>”</span>、<span>“</span>面积<span>”</span>、<span>“</span>体积<span>”</span>等概念的推广。<span>Stein</span>和周民强是从欧式空间的<span>Lebesgue</span>测度讲起，它是欧式空间上最自然最<span>canonical</span>的测度，是最符合我们直觉的测度。它的构造测度的步骤是：<span>“</span>（长方体的）体积<span>-&gt;</span>（任意集合的）外测度<span>/</span>内测度<span>-&gt;</span>（<span>Lebesgue</span>可测集的）<span>Lebesgue</span>测度<span>”</span>。<span>Folland</span>则是着重讲解抽象测度，在最一般的集合上建立测度理论，把<span>Lebesgue</span>测度作为一个具体例子。具体步骤为：<span>“</span>（长方体的）体积<span>-&gt;</span>（可构造集的）准测度<span>-&gt;</span>（<span>Borel</span>可测集的）<span>Borel</span>测度<span>-&gt;</span>（<span>Lebesgue</span>可测集的）<span>Lebesgue</span>测度<span>”</span>。这两种方法都是需要熟练掌握的，前者可以推广到几何测度论，后者可以推广到抽象测度论，而在欧氏空间上，<span>Caratheodory</span>定理告诉我们这两种方法构造出来的测度是等价的。我个人更加倾向于<span>Folland</span>的讲法，因为实分析就是要学习最一般的测度，为后续课程打下基础。例如我们在数学分析中学过的<span>Jordan</span>测度，在概率论中学过的概率测度。在以后的学习中，微分流形中会学到李群的<span>Haar</span>测度，几何测度论中会学到<span>Hausdoff</span>测度，黎曼几何中会学到黎曼体积测度，辛几何中会学到<span>Liouville</span>测度，量子混沌中会学到半经典缺失测度，等等。这些都是抽象测度论的具体例子。</p><p> </p><p>在对一个具体的空间定义好了什么是测度后，我们很自然地要考虑更加整体的性质，即把所有带有测度结构的空间放到一起研究。注意到可测函数的复合依然是可测函数，这是一个范畴性质！所以所有带有测度结构的空间放到一起就不单单是一个真类，更是一个范畴！我们会在课堂上听到老师经常讲这样一句话：很多年后你们会忘记实分析这门课具体内容，但你们应该会记得<span>Littleword</span>三原理。这是一种哲学上的观点：可测集差不多是开集，可测函数差不多是连续函数，依测度收敛差不多是一致收敛。如果我们用范畴论的观点去看，<span>Littleword</span>三原理其实就是在比较拓扑范畴与测度范畴的关系。作为范畴中的对象，拓扑结构由开集刻画，测度结构由可测集刻画，<span>Littleword</span>第一原理（也就是<span>Caratheodory</span>定理）描述了这两个结构的关系。作为范畴中的态射，拓扑范畴的态射是连续函数，测度范畴的态射是可测函数，<span>Littleword</span>第二原理（也就是<span>Lusin</span>定理）描述了这两个态射的关系。这两个范畴中又都有极限结构，<span>Littleword</span>第三原理（也就是<span>Egorov</span>定理）描述了这两种收敛的关系。</p><p> </p><p><span><strong>从测度论到积分论的提升：</strong></span></p><p>对比较特殊的欧式空间，我们会学习<span>Lebesgue</span>积分，它是数学分析中黎曼积分的推广。这里大家要理解：数学分析中学的黎曼积分有哪些不足，<span>Lebesgue</span>积分如何弥补了这些不足；黎曼积分中的许多定理如何推广到<span>Lebesgue</span>积分上去。但还是那句话，实分析不要只盯着欧式空间，要学习最一般集合上的积分，才能为后续课程打下基础。在微分流形中会用<span>“</span>形式张量<span>”</span>定义积分，在几何量子化中会对<span>“</span>半密度函数空间<span>”</span>定义积分，在广义函数理论中会利用<span>“</span>积分核<span>”</span>去定义广义算子，等等。</p><p> </p><p>对于最一般的空间，如何从测度定义积分，是实分析积分论要掌握的核心知识。正如前文集合论中所讲，集合一一对应于特征函数，所以我们可以定义特征函数的积分，再由<span>sigma</span>可加性，我们可以定义简单函数的积分，再利用<span>Levi</span>单调收敛定理，我们进而可以定义非负可测函数的积分，最后利用绝对值可积，我们定义一般可测函数的积分。值得注意的是，这一系列提升的过程是非常标准的，它不仅做到了<span>“</span>把测度的定义提升到积分的定义<span>”</span>，这个提升还将测度结构下很多良好的性质与定理保持到了积分中。例如：测度论中的<span>Fatou</span>引理可以提升到积分论中的<span>Fatou</span>引理；测度论中的控制收敛定理可以提升到积分论中的<span>Lebesgue</span>控制收敛定理；测度论中的<span>Fubini</span>定理可以提升到积分论中的<span>Fubini</span>定理<span>……</span>更一般的，比方说一个测度空间满足定理<span>A</span>（这个定理<span>A</span>可以是刚刚提到<span>Fatou</span>引理、控制收敛定理、<span>Fubini</span>定理，也可以是其他的定理或只依赖于测度结构的性质），那么由这个测度结构所定义的积分也必然满足定理<span>A</span>。证明是标准化的，就是走一遍<span>“</span>从测度到积分的提升<span>”</span>，先证明特征函数满足定理<span>A</span>，然后证明简单函数满足定理<span>A</span>，再证明非负可测函数满足定理<span>A</span>，最后证明一般的可测函数满足定理<span>A</span>。</p><p> </p><p><span><strong>从积分的观点看测度：</strong></span></p><p>在学完积分论后，我们以一种事后诸葛亮的方式回头再看测度论：测度论本质就是三条公理，而积分也满足那三条公理。唯一不同的是测度只能为正，而积分可正可负。我们只要将测度的定义拓展到可以取负值，那么测度与积分便统一起来了，<span>Hahn</span>分解定理告诉我们这样的拓展是可以做到的。在这种意义下，积分与测度就是一回事了。就像<span>“</span>鸡<span>”</span>和<span>“</span>蛋<span>”</span>的关系一样，积分可以看成测度（<span>Lebesgue</span>定理），测度也可以定义积分（单调收敛定理），二者相辅相成。从整体的观点看，我们可以把所有的测度结构放到一起（也是所有的积分结构），这便组成一个线性空间。在这个线性空间中任意取出两个不同的测度（记为<span>u</span>、<span>v</span>），由于测度与积分是一回事，我们不妨将<span>u</span>看成测度，将<span>v</span>看成积分，那么一个自然的问题便是：<span>v</span>这个积分是否是由<span>u</span>这个测度提升得到的？<span>Radon-Nikodym</span>分解回答了这个问题，它给出了<span>v</span>的一个直和分解，能由<span>u</span>提升得到的部分（即完全取决于<span>u</span>的部分），和与<span>u</span>相互奇异的部分（也就是与<span>u</span>完全无关的部分）。</p><p> </p><p><span><strong>注记</strong></span><span><strong>2</strong></span><span><strong>：关于泛函分析内容的补充</strong></span></p><p>在函数空间的学习中，我们需要少许泛函分析的知识。正如前言中所说，实分析教会了我们两个研究<span>“</span>函数空间<span>”</span>的工具，泛函分析也是如此。泛函分析的研究对象是<span>“</span>赋范线性空间<span>”</span>与<span>“</span>线性算子<span>”</span>，研究工具是<span>“</span>拓扑<span>”</span>与<span>“</span>算子谱理论<span>”</span>，也就是说，泛函分析提供了另一种研究函数空间的工具。关于这部分，我个人建议，即使本学期没有泛函分析这门课，也希望大家通过业余时间自学一点泛函分析的内容（知道什么是<span>Banach</span>空间、什么是<span>Hilbert</span>空间）。</p><p> </p><p><strong>Lebesgue</strong><span><strong>积分与</strong></span><strong>Riemann</strong><span><strong>积分的比较：</strong></span></p><p>我们在前文提到欧氏空间中的<span>Lebesgue</span>积分是黎曼积分的推广，黎曼可积函数一定<span>Lebesgue</span>可积，<span>L^1[a,b]</span>是<span>R[a,b]</span>的完备化。那么我们很自然地会问，黎曼积分中的一些定理和性质是不是在<span>Lebesgue</span>积分的框架下依然成立呢？我们在数学分析中学过以下四个理论：牛顿莱布尼兹定理、局部积分公式、中值定理、链式法则。在推广到<span>Lebesgue</span>积分论的过程中，最重要的一定要知道，我们是在什么框架下推广的！！！在黎曼积分中，这四套理论都是在<span>C^1[a,b]</span>框架下建立的。在实分析中，局部积分公式可以建立在有界变差函数<span>BV[a,b]</span>的框架中，中值定理可以建立在绝对连续函数<span>AC[a,b]</span>或<span>Lip[a,b]</span>框架中，链式法则可以建立<span>Lip[a,b]</span>框架中，牛顿莱布尼兹定理可以建立在<span>AC[a,b]/R~L^1[a,b]/a.e.</span>，或<span>Lip[a,b]/R~L^\infity[a,b]/a.e.</span>框架下。如果框架选择错误，就会出现反例，例如有界变差函数<span>BV[a,b]</span>的框架中是没有链式法则的，也没牛顿莱布尼兹定理！</p><p> </p><p><span><strong>关于具体的计算：</strong></span></p><p>这门课的计算题大致有三类：计算<span>Lebesgue</span>积分、计算有界变差、计算抽象测度。计算<span>Lebesgue</span>积分的常见方法有换元法、局部积分公式、中值定理、单调收敛定理、<span>Lebesgue</span>控制收敛定理。计算有界变差的常见方法有导函数的黎曼积分、计数函数的积分。计算抽象测度的积分，要么是直接使用定义，要么利用分布函数转化为黎曼积分。每种计算的每种方法都可以在书上找到课后习题，这部分的内容就是靠做题练的，没有捷径。</p><p> </p><p><span><strong>函数空间及其上面的拓扑：</strong></span></p><p>在分析学的大厦中，我们会遇到各种各样的函数空间，这门课我们主要学习两种最为基础的函数空间：<span>Lp</span>空间，它是一个<span>Banach</span>空间；<span>L2</span>空间，它是一个<span>Hilbert</span>空间。<span>Lp</span>空间的对偶，以及各种积分不等式的估计，是这一部分的学习重点。到了这个阶段，大家必须明白：<span>“</span>理解定理<span>”</span>比掌握<span>“</span>定理的证明<span>”</span>更重要。大家必须自己体会为什么这个定理有资格叫作定理，它为什么重要，有哪些应用？<span>“</span>掌握定理本身<span>”</span>比<span>“</span>会做题<span>”</span>更重要，这与我们之前学习的数学分析、线性代数等课，在学习模式上有着本质不同。举个例子：在积分不等式的学习中，我们会遇到一个重要的定理，<span>Riesz-Thorin</span>插值不等式。它的证明用到了调和分析的技巧，在这门课中是不做要求的，而且在后续的学习中，也基本没有地方会用到它的证明。大家初学的时候，可以直接跳过证明，但必须要理解它为什么重要（它刻画了当<span>p</span>在一个区间上连续变化时，一个线性算子在这一系列不同的<span>Lp</span>空间上，有着怎样的联系）以及它有什么应用（在傅立叶变换与广义算子的有界性控制中，起着重要作用）。</p><p> </p><p>研究函数空间的各种拓扑结构之间的关系，事实上就是各种收敛性之间的互推。我们这门课常见的收敛大致有：几乎一致收敛、依测度收敛、几乎处处收敛、依<span>L^1</span>范数收敛、控制收敛<span>……</span>它们之间的关系大致为：</p><p><img src="/uploads/images/46d4a1f1a94af549c2dd89a98f4c94c667bbd77c.jpg" style="height:605px; width:1510px"></p><p>而对于那些没有包含关系的收敛，我们要能举出反例，常见的范例大致有以下几种（应该可以应对<span>90%</span>举反例的题目）：</p><p><img src="/uploads/images/82a375723d94f21f07945b07ff9114ae95e9972d.jpg" style="height:1171px; width:822px"></p><p><span><strong>傅立叶分析与广义函数：</strong></span></p><p>这一部分并不是实分析的标准内容，只是作为实分析的拓展和应用。为我们后续学习更深入的分析课程打基础。这部分的内容包括卷积，带有参数的傅立叶变换，以及在此变换下，函数的<span>Lp</span>范数是如何控制的（这就涉及到一些不等式），以及傅立叶变换有哪些应用（将求导转化为乘法），等等。广义函数也叫<span>“</span>分布理论<span>”</span>，它是一个非常重要的函数空间。当我们把微分算子看成从一个函数空间到另一个函数空间的映射时，我们很自然地会问，这个映射的定义域是什么？紧支撑的光滑函数是很好的函数空间，几乎所有的微分算子都可以作用上去，它包含在这个映射的定义域中。但我们要真正搞清楚这个映射的定义域，就必须扩大我们已知的函数空间。事实上，我们所能涉及到的最大的函数空间就是广义函数空间。例如傅立叶变换的定义域是<span>“</span>缓增分布空间<span>”</span>，半经典拟微分算子的定义域是广义<span>Sobolev</span>空间，等等。这些函数空间都是广义函数空间的子集。学习广义函数，我们所能处理的函数空间就更大了，这也就方便我们进行各种操作。</p><p> </p><p>傅立叶变换其实本质上是一种泛函演算，是对求导算子进行的演算，将微分算子与多项式一一对应起来。算子是复杂的，而多项式是简单的。进一步观察我们可以发现，傅立叶变换将<span>k</span>次求导转化为了<span>x^k</span>，而作为函数我们不需要要求<span>k</span>是整数，所以我们可以对一般的实数<span>k</span>（例如<span>k=1.5</span>），利用傅立叶逆变换，便可得到<span>“</span>求<span>1.5</span>次导数<span>”</span>这种操作，这种对导数的推广就是拟微分算子。学过微分流形的同学，可以进一步学习流形上的广义函数，利用单位分拆的技巧，傅立叶变换可以自然地推广到流形上。</p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-28259">
+            <span class="small localtime" style="display: none;">03/01/2021 08:27:23</span>
+	    
+	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/18/2022 08:17:19</span><span class="small">）</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-28259">39</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(28259)">
+              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-28259">2</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-28259" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-28259-comments" class="panel panel-default" style="display:block">
+            <div class="panel-body">
+              
+              <div class="solid ud-pd-sm">
+                  <a href="/user/2384">本系垫底</a>：
                   <span>斗胆在此留言：ts+ys(zlf评课区)的两条实分析评论，堪称切中肯綮
 </span>
-<span class="text-muted small float-right">
-<span class="localtime" style="display: none;">03/03/2021 04:12:32</span>
-</span>
-</div>
-<div class="solid ud-pd-sm">
-<a href="https://icourse.club/user/4680">关于人在科大却想磕清北cp这件事</a>：
+                  <span class="text-muted small float-right">
+                    
+                    
+                    <span class="localtime" style="display: none;">03/03/2021 04:12:32</span>
+                  </span>
+              </div>
+              
+              <div class="solid ud-pd-sm">
+                  <a href="/user/4680">关于人在科大却想磕清北cp这件事</a>：
                   <span>补充一句，如果不是这个方向的同学不一定要看folland（yh老师的意见），他觉得难度太高，（本人也看不下去）
 </span>
-<span class="text-muted small float-right">
-<span class="localtime" style="display: none;">04/13/2022 14:12:39</span>
-</span>
-</div>
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-33882">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/3091">不能承受的gpa之轻</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：困难</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：一般</li>
-<li class="right-mg-md">收获大小：一般</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：困难</li>
-<li>作业：很少</li>
-<li>给分：一般</li>
-<li>收获：一般</li>
-</ul>
-<div class="review-content" id="review-content-33882">
-<p></p><div><h3>课程内容</h3><p>没太多好说的，王老师基本完全按照Stein上的内容讲的，就是测度、积分、微分，再加一丁点抽象测度，个别定理的证明采用了周民强上的方法，补充了依测度收敛（这应该都算不上补充），没有讲L<sup>p</sup>空间。可能是中间有几次课节奏太慢了导致最后抽象测度讲的内容实在太少，最后考试也没涉及。</p><p>王老师上课全英文板书，大部分时间是脱稿的，会把一些宏观的思想讲得很清楚，但在证明一些定理时可能会在一些细节的验证上卡住，导致上课的节奏被拖慢，课程的流畅性降低。大部分证明讲得比较细致，有些重复使用的技术用到时也会再写出来，王老师对此的解释是“如果你觉得我写的这些都是废话，那就说明这块内容你掌握了”。课程作业非常少，每周就四五道题，但王老师在课上曾指出如果你想学好这门课，那就把Stein上的题全做了。个人认为王老师这学期讲得最好的一节课就是讲度量和测度的关系，引申到曲面上的度量，然后介绍Gauss绝妙定理的那节课（就是有人来拍照录像的那次）</p><h3>关于考试</h3><p>期中考试考前两章（测度和积分），王老师觉得卷子出得挺简单，结果卷面成绩及格的不到30人（这个班总共121人）。期末考试考讲过的所有内容（本来说有一道抽象测度的题选做但最后也没考），有一位助教参与了出题，试卷难度整体降低了，具体成绩分布未知，但从均分来看并未改善太多。从题目本身来说并未涉及偏题、怪题以及技巧性太强的题。</p><h3>关于给分</h3><p>从我自己的成绩来看给分应该算挺好的了，优秀率29.4%（算法是优秀率上限×出勤率），但王老师好像只给了三个95以及好多个94，助教对此的解释是“4.3是一个非常严肃的事情，必须非常非常优秀才能拿到”。</p><p> </p><p>总的来说这学期王老师的课没能达到我的期望值，只能算是中规中矩，但毕竟这是王老师第一次带本科生课，要求也不能太高。</p>
-</div>
-</div>
-<div class="bm-pd-md grey" id="review-33882">
-<span class="small localtime" style="display: none;">07/17/2021 09:38:37</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-33882">3</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(33882)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-33882">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-33882" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-33882-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-36021">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/4004">好困不想学习</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：中等</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：中等</li>
-<li>作业：很少</li>
-<li>给分：超好</li>
-<li>收获：很多</li>
-</ul>
-<div class="review-content" id="review-content-36021">
-<p></p><div><p>       总体上还是很推荐的。</p><p>       老师的水平非常高，讲课思路很清晰，虽然板书一开始有点乱看不懂，后面慢慢适应了也还可以。实分析之前零零碎碎学过一些，但跟着老师学过一遍之后才知道自己学的有多拉跨。。。</p><p>       作业大概是大二下几门课里最少的了吧，每周最多4道题，全都出自Stein习题。</p><p>       期中期末难但也没有特别难，虽然改卷好严，但是最后的总评却是出乎意料的高。</p>
-</div>
-</div>
-<div class="bm-pd-md grey" id="review-36021">
-<span class="small localtime" style="display: none;">08/03/2021 19:06:54</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-36021">1</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(36021)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-36021">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-36021" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-36021-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-50146">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/6558">急行军</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：简单</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：一般</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：简单</li>
-<li>作业：很少</li>
-<li>给分：超好</li>
-<li>收获：一般</li>
-</ul>
-<div class="review-content" id="review-content-50146">
-<p></p><p>老师很奶，优秀率给了30%出头，老师讲课比较慢，比较细致，但偶尔的时候会挂黑板哈哈哈，比较适合慢慢学的同学</p>
-</div>
-<div class="bm-pd-md grey" id="review-50146">
-<span class="small localtime" style="display: none;">07/09/2022 14:35:28</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-50146">0</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(50146)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-50146">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-50146" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-50146-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-47843">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/4293">不会起名字</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：中等</li>
-<li class="right-mg-md">作业多少：很少</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：中等</li>
-<li>作业：很少</li>
-<li>给分：超好</li>
-<li>收获：很多</li>
-</ul>
-<div class="review-content" id="review-content-47843">
-<p></p><p>老师真的奶！给分超好！推荐选课</p>
-</div>
-<div class="bm-pd-md grey" id="review-47843">
-<span class="small localtime" style="display: none;">06/24/2022 09:06:29</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-47843">0</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(47843)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-47843">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-47843" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-47843-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-34393">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/5216">人类低质量舔狗</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：中等</li>
-<li class="right-mg-md">作业多少：中等</li>
-<li class="right-mg-md">给分好坏：超好</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：中等</li>
-<li>作业：中等</li>
-<li>给分：超好</li>
-<li>收获：很多</li>
-</ul>
-<div class="review-content" id="review-content-34393">
-<p></p><p>王老师上课是出奇的认真负责，板书的进步肉眼可见，给分好奶</p>
-</div>
-<div class="bm-pd-md grey" id="review-34393">
-<span class="small localtime" style="display: none;">07/21/2021 09:52:22</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-34393">0</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(34393)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-34393">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-34393" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-34393-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-<div class="ud-pd-md dashed review" id="review-31348">
-<div class="blue ud-pd-sm">
-<span class="right-pd-sm px16">
-<a href="https://icourse.club/user/3071">老衲法号乱来</a>
-</span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
-<span class="left-pd-md">2021春</span>
-<span class="pull-right">
-</span>
-</div>
-<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-<li class="right-mg-md">课程难度：困难</li>
-<li class="right-mg-md">作业多少：中等</li>
-<li class="right-mg-md">给分好坏：一般</li>
-<li class="right-mg-md">收获大小：很多</li>
-</ul>
-<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-<li>难度：困难</li>
-<li>作业：中等</li>
-<li>给分：一般</li>
-<li>收获：很多</li>
-</ul>
-<div class="review-content" id="review-content-31348">
-<p></p><div><p>老师很好 助教很强 我比较菜 期中主要不让出往年题 然后起飞</p><p>期末出题还好，因为实分析确实不是一门很简单的学科，有的时候背书确实能方便理解许多</p><p>最后，老师调分了，给的很好，很努力捞我了，感恩</p>
-</div>
-</div>
-<div class="bm-pd-md grey" id="review-31348">
-<span class="small localtime" style="display: none;">05/06/2021 03:29:36</span>
-<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">01/13/2022 14:13:11</span><span class="small">）</span>
-<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
-<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
-<span id="review-upvote-count-31348">0</span>
-</a>
-<a class="nounderline" href="javascript: show_review_comments(31348)">
-<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
-<span id="review-comment-count-31348">0</span>
-</a>
-<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-31348" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
-<span class="pull-right">
-</span>
-</div>
-<div class="panel panel-default" id="review-31348-comments" style="display:none">
-<div class="panel-body">
-<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
-</div>
-</div>
-</div>
-</div>
-<!-- 右边栏 -->
-<div class="col-md-4 rl-pd-lg">
-<div class="ud-pd-md dashed">
-<img class="avatar-lg circle" src="/uploads/images/59a8546d6608ff069eb1c3fb25085e7e1ab9072f.webp"/>
-<h3 class="blue"><a href="https://icourse.club/teacher/13829/">王兵</a></h3>
-<p></p>
-<p>教师主页：
+                  <span class="text-muted small float-right">
+                    
+                    
+                    <span class="localtime" style="display: none;">04/13/2022 14:12:39</span>
+                  </span>
+              </div>
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-33882">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/3091>不能承受的gpa之轻</a>
+              
+            </span>
+
             
-            <a href="http://staff.ustc.edu.cn/~topspin/index-c.html" target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-link"></span> 戳这里</a>
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：困难</li>
+            <li class="right-mg-md">作业多少：很少</li>
+            <li class="right-mg-md">给分好坏：一般</li>
+            <li class="right-mg-md">收获大小：一般</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：困难</li>
+            <li>作业：很少</li>
+            <li>给分：一般</li>
+            <li>收获：一般</li>
+          </ul>
+	  <div class="review-content" id="review-content-33882">
+            <p><div><h3>课程内容</h3><p>没太多好说的，王老师基本完全按照Stein上的内容讲的，就是测度、积分、微分，再加一丁点抽象测度，个别定理的证明采用了周民强上的方法，补充了依测度收敛（这应该都算不上补充），没有讲L<sup>p</sup>空间。可能是中间有几次课节奏太慢了导致最后抽象测度讲的内容实在太少，最后考试也没涉及。</p><p>王老师上课全英文板书，大部分时间是脱稿的，会把一些宏观的思想讲得很清楚，但在证明一些定理时可能会在一些细节的验证上卡住，导致上课的节奏被拖慢，课程的流畅性降低。大部分证明讲得比较细致，有些重复使用的技术用到时也会再写出来，王老师对此的解释是“如果你觉得我写的这些都是废话，那就说明这块内容你掌握了”。课程作业非常少，每周就四五道题，但王老师在课上曾指出如果你想学好这门课，那就把Stein上的题全做了。个人认为王老师这学期讲得最好的一节课就是讲度量和测度的关系，引申到曲面上的度量，然后介绍Gauss绝妙定理的那节课（就是有人来拍照录像的那次）</p><h3>关于考试</h3><p>期中考试考前两章（测度和积分），王老师觉得卷子出得挺简单，结果卷面成绩及格的不到30人（这个班总共121人）。期末考试考讲过的所有内容（本来说有一道抽象测度的题选做但最后也没考），有一位助教参与了出题，试卷难度整体降低了，具体成绩分布未知，但从均分来看并未改善太多。从题目本身来说并未涉及偏题、怪题以及技巧性太强的题。</p><h3>关于给分</h3><p>从我自己的成绩来看给分应该算挺好的了，优秀率29.4%（算法是优秀率上限×出勤率），但王老师好像只给了三个95以及好多个94，助教对此的解释是“4.3是一个非常严肃的事情，必须非常非常优秀才能拿到”。</p><p> </p><p>总的来说这学期王老师的课没能达到我的期望值，只能算是中规中矩，但毕竟这是王老师第一次带本科生课，要求也不能太高。</p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-33882">
+            <span class="small localtime" style="display: none;">07/17/2021 09:38:37</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-33882">3</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(33882)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-33882">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-33882" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-33882-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-36021">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/4004>好困不想学习</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：很少</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：很少</li>
+            <li>给分：超好</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-36021">
+            <p><div><p>       总体上还是很推荐的。</p><p>       老师的水平非常高，讲课思路很清晰，虽然板书一开始有点乱看不懂，后面慢慢适应了也还可以。实分析之前零零碎碎学过一些，但跟着老师学过一遍之后才知道自己学的有多拉跨。。。</p><p>       作业大概是大二下几门课里最少的了吧，每周最多4道题，全都出自Stein习题。</p><p>       期中期末难但也没有特别难，虽然改卷好严，但是最后的总评却是出乎意料的高。</p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-36021">
+            <span class="small localtime" style="display: none;">08/03/2021 19:06:54</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-36021">1</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(36021)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-36021">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-36021" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-36021-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-50146">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/6558>急行军</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：简单</li>
+            <li class="right-mg-md">作业多少：很少</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：一般</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：简单</li>
+            <li>作业：很少</li>
+            <li>给分：超好</li>
+            <li>收获：一般</li>
+          </ul>
+	  <div class="review-content" id="review-content-50146">
+            <p><p>老师很奶，优秀率给了30%出头，老师讲课比较慢，比较细致，但偶尔的时候会挂黑板哈哈哈，比较适合慢慢学的同学</p>
 </p>
-</div>
-<div class="ud-pd-md dashed">
-<h4 class="blue">其他老师的「实分析」课
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-50146">
+            <span class="small localtime" style="display: none;">07/09/2022 14:35:28</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-50146">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(50146)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-50146">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-50146" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-50146-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-47843">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/4293>不会起名字</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：很少</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：很少</li>
+            <li>给分：超好</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-47843">
+            <p><p>老师真的奶！给分超好！推荐选课</p>
+</p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-47843">
+            <span class="small localtime" style="display: none;">06/24/2022 09:06:29</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-47843">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(47843)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-47843">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-47843" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-47843-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-34393">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/5216>人类低质量舔狗</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：中等</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：中等</li>
+            <li>给分：超好</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-34393">
+            <p><p>王老师上课是出奇的认真负责，板书的进步肉眼可见，给分好奶</p>
+</p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-34393">
+            <span class="small localtime" style="display: none;">07/21/2021 09:52:22</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-34393">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(34393)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-34393">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-34393" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-34393-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-31348">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/3071>老衲法号乱来</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021春</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：困难</li>
+            <li class="right-mg-md">作业多少：中等</li>
+            <li class="right-mg-md">给分好坏：一般</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：困难</li>
+            <li>作业：中等</li>
+            <li>给分：一般</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-31348">
+            <p><div><p>老师很好 助教很强 我比较菜 期中主要不让出往年题 然后起飞</p><p>期末出题还好，因为实分析确实不是一门很简单的学科，有的时候背书确实能方便理解许多</p><p>最后，老师调分了，给的很好，很努力捞我了，感恩</p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-31348">
+            <span class="small localtime" style="display: none;">05/06/2021 03:29:36</span>
+	    
+	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">01/13/2022 14:13:11</span><span class="small">）</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-31348">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(31348)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-31348">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/19974/#review-31348" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-31348-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+        
+      </div>
+
+
+
+      <!-- 右边栏 -->
+
+      <div class="col-md-4 rl-pd-lg">
+        
+        <div class="ud-pd-md dashed">
+          <img class="avatar-lg circle" src="/uploads/images/59a8546d6608ff069eb1c3fb25085e7e1ab9072f.jpg"/>
+          
+          <h3 class="blue"><a href="/teacher/13829/">王兵</a></h3>
+          <p></p>
+          <p>教师主页：
+            
+            <a href="http://staff.ustc.edu.cn/~topspin/index-c.html" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> 戳这里</a>
+            
+          </p>
+        </div>
+        
+        
+
+        <div class="ud-pd-md dashed">
+          <h4 class="blue">其他老师的「实分析」课</h5>
           
           
           <div class="ud-pd-sm">
-<a href="https://icourse.club/course/2059/">殷浩</a>
-<span>9.7</span>
-<span class="grey">(14)</span>
-<span class="small grey align-bottom float-right">2022春 2014春...</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/14341/">许小卫</a>
-<span>9.8</span>
-<span class="grey">(9)</span>
-<span class="small grey align-bottom float-right">2019春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/2058/">赵立丰</a>
-<span>9.2</span>
-<span class="grey">(13)</span>
-<span class="small grey align-bottom float-right">2020春 2017春...</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/2060/">郭经纬</a>
-<span>9.2</span>
-<span class="grey">(13)</span>
-<span class="small grey align-bottom float-right">2021春 2020春...</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/12373/">刘聪文</a>
-<span>10.0</span>
-<span class="grey">(4)</span>
-<span class="small grey align-bottom float-right">2019春 2016春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/13835/">王作勤</a>
-<span>10.0</span>
-<span class="grey">(4)</span>
-<span class="small grey align-bottom float-right">2018春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/13836/">麻希南</a>
-<span>8.8</span>
-<span class="grey">(5)</span>
-<span class="small grey align-bottom float-right">2018春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/21352/">王兵, 李宇</a>
-<span>10.0</span>
-<span class="grey">(1)</span>
-<span class="small grey align-bottom float-right">2022春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/2057/">许斌</a>
-<span class="small grey align-bottom float-right">2012春</span>
-</div>
-</h4></div>
-<div class="ud-pd-md dashed">
-<h4 class="blue">王兵老师的其他课
+            <a href="/course/2059/">殷浩</a>
+            
+            <span>9.7</span>
+            <span class="grey">(14)</span>
+            
+            <span class="small grey align-bottom  float-right">2022春 2014春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/14341/">许小卫</a>
+            
+            <span>9.8</span>
+            <span class="grey">(9)</span>
+            
+            <span class="small grey align-bottom  float-right">2019春</span>
+          </div>
+          
           
           
           
           
           <div class="ud-pd-sm">
-<a href="https://icourse.club/course/13048/">化学物理进展</a>
-<span>10.0</span>
-<span class="grey">(2)</span>
-<span class="small grey align-bottom float-right">2018春 2016春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/21352/">实分析</a>
-<span>10.0</span>
-<span class="grey">(1)</span>
-<span class="small grey align-bottom float-right">2022春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/1119/">化学物理进展</a>
-<span class="small grey align-bottom float-right">2014春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/12709/">化学物理进展</a>
-<span class="small grey align-bottom float-right">2015春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/3070/">新生“科学与社会”研讨课</a>
-<span class="small grey align-bottom float-right">2020春 2019秋...</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/18812/">微分几何选讲</a>
-<span class="small grey align-bottom float-right">2020春 2019春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/18918/">纯粹数学前沿</a>
-<span class="small grey align-bottom float-right">2020夏</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/19300/">“科学与社会”研讨课</a>
-<span class="small grey align-bottom float-right">2022春 2021秋...</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/20126/">科技写作与表达</a>
-<span class="small grey align-bottom float-right">2021春</span>
-</div>
-<div class="ud-pd-sm">
-<a href="https://icourse.club/course/21910/">泛函分析</a>
-<span class="small grey align-bottom float-right">2022秋</span>
-</div>
-</h4></div>
-</div>
-</div> <!-- row -->
-</div> <!-- float-element  -->
-</div> <!-- container -->
-<a href="#" id="gotop">
-<span>▲</span>
+            <a href="/course/2058/">赵立丰</a>
+            
+            <span>9.2</span>
+            <span class="grey">(13)</span>
+            
+            <span class="small grey align-bottom  float-right">2020春 2017春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/2060/">郭经纬</a>
+            
+            <span>9.2</span>
+            <span class="grey">(13)</span>
+            
+            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/12373/">刘聪文</a>
+            
+            <span>10.0</span>
+            <span class="grey">(4)</span>
+            
+            <span class="small grey align-bottom  float-right">2019春 2016春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/13835/">王作勤</a>
+            
+            <span>10.0</span>
+            <span class="grey">(4)</span>
+            
+            <span class="small grey align-bottom  float-right">2018春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/13836/">麻希南</a>
+            
+            <span>8.8</span>
+            <span class="grey">(5)</span>
+            
+            <span class="small grey align-bottom  float-right">2018春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/21352/">王兵, 李宇</a>
+            
+            <span>10.0</span>
+            <span class="grey">(1)</span>
+            
+            <span class="small grey align-bottom  float-right">2022春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/2057/">许斌</a>
+            
+            <span class="small grey align-bottom  float-right">2012春</span>
+          </div>
+          
+          
+        </div>
+
+        
+        <div class="ud-pd-md dashed">
+          <h4 class="blue">王兵老师的其他课</h5>
+          
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/13048/">化学物理进展</a>
+            
+            <span>10.0</span>
+            <span class="grey">(2)</span>
+            
+            <span class="small grey align-bottom  float-right">2018春 2016春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/21352/">实分析</a>
+            
+            <span>10.0</span>
+            <span class="grey">(1)</span>
+            
+            <span class="small grey align-bottom  float-right">2022春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/1119/">化学物理进展</a>
+            
+            <span class="small grey align-bottom  float-right">2014春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/12709/">化学物理进展</a>
+            
+            <span class="small grey align-bottom  float-right">2015春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/3070/">新生“科学与社会”研讨课</a>
+            
+            <span class="small grey align-bottom  float-right">2020春 2019秋...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/18812/">微分几何选讲</a>
+            
+            <span class="small grey align-bottom  float-right">2020春 2019春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/18918/">纯粹数学前沿</a>
+            
+            <span class="small grey align-bottom  float-right">2020夏</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/19300/">“科学与社会”研讨课</a>
+            
+            <span class="small grey align-bottom  float-right">2022春 2021秋...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/20126/">科技写作与表达</a>
+            
+            <span class="small grey align-bottom  float-right">2021春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/21910/">泛函分析</a>
+            
+            <span class="small grey align-bottom  float-right">2022秋</span>
+          </div>
+          
+          
+        </div>
+        
+      </div>
+    </div> <!-- row -->
+  </div>  <!-- float-element  -->
+</div>  <!-- container -->
+
+<a id="gotop" href="#">
+  <span>▲</span>
 </a>
-<div id="push"></div>
-</div><!-- ./wrap -->
+
+
+  <div id="push"></div>
+  </div><!-- ./wrap -->
 <div class="container" id="footer">
-<div class="ud-pd-sm">
-<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
-<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
-<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
-<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
-<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
-<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
-<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
-<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
-<span class="float-right hidden">
-<a class="right-pd-sm">中文</a>
-<a class="left-pd-sm">English</a>
-</span>
-</div>
-<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
+    <div class="ud-pd-sm">
+      <a class="right-pd-md" href='/about/'>关于我们</a>
+      <a class="right-pd-md" href='/community-rules/'>社区规范</a>
+      <a class="right-pd-md" href='/report-review/'>投诉点评</a>
+      <a class="right-pd-md" href='/stats/'>站点统计</a>
+      <a class="right-pd-md" href='/stats/rankings/'>排行榜</a>
+      <a class="right-pd-md" href='/announcements/'>公告栏</a>
+      <a class="right-pd-md hidden" href='/copyright/'>版权与隐私</a>
+      <a class="right-pd-md hidden" href='/report-bug/'>发现漏洞</a>
+      
+      <span class="float-right hidden">
+        <a class="right-pd-sm">中文</a>
+        <a class="left-pd-sm">English</a>
+      </span>
+    </div>
+    <span class="footer-text text-muted">Copyright &copy; 2022 USTC评课社区</span>
 </div><!-- end container -->
 </body>
-<!-- Bootstrap core JavaScript
+
+
+
+
+  <!-- Bootstrap core JavaScript
   ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/clipboard.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
+  <script>
+ $.ajaxSetup({
+     beforeSend: function(xhr, settings) {
+         if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+             xhr.setRequestHeader("X-CSRFToken", "IjFjZGFhN2Q4NjIyMDQ2Y2NkZWU1YmIzOTNiYmUxZjVjNTVhMWNlMDki.YtlzEQ.aRrN-Sz2a--ihTZ2JnVUsNOf8Pc")
+         }
+     }
+ });
+
+ // display local time
+ function toHourMinutes(pubTime) {
+   var hours = pubTime.getHours().toString();
+   if (hours.length == 1) {
+     hours = '0' + hours;
+   }
+   var minutes = pubTime.getMinutes().toString();
+   if (minutes.length == 1) {
+     minutes = '0' + minutes;
+   }
+   return hours + ':' + minutes;
+ }
+
+ function toYearMonthDate(pubTime) {
+   var year = pubTime.getFullYear().toString();
+   var month = (pubTime.getMonth() + 1).toString();
+   var day = pubTime.getDate().toString();
+   return year + '年' + month + '月' + day + '日';
+ }
+ 
+ function updateLocalTime() {
+   $('.localtime').each(function(index) {
+     if ($(this).css('display') != 'none') {
+       return;
+     }
+     var utcTime = $(this).text();
+     var pubTime = new Date(utcTime + ' UTC');
+     if (!pubTime) {
+       $(this).text(pubTime);
+       $(this).show();
+       return;
+     }
+     var now = new Date();
+     if (pubTime.getFullYear() == now.getFullYear() && pubTime.getMonth() == now.getMonth() && pubTime.getDate() == now.getDate()) {
+       $(this).text('今天 ' + toHourMinutes(pubTime));
+     } else {
+       var yesterday = new Date();
+       yesterday.setDate(yesterday.getDate() - 1); // JavaScript can handle date roll overs
+       if (pubTime.getFullYear() == yesterday.getFullYear() && pubTime.getMonth() == yesterday.getMonth() && pubTime.getDate() == yesterday.getDate()) {
+         $(this).text('昨天 ' + toHourMinutes(pubTime));
+       } else {
+         $(this).text(toYearMonthDate(pubTime) + ' ' + toHourMinutes(pubTime));
+       }
+     }
+     $(this).show();
+   });
+ }
+
+ updateLocalTime();
 
 
+ new ClipboardJS('.review-links');
+ $('.review-links').tooltip();
+</script>
+  <script>
+   $('#signin').on('shown.bs.modal', function () {
+     $('#inputEmail').focus()
+   });
 
+   function signin_alert(msg, type) {
+     if (!type)
+       type = "danger";
+     $('#signin-alert').attr("class", "alert alert-" + type);
+     $('#signin-alert').html(msg);
+     $('#signin-alert').show();
+   }
 
+   $('#signin-form').submit(function(e) {
+     e.preventDefault();
+     var formdata = {}
+     $('#signin-form input').each(function() {
+       formdata[$(this).attr("name")] = $(this).val();
+     });
+     $.ajax({
+       type: "POST",
+       url: "/signin/?next=%2Fcourse%2F19974%2F&ajax=True",
+       data: formdata,
+       dataType: "json",
+       success: function(res) {
+         if (res.status == 200) {
+           if (res.next)
+             window.location.href = res.next;
+           else
+             signin_alert(res.msg, "success");
+         } else {
+           signin_alert(res.msg);
+         }
+       },
+       error: function(e) {
+         signin_alert('天了噜! 服务器正在睡觉，请稍后再试。', "warning");
+       }
+     })
+   });
 
+   function read_notification(count) {
+     if (count == 0)
+         return;
+     $.ajax({
+        type: "POST",
+        url: "/api/notifications/",
+     });
+   }
+  </script>
 
+  
+<script>
+ $('#myTab a').click(function (e) {
+   e.preventDefault()
+   $(this).tab('show')
+ })
 
+ var action_data = {
+   'follow': {
+     'enabled': false,
+     'count': 2,
+     'do_url': "/course/19974/follow/",
+     'undo_url': "/course/19974/unfollow/",
+   },
+   'downvote': {
+     'enabled': false,
+     'count': 3,
+     'do_url': "/course/19974/downvote/",
+     'undo_url': "/course/19974/undo-downvote/",
+     'conflict': 'upvote',
+   },
+   'upvote': {
+     'enabled': false,
+     'count': 6,
+     'do_url': "/course/19974/upvote/",
+     'undo_url': "/course/19974/undo-upvote/",
+     'conflict': 'downvote',
+   },
+   'join': {
+     'enabled': false,
+     'do_url': "/course/19974/join/",
+     'undo_url': "/course/19974/quit/",
+   },
+ }
+
+ $(function() {
+   for (action in action_data) {
+
+     if (! $('.btn-' + action).length)
+       continue;
+
+     (function(action) {
+       var d = action_data[action];
+
+       var do_btn = $('.btn-' + action).filter('.btn-do');
+       var undo_btn = $('.btn-' + action).filter('.btn-undo');
+
+       function update_count(count) {
+         d.count = count;
+         $('.btn-' + action + ' .count').text(count);
+       }
+       function http_post_wrapper(url) {
+         $.post(url, null, function(o) {
+           if (o.count)
+             update_count(o.count);
+           if (!o.ok)
+             alert('操作失败，请重试');
+           d.in_progress = false;
+         }, 'json')
+         .fail(function() {
+           alert('操作失败，请重试');
+           d.in_progress = false;
+         });
+       }
+
+       do_btn.click(function() {
+         
+         $('#signin').modal('show');
+         
+       });
+
+       undo_btn.click(function() {
+         
+         $('#signin').modal('show');
+         
+       });
+
+       update_count(d.count);
+
+       if (d.enabled) {
+         undo_btn.show();
+         do_btn.hide();
+       } else {
+         do_btn.show();
+         undo_btn.hide();
+       }
+     })(action);
+   }
+   $('#action-btn-group').show();
+ });
+
+ function delete_review(review_id, is_admin)
+ {
+     if (is_admin) {
+         if (!confirm('你正在作为管理员，删除其他用户的点评！建议使用屏蔽而非删除功能，确定删除吗？')) {
+             return;
+         }
+     } else {
+         if (!confirm('你真的要删除此点评吗？删除的点评是不可恢复的！')) {
+             return;
+         }
+     }
+     $.post("/review/delete/", { id: review_id }, function(o) {
+         if (o.ok)
+            window.location.href = "/course/19974/";
+         else
+            alert(o.message);
+     }, 'json')
+     .fail(function() {
+         alert('删除点评失败，请重试');
+     });
+ }
+
+ $('.showmore-shadow').click(function(e) {
+   $('.showmore-text').css('max-height', 'none');
+   $('.showmore-wrapper').hide();
+ });
+
+ if ($('.showmore-text').height() >= 750) {
+   $('.showmore-text').css('max-height', '400px');
+   $('.showmore-wrapper').show();
+ }
+
+ // go to top floating button from Freemind theme of Hexo
+ $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
+     var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+     if(scrollt>200){  //判断滚动后高度超过200px
+         $("#gotop").fadeIn(400); //淡出
+ 		if($(window).width() >= 1200){
+ 			$(".navbar").stop().fadeTo(400, 0.2);
+ 		}
+     }else{
+         $("#gotop").fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动
+         if($(window).width() >= 1200){
+ 			$(".navbar").stop().fadeTo(400, 1);
+         }
+     }
+ });
+ $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部        
+ 	$("html,body").animate({scrollTop:"0px"},200);
+ });
+
+</script>
+
+<script>
+ function show_review_comments(review_id)
+ {
+   if (document.getElementById('review-'+ review_id +'-comments').style.display=="block") {
+       document.getElementById('review-'+ review_id +'-comments').style.display="none";
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('grey');
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('blue');
+     }
+   else {
+       document.getElementById('review-'+ review_id +'-comments').style.display="block";
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('blue');
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('grey');
+   }
+ }
+
+ function get_upvote_review_elem(review_id)
+ {
+     var elem = $('#review-upvote-count-' + review_id);
+     if (!elem) return null;
+     if (elem.hasClass('in_progress')) {
+       alert('操作正在进行中，请稍候再试');
+       return null;
+     }
+     elem.addClass('in_progress');
+     return elem;
+ }
+
+ function upvote_review(review_id)
+ {
+     var elem = get_upvote_review_elem(review_id);
+     if (!elem) return;
+     elem.text(parseInt(elem.text()) + 1);
+     elem.parent().attr('href', 'javascript:cancel_upvote_review("' + review_id + '")');
+     elem.parent().find('span.glyphicon').removeClass('grey');
+     elem.parent().find('span.glyphicon').addClass('blue');
+
+     $.post("/api/review/upvote/", { review_id: review_id }, function(o) {
+       if (typeof o.count != "undefined") {
+         elem.text(o.count);
+       }
+       elem.removeClass('in_progress');
+     }, 'json')
+     .fail(function() {
+       elem.text(parseInt(elem.text()) - 1);
+       alert('点赞失败，请重试');
+     });
+ }
+ 
+ function cancel_upvote_review(review_id)
+ {
+     var elem = get_upvote_review_elem(review_id);
+     if (!elem) return;
+     elem.text(parseInt(elem.text()) - 1);
+     elem.parent().attr('href', 'javascript:upvote_review("' + review_id + '")');
+     elem.parent().find('span.glyphicon').removeClass('blue');
+     elem.parent().find('span.glyphicon').addClass('grey');
+
+     $.post("/api/review/cancel_upvote/", { review_id: review_id }, function(o) {
+       if (typeof o.count != "undefined") {
+         elem.text(o.count);
+       }
+       elem.removeClass('in_progress');
+     }, 'json')
+     .fail(function() {
+       elem.text(parseInt(elem.text()) + 1);
+       alert('取消点赞失败，请重试');
+     });
+ }
+
+ function reload_comments(review_id)
+ {
+     $.get("/review/comments/",
+        { review_id: review_id},
+        function(html) {
+            $('#review-' + review_id + '-comments').replaceWith(html);
+            $('#review-' + review_id + '-comments').show();
+            updateLocalTime();
+        }, 'html')
+     .fail(function() {
+        alert('重新加载评论区出错，请刷新页面');
+     });
+ }
+
+ function submit_comment(review_id)
+ {
+     content = $('#review-comment-input-' + review_id).val().trim();
+     if (content == '') {
+         alert('请输入评论内容');
+         return;
+     }
+     $.post("/api/review/new_comment/", {
+         review_id: review_id,
+         content: content
+     }, function(o) {
+         if (o.ok) {
+             reload_comments(review_id);
+         } else {
+             alert(o.message);
+         }
+     }, 'json')
+     .fail(function() {
+         alert('提交评论失败，请重试');
+     });
+ }
+
+ function delete_comment(review_id, comment_id)
+ {
+     if (!confirm('你真的要删除此评论吗？')) {
+         return;
+     }
+     $.post("/api/review/delete_comment/", { comment_id: comment_id },
+         function(o) {
+            if (o.ok) {
+               reload_comments(review_id);
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('删除评论失败，请重试');
+     });
+ }
+
+ function reply_comment(review_id, reply_to)
+ {
+     var elem = $('#review-comment-input-' + review_id);
+     elem.focus();
+     elem.val('');
+     elem.val('回复 @' + reply_to + ': ');
+ }
+
+ function block_review(review_id)
+ {
+     $.post("/api/review/block/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('屏蔽成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('屏蔽失败，请重试');
+     });
+ }
+
+ function unblock_review(review_id)
+ {
+     $.post("/api/review/unblock/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('解除屏蔽成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('解除屏蔽失败，请重试');
+     });
+ }
+
+ function hide_review(review_id)
+ {
+     $.post("/api/review/hide/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('隐藏点评成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('隐藏点评失败，请重试');
+     });
+ }
+
+ function unhide_review(review_id)
+ {
+     $.post("/api/review/unhide/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('解除隐藏点评成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('解除隐藏点评失败，请重试');
+     });
+ }
+
+ $('.review-filter-rule').each(function (index) {
+     var id = $(this).attr('id')
+     var prefix = 'review-filter-rule-'
+     var num_id = parseInt(id.substr(prefix.length))
+     var review_id = 'review-content-' + num_id.toString()
+     var original_text = $('#' + review_id).html()
+     console.log(original_text)
+     console.log($(this).text())
+
+     var regex_str = $(this).text()
+     var regex_match_and_replace = regex_str.split('\n')
+     var regex_match = regex_match_and_replace[0]
+     var regex_replace = regex_match_and_replace.length == 2 ? regex_match_and_replace[1] : ''
+     var regex = new RegExp(regex_match, 'g')
+     var replace_text = original_text.replace(regex, regex_replace)
+     $('#' + review_id).html(replace_text)
+ })
+
+ $('.review-content').each(function(index) {
+     var regex = new RegExp('(脑瘫玩意|傻逼|我艹你妈|艹你妈)', 'g')
+     var regex_replace = '<span data-toggle="tooltip" data-placement="top" title="本点评存在违反社区规范的内容，予以部分屏蔽" style="background:black;color:black;">请文明用语</span>'
+     var replace_text = $(this).html().replace(regex, regex_replace)
+     $(this).html(replace_text)
+ })
+
+ $('.teacher-review-label').tooltip()
+</script>
 
 </html>
