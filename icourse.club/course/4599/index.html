@@ -1,2530 +1,1091 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" property="og:description" content="7.0 分，6 人评价">
-    <meta name="keywords" content="USTC,评课,课程">
-    <meta name="author" content="jenny42,aaron1992,boj">
-    <link rel="icon" href="/static/image/favicon.ico">
-
-    <title>生命科学导论-脑与认知（毕国强, 杨昱鹏, 张隆华...） - USTC评课社区</title>
-
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/style.css?ver=20220706" rel="stylesheet">
-
-    
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="7.0 分，6 人评价" name="description" property="og:description"/>
+<meta content="USTC,评课,课程" name="keywords"/>
+<meta content="jenny42,aaron1992,boj" name="author"/>
+<link href="/static/image/favicon.ico" rel="icon"/>
+<title>生命科学导论-脑与认知（毕国强, 杨昱鹏, 张隆华...） - USTC评课社区</title>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-
+</head>
 <body>
-  <div id="wrap">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        
-        <button type="button" class="mobile btn btn-default navbar-btn pull-right right-mg-md" style="outline:none" data-toggle="modal" data-target="#signin">登录</button>
-        
-        <a class="navbar-brand" href="/">USTC评课社区</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav desktop">
-          <li ><a href="/latest_reviews">点评</a></li>
-	  <li ><a href="/course/">课程</a></li>
-          
-          <li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
-        </ul>
-
-	
-        <form class="navbar-form navbar-left desktop" action="/search/" method="get" role="search">
-	
-          <div class="form-group">
-            <input type="text" name="q" class="form-control" id="search" placeholder="搜索课程、老师" style="width: 235px" value="">
-          </div>
-          <span class="desktop-wide">
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey"></span></button>
-          </span>
-        </form>
-
-        <ul class="nav navbar-nav navbar-right desktop">
-          
-          <li><button type="button" class="btn btn-default navbar-btn left-mg-md" data-toggle="modal" data-target="#signin">登录</button></li>
-          
-        </ul>
-
-        
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  
-  <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-signin">
-      <div class="modal-content">
-        <form id="signin-form" class="form-signin">
-          <input type="hidden" name="csrf_token" value="IjkyMGZiYWFlZTI1ZTU4NTgwMmVjODg5MmZkODFlYzgzODNmNTQ1Zjci.YtlzGg.yphREhQWWuEcW9Sv6dtln6uZCtY" />
-          <div class="form-signin-heading">
-            <span class="h2">请登录</span>
-            <a class="btn btn-default float-right" href="/signup">注册</a>
-          </div>
-          <div id="signin-alert" role="alert" class="display: none"></div>
-          <label for="inputEmail" class="sr-only">用户名</label>
-          <input type="text" name="username" id="inputEmail" class="form-control" placeholder="用户名或邮箱" required autofocus>
-          <label for="inputPassword" class="sr-only">密码</label>
-          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="remember">记住我
-            </label>
-            <a class="float-right" href="/reset-password/">忘记密码</a>
-          </div>
-          <button class="btn btn-lg btn-blue btn-block" type="submit">登录</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  
-
-    <!-- banner -->
-    
-    <div class="container">
-      
-      <div class="text-center banner mobile">新增 <a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
-      
-
-      
-      <div class="text-center banner desktop">评课社区推出<a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
-      
-    </div>
-    <!-- end banner -->
-    
-
-  
-
+<div id="wrap">
+<nav class="navbar navbar-default">
 <div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
+<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav desktop">
+<li><a href="https://icourse.club/latest_reviews">点评</a></li>
+<li><a href="https://icourse.club/course/">课程</a></li>
+<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+</ul>
+<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
+<div class="form-group">
+<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
+</div>
+<span class="desktop-wide">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
+</span>
+</form>
+<ul class="nav navbar-nav navbar-right desktop">
+<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
 
-  <div class="row float-element">
-    <div class="row">
-      <div class="col-md-8 inline-h3">
-        <span class="blue h3">生命科学导论-脑与认知</span><span class="h3 blue mobile">（毕国强,  杨昱鹏,  张隆华...）</span>
-        <span class="small grey align-bottom left-pd-sm desktop">2019春 2018秋 2018春 2017春 2016春 2015春 2013春 &nbsp;课程号：BIO150602</span>
-        <br><span class="small grey align-bottom mobile">2019春 2018秋 2018春 2017春 2016春 2015春 2013春 &nbsp;课程号：BIO150602</span>
-
-        
-        <hr>
-        
-        <div class="ud-pd-sm blue">
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star-half glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star-empty glyphicon-lg" aria-hidden="true"></span>
-            
-          
-          <span class="rl-pd-sm h4">7.0</span><span class="rl-pd-sm text-muted">(6人评价)</span>
-        </div>
-        
-        <ul class="text-muted list-inline list-unstyled ud-pd-sm">
-          <li class="right-mg-md">课程难度：中等</li>
-          <li class="right-mg-md">作业多少：中等</li>
-          <li class="right-mg-md">给分好坏：一般</li>
-          <li class="right-mg-md">收获大小：一般</li>
-        </ul>
-
-        <table class="table table-condensed no-border">
-          <tr>
-            <td><strong>选课类别：</strong>计划</td>
-            <td><strong>教学类型：</strong>理论课</td>
-          </tr>
-          <tr>
-            <td><strong>课程类别：</strong>核心通识</td>
-            <td><strong>开课单位：</strong>生命科学学院</td>
-          </tr>
-          <tr>
-            <td><strong>课程层次：</strong>通修</td>
-            <td><strong>学分：</strong>2.0</td>
-          </tr>
-          </tbody>
-        </table>
-
-        <div class="ud-pd-sm">
-          
-          <strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
-          
-        </div>
-
-        <div id="action-btn-group" class="ud-pd-md" style="display:none">
-          <button class="btn btn-white btn-flat btn-follow btn-do"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> 关注 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-follow btn-undo"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 已关注 <small>(<span class="count"></span>)</small></button>
-
-          <button class="btn btn-white btn-flat btn-upvote btn-do"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-upvote btn-undo"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
-
-          <button class="btn btn-white btn-flat btn-downvote btn-do"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-downvote btn-undo"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
-
+<!-- banner -->
+<div class="container">
+<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+</div>
+<!-- end banner -->
+<div class="container">
+<div class="row float-element">
+<div class="row">
+<div class="col-md-8 inline-h3">
+<span class="blue h3">生命科学导论-脑与认知</span><span class="h3 blue mobile">（毕国强,  杨昱鹏,  张隆华...）</span>
+<span class="small grey align-bottom left-pd-sm desktop">2019春 2018秋 2018春 2017春 2016春 2015春 2013春  课程号：BIO150602</span>
+<br/><span class="small grey align-bottom mobile">2019春 2018秋 2018春 2017春 2016春 2015春 2013春  课程号：BIO150602</span>
+<hr/>
+<div class="ud-pd-sm blue">
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty glyphicon-lg"></span>
+<span class="rl-pd-sm h4">7.0</span><span class="rl-pd-sm text-muted">(6人评价)</span>
+</div>
+<ul class="text-muted list-inline list-unstyled ud-pd-sm">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<table class="table table-condensed no-border">
+<tr>
+<td><strong>选课类别：</strong>计划</td>
+<td><strong>教学类型：</strong>理论课</td>
+</tr>
+<tr>
+<td><strong>课程类别：</strong>核心通识</td>
+<td><strong>开课单位：</strong>生命科学学院</td>
+</tr>
+<tr>
+<td><strong>课程层次：</strong>通修</td>
+<td><strong>学分：</strong>2.0</td>
+</tr>
+</table>
+<div class="ud-pd-sm">
+<strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
           
         </div>
-
-	
-	
-
-	<div class="solid ud-pd-md inline-h3">
-	  <span class="blue h3" id="review-anchor">点评</span>
-          
-          <a type="button" data-toggle="modal" data-target="#signin" class="btn btn-white float-right blue"><span class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm" aria-hidden="true"></span>写点评</a>
-          
-        </div>
-
-
-        
-        
-	
-
-	
-	<div class="ud-pd-sm">
-		<span class="right-pd-sm weight-heavy">排序</span>
-		<select name="sort_by" onchange="location=this.value">
-			
-			<option value="/course/4599/?sort_by=upvote#review-anchor" selected>点赞最多</option>
-			
-			<option value="/course/4599/?sort_by=pubtime_desc#review-anchor" >最新点评</option>
-			
-			<option value="/course/4599/?sort_by=pubtime#review-anchor" >最旧点评</option>
-			
-			<option value="/course/4599/?sort_by=score_desc#review-anchor" >评分: 高-低</option>
-			
-			<option value="/course/4599/?sort_by=score#review-anchor" >评分: 低-高</option>
-			
-		</select>
-		<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
-		<select name="term" onchange="location=this.value">
-			
-			<option value="/course/4599/?sort_by=upvote#review-anchor" selected>全部</option>
-			
-			
-			<option value="/course/4599/?sort_by=upvote&amp;term=20162#review-anchor" >
+<div class="ud-pd-md" id="action-btn-group" style="display:none">
+<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+</div>
+<div class="solid ud-pd-md inline-h3">
+<span class="blue h3" id="review-anchor">点评</span>
+<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
+</div>
+<div class="ud-pd-sm">
+<span class="right-pd-sm weight-heavy">排序</span>
+<select name="sort_by" onchange="location=this.value">
+<option selected="" value="/course/4599/?sort_by=upvote#review-anchor">点赞最多</option>
+<option value="/course/4599/?sort_by=pubtime_desc#review-anchor">最新点评</option>
+<option value="/course/4599/?sort_by=pubtime#review-anchor">最旧点评</option>
+<option value="/course/4599/?sort_by=score_desc#review-anchor">评分: 高-低</option>
+<option value="/course/4599/?sort_by=score#review-anchor">评分: 低-高</option>
+</select>
+<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
+<select name="term" onchange="location=this.value">
+<option selected="" value="/course/4599/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/4599/?sort_by=upvote&amp;term=20162#review-anchor">
 			2017春 (2)
 			</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;term=20152#review-anchor" >
+<option value="/course/4599/?sort_by=upvote&amp;term=20152#review-anchor">
 			2016春 (1)
 			</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;term=20142#review-anchor" >
+<option value="/course/4599/?sort_by=upvote&amp;term=20142#review-anchor">
 			2015春 (3)
 			</option>
-			
-		</select>
-		<br class="mobile">
-		<span class="right-pd-sm weight-heavy mobile">评分</span>
-		<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
-		<select name="rating" onchange="location=this.value">
-			<option value="/course/4599/?sort_by=upvote#review-anchor" selected>全部</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;rating=5#review-anchor" >
+</select>
+<br class="mobile"/>
+<span class="right-pd-sm weight-heavy mobile">评分</span>
+<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
+<select name="rating" onchange="location=this.value">
+<option selected="" value="/course/4599/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/4599/?sort_by=upvote&amp;rating=5#review-anchor">
 				★★★★★ (1)
 			</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;rating=4#review-anchor" >
+<option value="/course/4599/?sort_by=upvote&amp;rating=4#review-anchor">
 				★★★★ (3)
 			</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;rating=3#review-anchor" >
+<option value="/course/4599/?sort_by=upvote&amp;rating=3#review-anchor">
 				★★★ (2)
 			</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;rating=2#review-anchor" >
+<option value="/course/4599/?sort_by=upvote&amp;rating=2#review-anchor">
 				★★ (0)
 			</option>
-			
-			<option value="/course/4599/?sort_by=upvote&amp;rating=1#review-anchor" >
+<option value="/course/4599/?sort_by=upvote&amp;rating=1#review-anchor">
 				★ (0)
 			</option>
-			
-		</select>
-		<span class="rl-pd-sm text-muted">6条点评</span>
-	</div>
-	
-
-    
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-227">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/269>Ikamusumi</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2015春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：简单</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：简单</li>
-            <li>作业：很少</li>
-            <li>给分：一般</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-227">
-            <p><div><p>没有选课，愣是旁听了一学期，所以不从作业和考试方面评价（反正考试也和我没关系）。</p><p>四位老师讲课都有自己的风格，而且讲课真心特别有趣，上课会将许多有趣的东西，顺便还会给自己的实验室招被试（2333），如果想在这方面开拓一下视野的同学可以选择旁听，能多少了解一些好玩的东西。</p><p>每上3-4节课会有一次小测，两三道题，基本上就是上课讲的东西（当然作弊用手机查也没人管你）。一学期下来也就3次小测。</p><p>考试是以小组形式做presentation，比较容易被坑。（最后的汇报我去旁听了一下，记得有一个小组做了“听音乐对做作业的影响”的心理学实验，报告了自己的实验结果和分析（结果因被其他组质疑实验流程和结果，比较尴尬），总体汇报质量都很高），但是这种presentation，给分真心不是自己能掌握的。（反正有妹纸估计会有优势吧。）</p><p>Conclusion：</p><p>1、当成科普讲座去旁听肯定没问题，开拓眼界么。</p><p>2、真的选课的话，小心小组的presentation会让你翻船。因为这和你的能力无关。（个人意见）</p><p> </p><p>更新：2015年7月7日</p><p>据同学说，生科导貌似和高中知识越相关考试就越难，另外某门生科导的考试似乎快只有生院的才会答了，这样一来脑与认知的考试还算简单。</p><p> </p><p>以上</p><p>By Venique</p></div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-227">
-            <span class="small localtime" style="display: none;">07/06/2015 09:12:21</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-227">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(227)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-227">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-227" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-227-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-169">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/206>幻</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2015春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：没有</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：中等</li>
-            <li>给分：一般</li>
-            <li>收获：没有</li>
-          </ul>
-	  <div class="review-content" id="review-content-169">
-            <p><p>比起其他几门生科导来说算是最麻烦的，期末还要求小组调研，最后给分极易坑。</p></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-169">
-            <span class="small localtime" style="display: none;">07/05/2015 12:05:54</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-169">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(169)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-169">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-169" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-169-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-3760">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/1168>zlx</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2017春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：杀手</li>
-            <li class="right-mg-md">收获大小：一般</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：中等</li>
-            <li>给分：杀手</li>
-            <li>收获：一般</li>
-          </ul>
-	  <div class="review-content" id="review-content-3760">
-            <p><p>如果知道给分这么不好不会选。虽然这种想法过于功利但建议不愿意在生物上投入大量时间和精力的人不要选。课程蛮有意思推荐旁听。考试很难回报率较低很难理解这门课程的定位。2.0学分的课要付出4.0学分的努力才能拿到不错的成绩，个人感觉不值得。</p>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-3760">
-            <span class="small localtime" style="display: none;">07/11/2017 14:31:36</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-3760">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(3760)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-3760">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-3760" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-3760-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-2860">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/1>jenny42</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2017春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：一般</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：一般</li>
-            <li>收获：一般</li>
-          </ul>
-	  <div class="review-content" id="review-content-2860">
-            <p><div><p>这门课可以开拓视野，看看《神经生物学——从神经元到大脑》还是蛮有意思的。老师讲课也挺棒的！</p><p>但给分不会很高啦，几乎每次都去上课，小测都做了，小组报告也花了不少时间，期末考也看了课件。不过考试好难啊，题量特别大，题目也很难。最后只拿了B。</p><p>建议老师给分可以更好一点，这样更多同学选这门课，毕竟课程本身还是很不错的，去参观生科院实验室也很有趣。</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-2860">
-            <span class="small localtime" style="display: none;">03/07/2017 08:04:25</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-2860">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(2860)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-2860">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-2860" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-2860-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-1793">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/471>razielis</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2016春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：很多</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：很多</li>
-            <li>给分：一般</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-1793">
-            <p><p>作为面向非生院同学的科普讲堂，课程内容还是很有趣而且很丰富的，对这方面有兴趣的话去听一听真的很值。然而期末考很难，考了很多课件上没有但老师口头讲过的东西，而且小组报告很费时间，给分不高。。。。</p>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-1793">
-            <span class="small localtime" style="display: none;">01/12/2017 03:19:02</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-1793">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(1793)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-1793">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-1793" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-1793-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-174">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/75>tjt2014</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2015春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：很少</li>
-            <li>给分：一般</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-174">
-            <p><p>四个老师轮流上不同方向的课，课程快结束的时候有一个小课题。总体上比较有趣，尤其是张效初老师的心理学部分。总体上内容比较多，需要付出的时间比较多。考试难度不大，只要上课认真听了最后稍微复习一下就不会很差，给分还好。</p></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-174">
-            <span class="small localtime" style="display: none;">07/05/2015 12:35:20</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-174">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(174)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-174">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-174" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-174-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-        
-      </div>
-
-
-
-      <!-- 右边栏 -->
-
-      <div class="col-md-4 rl-pd-lg">
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/2f78d792d09872ae85d015a969f6759559969a49.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/644/">毕国强</a></h3>
-          <p></p>
-          <p>教师主页：
-            暂无
-          </p>
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/f0ca70d96917e45afbb8981ddd569f0e731ab9f0.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/655/">杨昱鹏</a></h3>
-          <p></p>
-          <p>教师主页：
-            暂无
-          </p>
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/d52d8d61a3ae49cbbbe546264ba86ea9417b3567.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/698/">张隆华</a></h3>
-          <p></p>
-          <p>教师主页：
-            暂无
-          </p>
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/8fb0b7bd37ce05c7650bf42e5675508455278585.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/1044/">张效初</a></h3>
-          <p></p>
-          <p>教师主页：
-            暂无
-          </p>
-        </div>
-        
-        
-
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">其他老师的「生命科学导论-脑与认知」课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4598/">毕国强,  张效初,  薛天...</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2017秋 2016秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13620/">毕国强,  刘北明,  张效初...</a>
-            
-            <span>7.8</span>
-            <span class="grey">(5)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021秋...</span>
-          </div>
-          
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/10129/">未知</a>
-            
-            <span class="small grey align-bottom  float-right">2017春 2016秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4600/">毕国强,  杨昱鹏,  张隆华...</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4601/">毕国强, 张隆华, 张效初</a>
-            
-            <span class="small grey align-bottom  float-right">2013春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18013/">毕国强,  刘北明,  杨昱鹏...</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21505/">毕国强,  刘北明,  张隆华...</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21857/">毕国强,  刘北明,  杨昱鹏...</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-        </div>
-
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">毕国强老师的其他课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4598/">生命科学导论-脑与认知</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2017秋 2016秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18975/">生理学与神经生物学综合实验</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13620/">生命科学导论-脑与认知</a>
-            
-            <span>7.8</span>
-            <span class="grey">(5)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021秋...</span>
-          </div>
-          
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13398/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20742/">细胞动力学</a>
-            
-            <span class="small grey align-bottom  float-right">2021秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12697/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2014秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/185/">三维显微术与科学前沿(双语)</a>
-            
-            <span class="small grey align-bottom  float-right">2011夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/3149/">新生“科学与社会”研讨课</a>
-            
-            <span class="small grey align-bottom  float-right">2020春 2019秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4600/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4601/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2013春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5070/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋 2015秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5071/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5075/">神经科学文献阅读与分析</a>
-            
-            <span class="small grey align-bottom  float-right">2015秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5203/">突触的结构与功能前沿</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5897/">脑科学</a>
-            
-            <span class="small grey align-bottom  float-right">2012春 2011春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12672/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2016春 2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12696/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12919/">神经科学文献阅读与分析</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋 2015秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13034/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13054/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2016春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13312/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2016春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13352/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2017秋 2016秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13399/">突触的结构与功能前沿</a>
-            
-            <span class="small grey align-bottom  float-right">2018春 2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13412/">生物透射电子显微学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2018春 2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13585/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13670/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2017秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13696/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2018春 2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13994/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18013/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/19655/">生物透射电子显微学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20266/">生物透射电子显微镜实验</a>
-            
-            <span class="small grey align-bottom  float-right">2021春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20489/">生物透射电子显微镜实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21225/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21505/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21510/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21857/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">杨昱鹏老师的其他课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18975/">生理学与神经生物学综合实验</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20472/">发育生物学</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021春</span>
-          </div>
-          
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4739/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/7026/">高级神经生物学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13398/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13584/">发育生物学</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12697/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2014秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21515/">高级神经生物学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4600/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5070/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋 2015秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5071/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12672/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2016春 2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12696/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13034/">神经生物学原理I</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13054/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2016春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13312/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2016春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13585/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13696/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2018春 2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13994/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18013/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21225/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21510/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21857/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4720/">生物科技文献阅读</a>
-            
-            <span class="small grey align-bottom  float-right">2013夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4740/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2019春 2018春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4745/">生理学和神经生物学实验(II)</a>
-            
-            <span class="small grey align-bottom  float-right">2010春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5072/">神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2012夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18011/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18135/">新生“科学与社会”研讨课</a>
-            
-            <span class="small grey align-bottom  float-right">2020春 2019秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18671/">生物科技文献阅读</a>
-            
-            <span class="small grey align-bottom  float-right">2019春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/19286/">“科学与社会”研讨课</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋 2022春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21218/">发育生物学</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21856/">生命科学前沿</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">张隆华老师的其他课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13619/">基础神经科学</a>
-            
-            <span>9.0</span>
-            <span class="grey">(4)</span>
-            
-            <span class="small grey align-bottom  float-right">2020秋 2019秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21507/">认知神经科学（心理学）</a>
-            
-            <span>9.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4751/">生理学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2020秋 2019秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12720/">生理学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋 2021秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18428/">人体机能学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2019秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/19049/">人体机能学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4600/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4601/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2013春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18013/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21505/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13581/">分子生物学II</a>
-            
-            <span class="small grey align-bottom  float-right">2013春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/885/">分子生物学II</a>
-            
-            <span class="small grey align-bottom  float-right">2015秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/886/">分子生物学II</a>
-            
-            <span class="small grey align-bottom  float-right">2014秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/1594/">基础神经科学</a>
-            
-            <span class="small grey align-bottom  float-right">2017秋 2016秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/1595/">基础神经科学</a>
-            
-            <span class="small grey align-bottom  float-right">2012秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20737/">基础神经科学</a>
-            
-            <span class="small grey align-bottom  float-right">2021秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21444/">科研实习</a>
-            
-            <span class="small grey align-bottom  float-right">2021夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21684/">认知神经科学（心理学）</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">张效初老师的其他课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4598/">生命科学导论-脑与认知</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2017秋 2016秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18975/">生理学与神经生物学综合实验</a>
-            
-            <span>10.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21507/">认知神经科学（心理学）</a>
-            
-            <span>9.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5573/">经典阅读专题</a>
-            
-            <span>9.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2018夏 2017夏...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20259/">认知神经科学（心理学）</a>
-            
-            <span>8.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13620/">生命科学导论-脑与认知</a>
-            
-            <span>7.8</span>
-            <span class="grey">(5)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6327/">认知神经科学</a>
-            
-            <span>7.5</span>
-            <span class="grey">(2)</span>
-            
-            <span class="small grey align-bottom  float-right">2020春 2019春...</span>
-          </div>
-          
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4739/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/7026/">高级神经生物学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21515/">高级神经生物学实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4600/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4601/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2013春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12672/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2016春 2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12696/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13054/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2016春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13585/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13696/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2018春 2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13994/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18013/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21225/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21505/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21510/">神经生物学原理II</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21857/">生命科学导论-脑与认知</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4588/">生命科学导论</a>
-            
-            <span class="small grey align-bottom  float-right">2012秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18011/">生理学与神经生物学综合实验</a>
-            
-            <span class="small grey align-bottom  float-right">2020春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/12362/">生物科技文献阅读</a>
-            
-            <span class="small grey align-bottom  float-right">2016春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21684/">认知神经科学（心理学）</a>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4572/">生命科学前沿</a>
-            
-            <span class="small grey align-bottom  float-right">2015秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5572/">经典阅读专题</a>
-            
-            <span class="small grey align-bottom  float-right">2012夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18116/">新生“科学与社会”研讨课</a>
-            
-            <span class="small grey align-bottom  float-right">2020春 2019秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18646/">经典阅读专题</a>
-            
-            <span class="small grey align-bottom  float-right">2019夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/19229/">“科学与社会”研讨课</a>
-            
-            <span class="small grey align-bottom  float-right">2020秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21817/">大学生心理学</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-        </div>
-        
-      </div>
-    </div> <!-- row -->
-  </div>  <!-- float-element  -->
-</div>  <!-- container -->
-
-<a id="gotop" href="#">
-  <span>▲</span>
+</select>
+<span class="rl-pd-sm text-muted">6条点评</span>
+</div>
+<div class="ud-pd-md dashed review" id="review-227">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/269">Ikamusumi</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2015春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：简单</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：简单</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-227">
+<p></p><div><p>没有选课，愣是旁听了一学期，所以不从作业和考试方面评价（反正考试也和我没关系）。</p><p>四位老师讲课都有自己的风格，而且讲课真心特别有趣，上课会将许多有趣的东西，顺便还会给自己的实验室招被试（2333），如果想在这方面开拓一下视野的同学可以选择旁听，能多少了解一些好玩的东西。</p><p>每上3-4节课会有一次小测，两三道题，基本上就是上课讲的东西（当然作弊用手机查也没人管你）。一学期下来也就3次小测。</p><p>考试是以小组形式做presentation，比较容易被坑。（最后的汇报我去旁听了一下，记得有一个小组做了“听音乐对做作业的影响”的心理学实验，报告了自己的实验结果和分析（结果因被其他组质疑实验流程和结果，比较尴尬），总体汇报质量都很高），但是这种presentation，给分真心不是自己能掌握的。（反正有妹纸估计会有优势吧。）</p><p>Conclusion：</p><p>1、当成科普讲座去旁听肯定没问题，开拓眼界么。</p><p>2、真的选课的话，小心小组的presentation会让你翻船。因为这和你的能力无关。（个人意见）</p><p> </p><p>更新：2015年7月7日</p><p>据同学说，生科导貌似和高中知识越相关考试就越难，另外某门生科导的考试似乎快只有生院的才会答了，这样一来脑与认知的考试还算简单。</p><p> </p><p>以上</p><p>By Venique</p></div>
+</div>
+<div class="bm-pd-md grey" id="review-227">
+<span class="small localtime" style="display: none;">07/06/2015 09:12:21</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-227">1</span>
 </a>
-
-
-  <div id="push"></div>
-  </div><!-- ./wrap -->
+<a class="nounderline" href="javascript: show_review_comments(227)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-227">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-227" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-227-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-169">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/206">幻</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2015春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：没有</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：中等</li>
+<li>给分：一般</li>
+<li>收获：没有</li>
+</ul>
+<div class="review-content" id="review-content-169">
+<p></p><p>比起其他几门生科导来说算是最麻烦的，期末还要求小组调研，最后给分极易坑。</p>
+</div>
+<div class="bm-pd-md grey" id="review-169">
+<span class="small localtime" style="display: none;">07/05/2015 12:05:54</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-169">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(169)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-169">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-169" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-169-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-3760">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/1168">zlx</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2017春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：杀手</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：中等</li>
+<li>给分：杀手</li>
+<li>收获：一般</li>
+</ul>
+<div class="review-content" id="review-content-3760">
+<p></p><p>如果知道给分这么不好不会选。虽然这种想法过于功利但建议不愿意在生物上投入大量时间和精力的人不要选。课程蛮有意思推荐旁听。考试很难回报率较低很难理解这门课程的定位。2.0学分的课要付出4.0学分的努力才能拿到不错的成绩，个人感觉不值得。</p>
+</div>
+<div class="bm-pd-md grey" id="review-3760">
+<span class="small localtime" style="display: none;">07/11/2017 14:31:36</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-3760">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(3760)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-3760">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-3760" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-3760-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-2860">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/1">jenny42</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2017春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
+<div class="review-content" id="review-content-2860">
+<p></p><div><p>这门课可以开拓视野，看看《神经生物学——从神经元到大脑》还是蛮有意思的。老师讲课也挺棒的！</p><p>但给分不会很高啦，几乎每次都去上课，小测都做了，小组报告也花了不少时间，期末考也看了课件。不过考试好难啊，题量特别大，题目也很难。最后只拿了B。</p><p>建议老师给分可以更好一点，这样更多同学选这门课，毕竟课程本身还是很不错的，去参观生科院实验室也很有趣。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-2860">
+<span class="small localtime" style="display: none;">03/07/2017 08:04:25</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-2860">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(2860)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-2860">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-2860" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-2860-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-1793">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/471">razielis</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2016春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很多</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很多</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-1793">
+<p></p><p>作为面向非生院同学的科普讲堂，课程内容还是很有趣而且很丰富的，对这方面有兴趣的话去听一听真的很值。然而期末考很难，考了很多课件上没有但老师口头讲过的东西，而且小组报告很费时间，给分不高。。。。</p>
+</div>
+<div class="bm-pd-md grey" id="review-1793">
+<span class="small localtime" style="display: none;">01/12/2017 03:19:02</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-1793">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(1793)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-1793">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-1793" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-1793-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-174">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/75">tjt2014</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span class="left-pd-md">2015春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-174">
+<p></p><p>四个老师轮流上不同方向的课，课程快结束的时候有一个小课题。总体上比较有趣，尤其是张效初老师的心理学部分。总体上内容比较多，需要付出的时间比较多。考试难度不大，只要上课认真听了最后稍微复习一下就不会很差，给分还好。</p>
+</div>
+<div class="bm-pd-md grey" id="review-174">
+<span class="small localtime" style="display: none;">07/05/2015 12:35:20</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-174">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(174)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-174">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/4599/#review-174" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-174-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 右边栏 -->
+<div class="col-md-4 rl-pd-lg">
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/2f78d792d09872ae85d015a969f6759559969a49.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/644/">毕国强</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/f0ca70d96917e45afbb8981ddd569f0e731ab9f0.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/655/">杨昱鹏</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/d52d8d61a3ae49cbbbe546264ba86ea9417b3567.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/698/">张隆华</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/8fb0b7bd37ce05c7650bf42e5675508455278585.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/1044/">张效初</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">其他老师的「生命科学导论-脑与认知」课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/4598/">毕国强,  张效初,  薛天...</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2017秋 2016秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13620/">毕国强,  刘北明,  张效初...</a>
+<span>7.8</span>
+<span class="grey">(5)</span>
+<span class="small grey align-bottom float-right">2022春 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/10129/">未知</a>
+<span class="small grey align-bottom float-right">2017春 2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4600/">毕国强,  杨昱鹏,  张隆华...</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4601/">毕国强, 张隆华, 张效初</a>
+<span class="small grey align-bottom float-right">2013春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18013/">毕国强,  刘北明,  杨昱鹏...</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21505/">毕国强,  刘北明,  张隆华...</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21857/">毕国强,  刘北明,  杨昱鹏...</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">毕国强老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/4598/">生命科学导论-脑与认知</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2017秋 2016秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18975/">生理学与神经生物学综合实验</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2021春 2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13620/">生命科学导论-脑与认知</a>
+<span>7.8</span>
+<span class="grey">(5)</span>
+<span class="small grey align-bottom float-right">2022春 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13398/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20742/">细胞动力学</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12697/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/185/">三维显微术与科学前沿(双语)</a>
+<span class="small grey align-bottom float-right">2011夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3149/">新生“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2020春 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4600/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4601/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2013春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5070/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2016秋 2015秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5071/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5075/">神经科学文献阅读与分析</a>
+<span class="small grey align-bottom float-right">2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5203/">突触的结构与功能前沿</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5897/">脑科学</a>
+<span class="small grey align-bottom float-right">2012春 2011春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12672/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2016春 2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12696/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12919/">神经科学文献阅读与分析</a>
+<span class="small grey align-bottom float-right">2016秋 2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13034/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13054/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13312/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13352/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2017秋 2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13399/">突触的结构与功能前沿</a>
+<span class="small grey align-bottom float-right">2018春 2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13412/">生物透射电子显微学实验</a>
+<span class="small grey align-bottom float-right">2018春 2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13585/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13670/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2017秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13696/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2018春 2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13994/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2021春 2020春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18013/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19655/">生物透射电子显微学实验</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20266/">生物透射电子显微镜实验</a>
+<span class="small grey align-bottom float-right">2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20489/">生物透射电子显微镜实验</a>
+<span class="small grey align-bottom float-right">2022春 2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21225/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21505/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21510/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21857/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">杨昱鹏老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/18975/">生理学与神经生物学综合实验</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2021春 2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20472/">发育生物学</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022春 2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4739/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/7026/">高级神经生物学实验</a>
+<span class="small grey align-bottom float-right">2021春 2020春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13398/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13584/">发育生物学</a>
+<span class="small grey align-bottom float-right">2021春 2020春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12697/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21515/">高级神经生物学实验</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4600/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5070/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2016秋 2015秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5071/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12672/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2016春 2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12696/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13034/">神经生物学原理I</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13054/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13312/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13585/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13696/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2018春 2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13994/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2021春 2020春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18013/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21225/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21510/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21857/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4720/">生物科技文献阅读</a>
+<span class="small grey align-bottom float-right">2013夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4740/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2019春 2018春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4745/">生理学和神经生物学实验(II)</a>
+<span class="small grey align-bottom float-right">2010春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5072/">神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2012夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18011/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18135/">新生“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2020春 2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18671/">生物科技文献阅读</a>
+<span class="small grey align-bottom float-right">2019春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19286/">“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2022秋 2022春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21218/">发育生物学</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21856/">生命科学前沿</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">张隆华老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/13619/">基础神经科学</a>
+<span>9.0</span>
+<span class="grey">(4)</span>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21507/">认知神经科学（心理学）</a>
+<span>9.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4751/">生理学实验</a>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12720/">生理学实验</a>
+<span class="small grey align-bottom float-right">2022秋 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18428/">人体机能学实验</a>
+<span class="small grey align-bottom float-right">2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19049/">人体机能学实验</a>
+<span class="small grey align-bottom float-right">2022春 2021春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4600/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4601/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2013春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18013/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21505/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13581/">分子生物学II</a>
+<span class="small grey align-bottom float-right">2013春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/885/">分子生物学II</a>
+<span class="small grey align-bottom float-right">2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/886/">分子生物学II</a>
+<span class="small grey align-bottom float-right">2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1594/">基础神经科学</a>
+<span class="small grey align-bottom float-right">2017秋 2016秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1595/">基础神经科学</a>
+<span class="small grey align-bottom float-right">2012秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20737/">基础神经科学</a>
+<span class="small grey align-bottom float-right">2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21444/">科研实习</a>
+<span class="small grey align-bottom float-right">2021夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21684/">认知神经科学（心理学）</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">张效初老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/4598/">生命科学导论-脑与认知</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2017秋 2016秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18975/">生理学与神经生物学综合实验</a>
+<span>10.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2021春 2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21507/">认知神经科学（心理学）</a>
+<span>9.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5573/">经典阅读专题</a>
+<span>9.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2018夏 2017夏...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20259/">认知神经科学（心理学）</a>
+<span>8.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13620/">生命科学导论-脑与认知</a>
+<span>7.8</span>
+<span class="grey">(5)</span>
+<span class="small grey align-bottom float-right">2022春 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6327/">认知神经科学</a>
+<span>7.5</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2020春 2019春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4739/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/7026/">高级神经生物学实验</a>
+<span class="small grey align-bottom float-right">2021春 2020春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21515/">高级神经生物学实验</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4600/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4601/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2013春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12672/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2016春 2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12696/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13054/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13585/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13696/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2018春 2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13994/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2021春 2020春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18013/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21225/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21505/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21510/">神经生物学原理II</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21857/">生命科学导论-脑与认知</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4588/">生命科学导论</a>
+<span class="small grey align-bottom float-right">2012秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18011/">生理学与神经生物学综合实验</a>
+<span class="small grey align-bottom float-right">2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/12362/">生物科技文献阅读</a>
+<span class="small grey align-bottom float-right">2016春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21684/">认知神经科学（心理学）</a>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4572/">生命科学前沿</a>
+<span class="small grey align-bottom float-right">2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5572/">经典阅读专题</a>
+<span class="small grey align-bottom float-right">2012夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18116/">新生“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2020春 2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18646/">经典阅读专题</a>
+<span class="small grey align-bottom float-right">2019夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/19229/">“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2020秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21817/">大学生心理学</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+</h4></div>
+</div>
+</div> <!-- row -->
+</div> <!-- float-element  -->
+</div> <!-- container -->
+<a href="#" id="gotop">
+<span>▲</span>
+</a>
+<div id="push"></div>
+</div><!-- ./wrap -->
 <div class="container" id="footer">
-    <div class="ud-pd-sm">
-      <a class="right-pd-md" href='/about/'>关于我们</a>
-      <a class="right-pd-md" href='/community-rules/'>社区规范</a>
-      <a class="right-pd-md" href='/report-review/'>投诉点评</a>
-      <a class="right-pd-md" href='/stats/'>站点统计</a>
-      <a class="right-pd-md" href='/stats/rankings/'>排行榜</a>
-      <a class="right-pd-md" href='/announcements/'>公告栏</a>
-      <a class="right-pd-md hidden" href='/copyright/'>版权与隐私</a>
-      <a class="right-pd-md hidden" href='/report-bug/'>发现漏洞</a>
-      
-      <span class="float-right hidden">
-        <a class="right-pd-sm">中文</a>
-        <a class="left-pd-sm">English</a>
-      </span>
-    </div>
-    <span class="footer-text text-muted">Copyright &copy; 2022 USTC评课社区</span>
+<div class="ud-pd-sm">
+<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
+<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
+<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
+<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
+<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
+<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
+<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
+<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
+<span class="float-right hidden">
+<a class="right-pd-sm">中文</a>
+<a class="left-pd-sm">English</a>
+</span>
+</div>
+<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
 </div><!-- end container -->
 </body>
-
-
-
-
-  <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/clipboard.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
-  <script>
- $.ajaxSetup({
-     beforeSend: function(xhr, settings) {
-         if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
-             xhr.setRequestHeader("X-CSRFToken", "IjkyMGZiYWFlZTI1ZTU4NTgwMmVjODg5MmZkODFlYzgzODNmNTQ1Zjci.YtlzGg.yphREhQWWuEcW9Sv6dtln6uZCtY")
-         }
-     }
- });
-
- // display local time
- function toHourMinutes(pubTime) {
-   var hours = pubTime.getHours().toString();
-   if (hours.length == 1) {
-     hours = '0' + hours;
-   }
-   var minutes = pubTime.getMinutes().toString();
-   if (minutes.length == 1) {
-     minutes = '0' + minutes;
-   }
-   return hours + ':' + minutes;
- }
-
- function toYearMonthDate(pubTime) {
-   var year = pubTime.getFullYear().toString();
-   var month = (pubTime.getMonth() + 1).toString();
-   var day = pubTime.getDate().toString();
-   return year + '年' + month + '月' + day + '日';
- }
- 
- function updateLocalTime() {
-   $('.localtime').each(function(index) {
-     if ($(this).css('display') != 'none') {
-       return;
-     }
-     var utcTime = $(this).text();
-     var pubTime = new Date(utcTime + ' UTC');
-     if (!pubTime) {
-       $(this).text(pubTime);
-       $(this).show();
-       return;
-     }
-     var now = new Date();
-     if (pubTime.getFullYear() == now.getFullYear() && pubTime.getMonth() == now.getMonth() && pubTime.getDate() == now.getDate()) {
-       $(this).text('今天 ' + toHourMinutes(pubTime));
-     } else {
-       var yesterday = new Date();
-       yesterday.setDate(yesterday.getDate() - 1); // JavaScript can handle date roll overs
-       if (pubTime.getFullYear() == yesterday.getFullYear() && pubTime.getMonth() == yesterday.getMonth() && pubTime.getDate() == yesterday.getDate()) {
-         $(this).text('昨天 ' + toHourMinutes(pubTime));
-       } else {
-         $(this).text(toYearMonthDate(pubTime) + ' ' + toHourMinutes(pubTime));
-       }
-     }
-     $(this).show();
-   });
- }
-
- updateLocalTime();
+<!-- Placed at the end of the document so the pages load faster -->
 
 
- new ClipboardJS('.review-links');
- $('.review-links').tooltip();
-</script>
-  <script>
-   $('#signin').on('shown.bs.modal', function () {
-     $('#inputEmail').focus()
-   });
 
-   function signin_alert(msg, type) {
-     if (!type)
-       type = "danger";
-     $('#signin-alert').attr("class", "alert alert-" + type);
-     $('#signin-alert').html(msg);
-     $('#signin-alert').show();
-   }
 
-   $('#signin-form').submit(function(e) {
-     e.preventDefault();
-     var formdata = {}
-     $('#signin-form input').each(function() {
-       formdata[$(this).attr("name")] = $(this).val();
-     });
-     $.ajax({
-       type: "POST",
-       url: "/signin/?next=%2Fcourse%2F4599%2F&ajax=True",
-       data: formdata,
-       dataType: "json",
-       success: function(res) {
-         if (res.status == 200) {
-           if (res.next)
-             window.location.href = res.next;
-           else
-             signin_alert(res.msg, "success");
-         } else {
-           signin_alert(res.msg);
-         }
-       },
-       error: function(e) {
-         signin_alert('天了噜! 服务器正在睡觉，请稍后再试。', "warning");
-       }
-     })
-   });
 
-   function read_notification(count) {
-     if (count == 0)
-         return;
-     $.ajax({
-        type: "POST",
-        url: "/api/notifications/",
-     });
-   }
-  </script>
 
-  
-<script>
- $('#myTab a').click(function (e) {
-   e.preventDefault()
-   $(this).tab('show')
- })
 
- var action_data = {
-   'follow': {
-     'enabled': false,
-     'count': 0,
-     'do_url': "/course/4599/follow/",
-     'undo_url': "/course/4599/unfollow/",
-   },
-   'downvote': {
-     'enabled': false,
-     'count': 2,
-     'do_url': "/course/4599/downvote/",
-     'undo_url': "/course/4599/undo-downvote/",
-     'conflict': 'upvote',
-   },
-   'upvote': {
-     'enabled': false,
-     'count': 2,
-     'do_url': "/course/4599/upvote/",
-     'undo_url': "/course/4599/undo-upvote/",
-     'conflict': 'downvote',
-   },
-   'join': {
-     'enabled': false,
-     'do_url': "/course/4599/join/",
-     'undo_url': "/course/4599/quit/",
-   },
- }
-
- $(function() {
-   for (action in action_data) {
-
-     if (! $('.btn-' + action).length)
-       continue;
-
-     (function(action) {
-       var d = action_data[action];
-
-       var do_btn = $('.btn-' + action).filter('.btn-do');
-       var undo_btn = $('.btn-' + action).filter('.btn-undo');
-
-       function update_count(count) {
-         d.count = count;
-         $('.btn-' + action + ' .count').text(count);
-       }
-       function http_post_wrapper(url) {
-         $.post(url, null, function(o) {
-           if (o.count)
-             update_count(o.count);
-           if (!o.ok)
-             alert('操作失败，请重试');
-           d.in_progress = false;
-         }, 'json')
-         .fail(function() {
-           alert('操作失败，请重试');
-           d.in_progress = false;
-         });
-       }
-
-       do_btn.click(function() {
-         
-         $('#signin').modal('show');
-         
-       });
-
-       undo_btn.click(function() {
-         
-         $('#signin').modal('show');
-         
-       });
-
-       update_count(d.count);
-
-       if (d.enabled) {
-         undo_btn.show();
-         do_btn.hide();
-       } else {
-         do_btn.show();
-         undo_btn.hide();
-       }
-     })(action);
-   }
-   $('#action-btn-group').show();
- });
-
- function delete_review(review_id, is_admin)
- {
-     if (is_admin) {
-         if (!confirm('你正在作为管理员，删除其他用户的点评！建议使用屏蔽而非删除功能，确定删除吗？')) {
-             return;
-         }
-     } else {
-         if (!confirm('你真的要删除此点评吗？删除的点评是不可恢复的！')) {
-             return;
-         }
-     }
-     $.post("/review/delete/", { id: review_id }, function(o) {
-         if (o.ok)
-            window.location.href = "/course/4599/";
-         else
-            alert(o.message);
-     }, 'json')
-     .fail(function() {
-         alert('删除点评失败，请重试');
-     });
- }
-
- $('.showmore-shadow').click(function(e) {
-   $('.showmore-text').css('max-height', 'none');
-   $('.showmore-wrapper').hide();
- });
-
- if ($('.showmore-text').height() >= 750) {
-   $('.showmore-text').css('max-height', '400px');
-   $('.showmore-wrapper').show();
- }
-
- // go to top floating button from Freemind theme of Hexo
- $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
-     var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
-     if(scrollt>200){  //判断滚动后高度超过200px
-         $("#gotop").fadeIn(400); //淡出
- 		if($(window).width() >= 1200){
- 			$(".navbar").stop().fadeTo(400, 0.2);
- 		}
-     }else{
-         $("#gotop").fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动
-         if($(window).width() >= 1200){
- 			$(".navbar").stop().fadeTo(400, 1);
-         }
-     }
- });
- $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部        
- 	$("html,body").animate({scrollTop:"0px"},200);
- });
-
-</script>
-
-<script>
- function show_review_comments(review_id)
- {
-   if (document.getElementById('review-'+ review_id +'-comments').style.display=="block") {
-       document.getElementById('review-'+ review_id +'-comments').style.display="none";
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('grey');
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('blue');
-     }
-   else {
-       document.getElementById('review-'+ review_id +'-comments').style.display="block";
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('blue');
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('grey');
-   }
- }
-
- function get_upvote_review_elem(review_id)
- {
-     var elem = $('#review-upvote-count-' + review_id);
-     if (!elem) return null;
-     if (elem.hasClass('in_progress')) {
-       alert('操作正在进行中，请稍候再试');
-       return null;
-     }
-     elem.addClass('in_progress');
-     return elem;
- }
-
- function upvote_review(review_id)
- {
-     var elem = get_upvote_review_elem(review_id);
-     if (!elem) return;
-     elem.text(parseInt(elem.text()) + 1);
-     elem.parent().attr('href', 'javascript:cancel_upvote_review("' + review_id + '")');
-     elem.parent().find('span.glyphicon').removeClass('grey');
-     elem.parent().find('span.glyphicon').addClass('blue');
-
-     $.post("/api/review/upvote/", { review_id: review_id }, function(o) {
-       if (typeof o.count != "undefined") {
-         elem.text(o.count);
-       }
-       elem.removeClass('in_progress');
-     }, 'json')
-     .fail(function() {
-       elem.text(parseInt(elem.text()) - 1);
-       alert('点赞失败，请重试');
-     });
- }
- 
- function cancel_upvote_review(review_id)
- {
-     var elem = get_upvote_review_elem(review_id);
-     if (!elem) return;
-     elem.text(parseInt(elem.text()) - 1);
-     elem.parent().attr('href', 'javascript:upvote_review("' + review_id + '")');
-     elem.parent().find('span.glyphicon').removeClass('blue');
-     elem.parent().find('span.glyphicon').addClass('grey');
-
-     $.post("/api/review/cancel_upvote/", { review_id: review_id }, function(o) {
-       if (typeof o.count != "undefined") {
-         elem.text(o.count);
-       }
-       elem.removeClass('in_progress');
-     }, 'json')
-     .fail(function() {
-       elem.text(parseInt(elem.text()) + 1);
-       alert('取消点赞失败，请重试');
-     });
- }
-
- function reload_comments(review_id)
- {
-     $.get("/review/comments/",
-        { review_id: review_id},
-        function(html) {
-            $('#review-' + review_id + '-comments').replaceWith(html);
-            $('#review-' + review_id + '-comments').show();
-            updateLocalTime();
-        }, 'html')
-     .fail(function() {
-        alert('重新加载评论区出错，请刷新页面');
-     });
- }
-
- function submit_comment(review_id)
- {
-     content = $('#review-comment-input-' + review_id).val().trim();
-     if (content == '') {
-         alert('请输入评论内容');
-         return;
-     }
-     $.post("/api/review/new_comment/", {
-         review_id: review_id,
-         content: content
-     }, function(o) {
-         if (o.ok) {
-             reload_comments(review_id);
-         } else {
-             alert(o.message);
-         }
-     }, 'json')
-     .fail(function() {
-         alert('提交评论失败，请重试');
-     });
- }
-
- function delete_comment(review_id, comment_id)
- {
-     if (!confirm('你真的要删除此评论吗？')) {
-         return;
-     }
-     $.post("/api/review/delete_comment/", { comment_id: comment_id },
-         function(o) {
-            if (o.ok) {
-               reload_comments(review_id);
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('删除评论失败，请重试');
-     });
- }
-
- function reply_comment(review_id, reply_to)
- {
-     var elem = $('#review-comment-input-' + review_id);
-     elem.focus();
-     elem.val('');
-     elem.val('回复 @' + reply_to + ': ');
- }
-
- function block_review(review_id)
- {
-     $.post("/api/review/block/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('屏蔽成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('屏蔽失败，请重试');
-     });
- }
-
- function unblock_review(review_id)
- {
-     $.post("/api/review/unblock/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('解除屏蔽成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('解除屏蔽失败，请重试');
-     });
- }
-
- function hide_review(review_id)
- {
-     $.post("/api/review/hide/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('隐藏点评成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('隐藏点评失败，请重试');
-     });
- }
-
- function unhide_review(review_id)
- {
-     $.post("/api/review/unhide/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('解除隐藏点评成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('解除隐藏点评失败，请重试');
-     });
- }
-
- $('.review-filter-rule').each(function (index) {
-     var id = $(this).attr('id')
-     var prefix = 'review-filter-rule-'
-     var num_id = parseInt(id.substr(prefix.length))
-     var review_id = 'review-content-' + num_id.toString()
-     var original_text = $('#' + review_id).html()
-     console.log(original_text)
-     console.log($(this).text())
-
-     var regex_str = $(this).text()
-     var regex_match_and_replace = regex_str.split('\n')
-     var regex_match = regex_match_and_replace[0]
-     var regex_replace = regex_match_and_replace.length == 2 ? regex_match_and_replace[1] : ''
-     var regex = new RegExp(regex_match, 'g')
-     var replace_text = original_text.replace(regex, regex_replace)
-     $('#' + review_id).html(replace_text)
- })
-
- $('.review-content').each(function(index) {
-     var regex = new RegExp('(脑瘫玩意|傻逼|我艹你妈|艹你妈)', 'g')
-     var regex_replace = '<span data-toggle="tooltip" data-placement="top" title="本点评存在违反社区规范的内容，予以部分屏蔽" style="background:black;color:black;">请文明用语</span>'
-     var replace_text = $(this).html().replace(regex, regex_replace)
-     $(this).html(replace_text)
- })
-
- $('.teacher-review-label').tooltip()
-</script>
 
 </html>

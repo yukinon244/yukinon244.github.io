@@ -1,2837 +1,1284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" property="og:description" content="9.9 分，16 人评价">
-    <meta name="keywords" content="USTC,评课,课程">
-    <meta name="author" content="jenny42,aaron1992,boj">
-    <link rel="icon" href="/static/image/favicon.ico">
-
-    <title>统计力学（侯中怀, 徐瑞雪） - USTC评课社区</title>
-
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/style.css?ver=20220706" rel="stylesheet">
-
-    
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="9.9 分，16 人评价" name="description" property="og:description"/>
+<meta content="USTC,评课,课程" name="keywords"/>
+<meta content="jenny42,aaron1992,boj" name="author"/>
+<link href="/static/image/favicon.ico" rel="icon"/>
+<title>统计力学（侯中怀, 徐瑞雪） - USTC评课社区</title>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-
+</head>
 <body>
-  <div id="wrap">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        
-        <button type="button" class="mobile btn btn-default navbar-btn pull-right right-mg-md" style="outline:none" data-toggle="modal" data-target="#signin">登录</button>
-        
-        <a class="navbar-brand" href="/">USTC评课社区</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav desktop">
-          <li ><a href="/latest_reviews">点评</a></li>
-	  <li ><a href="/course/">课程</a></li>
-          
-          <li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
-        </ul>
-
-	
-        <form class="navbar-form navbar-left desktop" action="/search/" method="get" role="search">
-	
-          <div class="form-group">
-            <input type="text" name="q" class="form-control" id="search" placeholder="搜索课程、老师" style="width: 235px" value="">
-          </div>
-          <span class="desktop-wide">
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey"></span></button>
-          </span>
-        </form>
-
-        <ul class="nav navbar-nav navbar-right desktop">
-          
-          <li><button type="button" class="btn btn-default navbar-btn left-mg-md" data-toggle="modal" data-target="#signin">登录</button></li>
-          
-        </ul>
-
-        
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  
-  <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-signin">
-      <div class="modal-content">
-        <form id="signin-form" class="form-signin">
-          <input type="hidden" name="csrf_token" value="Ijg2NGUxYWJkYzY4NzA2MTFkY2ZiZmM5YTE4MGYwZTUwZGI5ZTQ1OTUi.Ytly_A.Mwpzoy7tj_CAMga0V5OjWlo8oas" />
-          <div class="form-signin-heading">
-            <span class="h2">请登录</span>
-            <a class="btn btn-default float-right" href="/signup">注册</a>
-          </div>
-          <div id="signin-alert" role="alert" class="display: none"></div>
-          <label for="inputEmail" class="sr-only">用户名</label>
-          <input type="text" name="username" id="inputEmail" class="form-control" placeholder="用户名或邮箱" required autofocus>
-          <label for="inputPassword" class="sr-only">密码</label>
-          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="remember">记住我
-            </label>
-            <a class="float-right" href="/reset-password/">忘记密码</a>
-          </div>
-          <button class="btn btn-lg btn-blue btn-block" type="submit">登录</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  
-
-    <!-- banner -->
-    
-    <div class="container">
-      
-      <div class="text-center banner mobile">新增 <a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
-      
-
-      
-      <div class="text-center banner desktop">评课社区推出<a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
-      
-    </div>
-    <!-- end banner -->
-    
-
-  
-
+<div id="wrap">
+<nav class="navbar navbar-default">
 <div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
+<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav desktop">
+<li><a href="https://icourse.club/latest_reviews">点评</a></li>
+<li><a href="https://icourse.club/course/">课程</a></li>
+<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+</ul>
+<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
+<div class="form-group">
+<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
+</div>
+<span class="desktop-wide">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
+</span>
+</form>
+<ul class="nav navbar-nav navbar-right desktop">
+<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
 
-  <div class="row float-element">
-    <div class="row">
-      <div class="col-md-8 inline-h3">
-        <span class="blue h3">统计力学</span><span class="h3 blue mobile">（侯中怀, 徐瑞雪）</span>
-        <span class="small grey align-bottom left-pd-sm desktop">2022春 2021春 2020春 2019春 2018春 2017春 2016春 2015春 &nbsp;课程号：CHEM5010P01</span>
-        <br><span class="small grey align-bottom mobile">2022春 2021春 2020春 2019春 2018春 2017春 2016春 2015春 &nbsp;课程号：CHEM5010P01</span>
-
-        
-        <hr>
-        
-        <div class="ud-pd-sm blue">
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-          <span class="rl-pd-sm h4">9.9</span><span class="rl-pd-sm text-muted">(16人评价)</span>
-        </div>
-        
-        <ul class="text-muted list-inline list-unstyled ud-pd-sm">
-          <li class="right-mg-md">课程难度：困难</li>
-          <li class="right-mg-md">作业多少：中等</li>
-          <li class="right-mg-md">给分好坏：超好</li>
-          <li class="right-mg-md">收获大小：很多</li>
-        </ul>
-
-        <table class="table table-condensed no-border">
-          <tr>
-            <td><strong>选课类别：</strong>基础</td>
-            <td><strong>教学类型：</strong>理论课</td>
-          </tr>
-          <tr>
-            <td><strong>课程类别：</strong>研究生课程</td>
-            <td><strong>开课单位：</strong>化学物理系</td>
-          </tr>
-          <tr>
-            <td><strong>课程层次：</strong>本研贯通</td>
-            <td><strong>学分：</strong>4.0</td>
-          </tr>
-          </tbody>
-        </table>
-
-        <div class="ud-pd-sm">
-          
-          <strong>课程主页</strong>：<a href="http://staff.ustc.edu.cn/~hzhlj/education.html">http://staff.ustc.edu.cn/~hzhlj/education.html</a>
-          
-        </div>
-
-        <div id="action-btn-group" class="ud-pd-md" style="display:none">
-          <button class="btn btn-white btn-flat btn-follow btn-do"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> 关注 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-follow btn-undo"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 已关注 <small>(<span class="count"></span>)</small></button>
-
-          <button class="btn btn-white btn-flat btn-upvote btn-do"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-upvote btn-undo"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
-
-          <button class="btn btn-white btn-flat btn-downvote btn-do"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-downvote btn-undo"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
-
-          
-        </div>
-
-	
-	<div class="ud-pd-md">
-	  <div class="solid ud-pd-sm inline-h3">
-          <span class="blue h3">简介</span>
-          <span class="text-muted pull-right small" style="padding-top: 1em;">
-             
-             
-             <span class="glyphicon glyphicon-time grey left-pd-sm" aria-hidden="true" ></span>
+<!-- banner -->
+<div class="container">
+<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+</div>
+<!-- end banner -->
+<div class="container">
+<div class="row float-element">
+<div class="row">
+<div class="col-md-8 inline-h3">
+<span class="blue h3">统计力学</span><span class="h3 blue mobile">（侯中怀, 徐瑞雪）</span>
+<span class="small grey align-bottom left-pd-sm desktop">2022春 2021春 2020春 2019春 2018春 2017春 2016春 2015春  课程号：CHEM5010P01</span>
+<br/><span class="small grey align-bottom mobile">2022春 2021春 2020春 2019春 2018春 2017春 2016春 2015春  课程号：CHEM5010P01</span>
+<hr/>
+<div class="ud-pd-sm blue">
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span class="rl-pd-sm h4">9.9</span><span class="rl-pd-sm text-muted">(16人评价)</span>
+</div>
+<ul class="text-muted list-inline list-unstyled ud-pd-sm">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<table class="table table-condensed no-border">
+<tr>
+<td><strong>选课类别：</strong>基础</td>
+<td><strong>教学类型：</strong>理论课</td>
+</tr>
+<tr>
+<td><strong>课程类别：</strong>研究生课程</td>
+<td><strong>开课单位：</strong>化学物理系</td>
+</tr>
+<tr>
+<td><strong>课程层次：</strong>本研贯通</td>
+<td><strong>学分：</strong>4.0</td>
+</tr>
+</table>
+<div class="ud-pd-sm">
+<strong>课程主页</strong>：<a href="http://staff.ustc.edu.cn/~hzhlj/education.html">http://staff.ustc.edu.cn/~hzhlj/education.html</a>
+</div>
+<div class="ud-pd-md" id="action-btn-group" style="display:none">
+<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+</div>
+<div class="ud-pd-md">
+<div class="solid ud-pd-sm inline-h3">
+<span class="blue h3">简介</span>
+<span class="text-muted pull-right small" style="padding-top: 1em;">
+<span aria-hidden="true" class="glyphicon glyphicon-time grey left-pd-sm"></span>
              最后更新：<span class="localtime" style="display: none;">07/20/2022 16:05:01</span>
-             
-          </span>
-	  </div>
-      <div class="showmore-text" id="course-intro">
-	    <div><p>讲义有密码qwq</p><p>------------------------------------------------------------------------上面这个人写的简介较为无关，分割一下</p><p>一门面向本科生（主要是化院3系三年级）和研究生的课程，授课安排为1个2连堂加1个3连堂，但第<span>3连堂的第</span>3节课的时间也可能灵活调整。</p><p>考试形式：2022年：需要使用计算器的闭卷，有35分选择填空题，其他是大题。</p><p>授课：几乎是纯板书（电子板书或者黑板板书）</p></div>
-      </div>
-      <div class="showmore-wrapper">
-        <div class="showmore-shadow">
-          <div class="showmore-btn-wrapper">
-            <button class="showmore-btn">展开全部课程简介 <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
-          </div>
-        </div>
-      </div>
-	</div>
-	
-	
-
-	<div class="solid ud-pd-md inline-h3">
-	  <span class="blue h3" id="review-anchor">点评</span>
-          
-          <a type="button" data-toggle="modal" data-target="#signin" class="btn btn-white float-right blue"><span class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm" aria-hidden="true"></span>写点评</a>
-          
-        </div>
-
-
-        
-        
-	
-
-	
-	<div class="ud-pd-sm">
-		<span class="right-pd-sm weight-heavy">排序</span>
-		<select name="sort_by" onchange="location=this.value">
-			
-			<option value="/course/5645/?sort_by=upvote#review-anchor" selected>点赞最多</option>
-			
-			<option value="/course/5645/?sort_by=pubtime_desc#review-anchor" >最新点评</option>
-			
-			<option value="/course/5645/?sort_by=pubtime#review-anchor" >最旧点评</option>
-			
-			<option value="/course/5645/?sort_by=score_desc#review-anchor" >评分: 高-低</option>
-			
-			<option value="/course/5645/?sort_by=score#review-anchor" >评分: 低-高</option>
-			
-		</select>
-		<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
-		<select name="term" onchange="location=this.value">
-			
-			<option value="/course/5645/?sort_by=upvote#review-anchor" selected>全部</option>
-			
-			
-			<option value="/course/5645/?sort_by=upvote&amp;term=20212#review-anchor" >
+</span>
+</div>
+<div class="showmore-text" id="course-intro">
+<div><p>讲义有密码qwq</p><p>------------------------------------------------------------------------上面这个人写的简介较为无关，分割一下</p><p>一门面向本科生（主要是化院3系三年级）和研究生的课程，授课安排为1个2连堂加1个3连堂，但第<span>3连堂的第</span>3节课的时间也可能灵活调整。</p><p>考试形式：2022年：需要使用计算器的闭卷，有35分选择填空题，其他是大题。</p><p>授课：几乎是纯板书（电子板书或者黑板板书）</p></div>
+</div>
+<div class="showmore-wrapper">
+<div class="showmore-shadow">
+<div class="showmore-btn-wrapper">
+<button class="showmore-btn">展开全部课程简介 <span aria-hidden="true" class="glyphicon glyphicon-chevron-down"></span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="solid ud-pd-md inline-h3">
+<span class="blue h3" id="review-anchor">点评</span>
+<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
+</div>
+<div class="ud-pd-sm">
+<span class="right-pd-sm weight-heavy">排序</span>
+<select name="sort_by" onchange="location=this.value">
+<option selected="" value="/course/5645/?sort_by=upvote#review-anchor">点赞最多</option>
+<option value="/course/5645/?sort_by=pubtime_desc#review-anchor">最新点评</option>
+<option value="/course/5645/?sort_by=pubtime#review-anchor">最旧点评</option>
+<option value="/course/5645/?sort_by=score_desc#review-anchor">评分: 高-低</option>
+<option value="/course/5645/?sort_by=score#review-anchor">评分: 低-高</option>
+</select>
+<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
+<select name="term" onchange="location=this.value">
+<option selected="" value="/course/5645/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/5645/?sort_by=upvote&amp;term=20212#review-anchor">
 			2022春 (7)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;term=20202#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;term=20202#review-anchor">
 			2021春 (2)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;term=20192#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;term=20192#review-anchor">
 			2020春 (3)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;term=20182#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;term=20182#review-anchor">
 			2019春 (3)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;term=20152#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;term=20152#review-anchor">
 			2016春 (1)
 			</option>
-			
-		</select>
-		<br class="mobile">
-		<span class="right-pd-sm weight-heavy mobile">评分</span>
-		<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
-		<select name="rating" onchange="location=this.value">
-			<option value="/course/5645/?sort_by=upvote#review-anchor" selected>全部</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;rating=5#review-anchor" >
+</select>
+<br class="mobile"/>
+<span class="right-pd-sm weight-heavy mobile">评分</span>
+<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
+<select name="rating" onchange="location=this.value">
+<option selected="" value="/course/5645/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/5645/?sort_by=upvote&amp;rating=5#review-anchor">
 				★★★★★ (15)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;rating=4#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;rating=4#review-anchor">
 				★★★★ (1)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;rating=3#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;rating=3#review-anchor">
 				★★★ (0)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;rating=2#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;rating=2#review-anchor">
 				★★ (0)
 			</option>
-			
-			<option value="/course/5645/?sort_by=upvote&amp;rating=1#review-anchor" >
+<option value="/course/5645/?sort_by=upvote&amp;rating=1#review-anchor">
 				★ (0)
 			</option>
-			
-		</select>
-		<span class="rl-pd-sm text-muted">16条点评</span>
-	</div>
-	
-
-    
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-47649">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/4572>Manifold</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-47649">
-            <p><div><p>今天刚考完试，迫不及待来写一个评课了，不得不说这门课程是妮可一门十分优秀的课程，吹爆！</p><hr><p>授课上，主要是由徐老师与侯老师两个人分别讲，徐老师主要讲系综和无相互作用系统，这学期用的是手写板在电脑上写，然后电脑会投影，并且也可以在BB系统上看（有线上课）；侯老师主要讲相变、经典流体和非平衡态统计，每节课都是粉笔+黑板，非常舒适。</p><hr><p>然后是这门课的主要内容，主要分为了五个部分。</p><p>（如有理解错误欢迎讨论）</p><ul><li>系综理论</li></ul><p>统计力学（在本门课的范围内），研究的主要对象是宏观系统，是由大量粒子所构成的，利用一些宏观可测的物理量来描述这样的系统；而统计力学的目标就是，通过研究系统的微观态，利用概率、平均与涨落，来建立起与宏观态的联系，得到宏观态的结果。</p><p>为此，我们引入了遍历假设，这告诉我们实际上宏观观测与系综平均是相对应的，这样我们就建立起了微观与宏观的桥梁，只需要去研究"系综"，就能得到宏观物理量的结果。</p><p>系综是有多种多样的，微正则系综、正则系统、巨正则系综、等压系综......统计力学将用优美的方式，建立起不同系综的微观态描述，而且神奇而合理的是，当粒子数充分大时，不同系综得到的结果实际上是一样的。</p><p>在研究系综时，不要忘记我们仍需建立起对系统宏观态的描述，可以通过热力学关系、平衡态、系综平均的相关探究，得到配分函数与热力学量的对应关系。</p><p>并且，相比于热力学更多研究平衡态，系综给出了统计涨落的结果，比如粒子数、能量、体积的涨落，不过对于粒子数较大的系统，相对涨落是非常微小的。</p><ul><li>无相互作用系统</li></ul><p>这一部分更像是系综理论的一个应用。</p><p>首先是配分函数的因子话，其实更像是一种，分离变量（？），其实就是将不同组分的配分函数分离。</p><p>全同粒子的配分函数，大概就是费米子、玻色子的巨配分函数的导出，不同能级粒子数分布，不同能级的关联，经典统计极限，多组分的配分函数。</p><p>对光子气、自由电子气的研究，主要是各自的配分函数、热力学等。</p><p>在经典极限下，可以导出经典单原子的单粒子平动配分函数，分子内部电子、核能级；多原子的振动、转动能级等；并且可以得到气相化学平衡的平衡常数（据说经常考期末题）。</p><p>进而可以研究 BEC ，0K下的费米分布，近0K的费米能级、热容等。</p><ul><li>相变理论</li></ul><p>这一部分又名 Ising Model 的各种解法（×）</p><p>这部分主要是，1D Ising Model 有/无外场的开放/周期边界条件的解，讲了近似解、转移矩阵法、平均场理论、重整化群方法，已经 2D Ising Model 的解，并考虑系统的关联、热力学（能量、热容...），算一算相变、临界指数等。</p><p>最让我感觉精彩的大概就是重整化群的部分，"粗粒化"是其思想的核心，通过消除粒子1和粒子3中间的粒子2，并且找到一个新的等效的粒子1和粒子3的相互作用，从而可以得到新的体系与旧的体系的配分函数的关系。这一部分侯老师用通俗、细致的讲述娓娓道来，还是非常精彩的。</p><ul><li>经典流体</li><li>非平衡态统计</li></ul><p>（讲道理这两部分学的挺烂的，还是不说了）</p><hr><p>考试部分，题目有，填空题，选择题，判断题，五道大题。</p><p>填空、选择和判断题就是一些基本概念的考察，系综、Ising Model、FD BE MB 分布，关联函数（比如各个关联函数长什么样子）等，反正比较细节。而且吧，其实...比如会考到 1D Ising Model 的 RG 方法的结果是啥，所以其实，有点像背书课（）</p><p>大题五个，一共65分。</p><p>第一题，给一个单粒子配分函数，求一下巨配分函数，非常的基础。</p><p>第二题，算 水和一氧化碳 反应生成 氢气和一氧化碳 的化学反应平衡常数，无脑套公式，复习了背了就会做。</p><p>第三题，算光子气和自由电子气的巨配分函数和状态方程...</p><p>第四题，理想流体相关，有算第二位力系数，算一个粒子周围有多少个其他粒子。</p><p>最后一题，关于线性相应，算一下响应函数，还有给一个外场算一下 Delta bar{A}(t)，最后列举四个涨落耗散定理的形式并简要说明。</p><hr><p>总的来说，这门课确实是妮可的不可多得的一门优秀课程，能够学到相当多的知识，老师的讲述也是精彩绝伦，相比于隔壁物院的热统...还是希望物院能够有所改观吧。</p><p>想学统计，选就完了！</p><p>最后放上来自己的复习笔记（最后非平衡统计实在没时间写了）</p><p><a href="/uploads/files/7082e4be7234ed183b607f6f8c3a79fb8f0f2a06.pdf">Chapter 1 系综理论.pdf</a></p><p><a href="/uploads/files/45fd482a78c83248452f28cb1232b6672aff4a57.pdf">Chapter 2 无相互作用系统.pdf</a></p><p><a href="/uploads/files/81a481925c63fab1a3bee6fe09dc3849a24676c2.pdf">Chapter 3 相变.pdf</a></p><p><a href="/uploads/files/5936f841c16cea1b0e571e1efb5b8d2074dc0ea4.pdf">Chapter 4 经典流体.pdf</a></p><p><a href="/uploads/files/0fcbaf3713bd5dadd52a1b4da45ec71ad57bfbf4.pdf">Chapter 5 非平衡态统计.pdf</a></p><p>嗷对，补充一下，笔记借鉴（抄）了 scp 和 lsr 两位 dl 的笔记！</p><hr><p>出分咯，和预估的一样。</p><p>只能说老师真是神人，从大家的草稿纸上硬捞分数，一半的同学都能从草稿纸上加分，虽然最高也就4分，但这工作量实在巨大...谢谢你老师！！</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-47649">
-            <span class="small localtime" style="display: none;">06/23/2022 09:15:34</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/28/2022 09:19:17</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-47649">12</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(47649)">
-              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-47649">2</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-47649" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-47649-comments" class="panel panel-default" style="display:block">
-            <div class="panel-body">
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/6712">USTCscp</a>：
+</select>
+<span class="rl-pd-sm text-muted">16条点评</span>
+</div>
+<div class="ud-pd-md dashed review" id="review-47649">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/4572">Manifold</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-47649">
+<p></p><div><p>今天刚考完试，迫不及待来写一个评课了，不得不说这门课程是妮可一门十分优秀的课程，吹爆！</p><hr/><p>授课上，主要是由徐老师与侯老师两个人分别讲，徐老师主要讲系综和无相互作用系统，这学期用的是手写板在电脑上写，然后电脑会投影，并且也可以在BB系统上看（有线上课）；侯老师主要讲相变、经典流体和非平衡态统计，每节课都是粉笔+黑板，非常舒适。</p><hr/><p>然后是这门课的主要内容，主要分为了五个部分。</p><p>（如有理解错误欢迎讨论）</p><ul><li>系综理论</li></ul><p>统计力学（在本门课的范围内），研究的主要对象是宏观系统，是由大量粒子所构成的，利用一些宏观可测的物理量来描述这样的系统；而统计力学的目标就是，通过研究系统的微观态，利用概率、平均与涨落，来建立起与宏观态的联系，得到宏观态的结果。</p><p>为此，我们引入了遍历假设，这告诉我们实际上宏观观测与系综平均是相对应的，这样我们就建立起了微观与宏观的桥梁，只需要去研究"系综"，就能得到宏观物理量的结果。</p><p>系综是有多种多样的，微正则系综、正则系统、巨正则系综、等压系综......统计力学将用优美的方式，建立起不同系综的微观态描述，而且神奇而合理的是，当粒子数充分大时，不同系综得到的结果实际上是一样的。</p><p>在研究系综时，不要忘记我们仍需建立起对系统宏观态的描述，可以通过热力学关系、平衡态、系综平均的相关探究，得到配分函数与热力学量的对应关系。</p><p>并且，相比于热力学更多研究平衡态，系综给出了统计涨落的结果，比如粒子数、能量、体积的涨落，不过对于粒子数较大的系统，相对涨落是非常微小的。</p><ul><li>无相互作用系统</li></ul><p>这一部分更像是系综理论的一个应用。</p><p>首先是配分函数的因子话，其实更像是一种，分离变量（？），其实就是将不同组分的配分函数分离。</p><p>全同粒子的配分函数，大概就是费米子、玻色子的巨配分函数的导出，不同能级粒子数分布，不同能级的关联，经典统计极限，多组分的配分函数。</p><p>对光子气、自由电子气的研究，主要是各自的配分函数、热力学等。</p><p>在经典极限下，可以导出经典单原子的单粒子平动配分函数，分子内部电子、核能级；多原子的振动、转动能级等；并且可以得到气相化学平衡的平衡常数（据说经常考期末题）。</p><p>进而可以研究 BEC ，0K下的费米分布，近0K的费米能级、热容等。</p><ul><li>相变理论</li></ul><p>这一部分又名 Ising Model 的各种解法（×）</p><p>这部分主要是，1D Ising Model 有/无外场的开放/周期边界条件的解，讲了近似解、转移矩阵法、平均场理论、重整化群方法，已经 2D Ising Model 的解，并考虑系统的关联、热力学（能量、热容...），算一算相变、临界指数等。</p><p>最让我感觉精彩的大概就是重整化群的部分，"粗粒化"是其思想的核心，通过消除粒子1和粒子3中间的粒子2，并且找到一个新的等效的粒子1和粒子3的相互作用，从而可以得到新的体系与旧的体系的配分函数的关系。这一部分侯老师用通俗、细致的讲述娓娓道来，还是非常精彩的。</p><ul><li>经典流体</li><li>非平衡态统计</li></ul><p>（讲道理这两部分学的挺烂的，还是不说了）</p><hr/><p>考试部分，题目有，填空题，选择题，判断题，五道大题。</p><p>填空、选择和判断题就是一些基本概念的考察，系综、Ising Model、FD BE MB 分布，关联函数（比如各个关联函数长什么样子）等，反正比较细节。而且吧，其实...比如会考到 1D Ising Model 的 RG 方法的结果是啥，所以其实，有点像背书课（）</p><p>大题五个，一共65分。</p><p>第一题，给一个单粒子配分函数，求一下巨配分函数，非常的基础。</p><p>第二题，算 水和一氧化碳 反应生成 氢气和一氧化碳 的化学反应平衡常数，无脑套公式，复习了背了就会做。</p><p>第三题，算光子气和自由电子气的巨配分函数和状态方程...</p><p>第四题，理想流体相关，有算第二位力系数，算一个粒子周围有多少个其他粒子。</p><p>最后一题，关于线性相应，算一下响应函数，还有给一个外场算一下 Delta bar{A}(t)，最后列举四个涨落耗散定理的形式并简要说明。</p><hr/><p>总的来说，这门课确实是妮可的不可多得的一门优秀课程，能够学到相当多的知识，老师的讲述也是精彩绝伦，相比于隔壁物院的热统...还是希望物院能够有所改观吧。</p><p>想学统计，选就完了！</p><p>最后放上来自己的复习笔记（最后非平衡统计实在没时间写了）</p><p><a href="https://icourse.club/uploads/files/7082e4be7234ed183b607f6f8c3a79fb8f0f2a06.pdf">Chapter 1 系综理论.pdf</a></p><p><a href="https://icourse.club/uploads/files/45fd482a78c83248452f28cb1232b6672aff4a57.pdf">Chapter 2 无相互作用系统.pdf</a></p><p><a href="https://icourse.club/uploads/files/81a481925c63fab1a3bee6fe09dc3849a24676c2.pdf">Chapter 3 相变.pdf</a></p><p><a href="https://icourse.club/uploads/files/5936f841c16cea1b0e571e1efb5b8d2074dc0ea4.pdf">Chapter 4 经典流体.pdf</a></p><p><a href="https://icourse.club/uploads/files/0fcbaf3713bd5dadd52a1b4da45ec71ad57bfbf4.pdf">Chapter 5 非平衡态统计.pdf</a></p><p>嗷对，补充一下，笔记借鉴（抄）了 scp 和 lsr 两位 dl 的笔记！</p><hr/><p>出分咯，和预估的一样。</p><p>只能说老师真是神人，从大家的草稿纸上硬捞分数，一半的同学都能从草稿纸上加分，虽然最高也就4分，但这工作量实在巨大...谢谢你老师！！</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-47649">
+<span class="small localtime" style="display: none;">06/23/2022 09:15:34</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/28/2022 09:19:17</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-47649">12</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(47649)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-47649">2</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-47649" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-47649-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/6712">USTCscp</a>：
                   <span>一手资料（参考了其他两个同学的期末复习笔记），一个晚上，一个早上，一支笔，一遍推导，一个奇迹。
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">06/23/2022 14:43:03</span>
-                  </span>
-              </div>
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/6206">Dzhou</a>：
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">06/23/2022 14:43:03</span>
+</span>
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/6206">Dzhou</a>：
                   <span>学热统的感觉好亏(&gt;﹏&lt;)
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">06/23/2022 15:37:59</span>
-                  </span>
-              </div>
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-48397">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/6712>USTCscp</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-48397">
-            <p><blockquote><p><img src="/uploads/images/b065d635245ff0f9e2655e3030b702607cfb239c.png" style="height:266px; width:560px"></p><p>这个是22年的考试成绩分布图，我的卷面是82，总评96，ありがとうございます。</p><p><a href="/uploads/files/572d5e3a3201bb2fe8a48a9e7e6175a7d4b48719.pdf">统计力学期末整理 3.pdf</a>　　主要是群里的往年笔记，书本，也摘了另一位同学的部分笔记和我自己的。</p><p>我前一学期和寒假提前听了mit open course里面kardar的统计力学I，第三章的东西是很复杂的，做了许多物理上的近似，我想可以直接跳过第三章3.4the Boltzmann equation然后开始看ensemble的部分，往后面看。我当时是在第三章花了太长时间导致学习速度很慢（视频YouTube上有，还可以开实时字幕）（kardar的理论推导比较多）。</p><p>  考试考了化学平衡常数，巨正则系综方法求理想气体状态方程，光子气电子气状态方程，第二位力系数在简单模型中的应用（有约化分布函数g(r)算附近粒子数），关联函数以及涨落耗散定理的几种形式并解释。选择题作业认真写就会了，填空题考得比较细，前面10分系综的概念，基本柿子，简单的关联函数的，问了重整化里最简单的那个一维粗化细化公式，可惜我赌这个不考没复习。</p><p>  学习过程中同学们很好，很好啊。有个第八章化学反应速率的作业题目不会还有林哥哥打电话来教我，考前几天只有最后一晚和早上可以复习，我是结合着同学的笔记看看哪边漏复习了，全部公式给推导一遍，考试的时候大题基本就都会推导。（作业题里面可能有个用不是泰勒展开的展开做的题目，记得找对展开的公式，这个不重要只是当时我写好久）</p><p>  课本chandler的，讲的速度挺快，很多部分被略去了，还是可以自己看的，耐心看下去你就会发现老师上课讲的你可能提前会了。</p><p>习题课推荐去，透了点题但没完全透，知识点过了一遍。</p><p> 和物院的热统比起来有如下好处：作业极少且有答案（部分），没有期中考，直接系综开头。强烈推荐和小伙伴一起来玩耍！</p></blockquote>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-48397">
-            <span class="small localtime" style="display: none;">06/28/2022 14:00:40</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/28/2022 14:46:21</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-48397">9</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(48397)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-48397">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-48397" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-48397-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-14154">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/822>秋实</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2019春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-14154">
-            <p><div><p>必须强吹一波，我来科大上过最好的课了。</p><p>作为化院的统计力学，从简单系综开始，到广义系综，中间穿插各种应用的例子；经典统计，黑体辐射，固体晶格振动热容，自由电子气理论；然后经典流体附带一点点结构因子的部分；接着非平衡统计基础，响应函数，涨落耗散定理，自扩散，布朗运动；最后量子统计，把非平衡部分用密度矩阵和量子力学算符重新写一遍。也算是雨露均沾，把统计力学的核心部分展示给了学生。</p><p>先是徐瑞雪老师上前两部分，徐老师的特点是她的思维比较敏捷，所以讲的很流畅，当然学生听不懂是可以中间打断的，全板书上课，会着重强调考试要考的内容（而且据说每年的考试题目都不怎么变），当然如果问一些弱点的问题可能会被老师怼，不过其实老师人还是蛮好的，最后都会给解决的，老师上课绝对没有一句题外话，都是课程相关，所以可能要求专心听课。</p><p>中间两部分是侯中怀老师上，老师本来就是搞统计力学的，所以上起来得心应手，也是全板书过程，不过就会从穿插一些不会考试的内容，比如蒙特卡洛模拟这些，当然非平衡部分本身比较难，所以可能要多花时间。</p><p>最后一部分是严以京老师上，老师水平高得不得了，内容也确实很难，考试会考到，但我觉得稍微理解加记忆一下，应付考试没什么问题，老师是PPT讲授。也会板书细节。严老师的书快出来了，大家可以买一波。</p><p>最后，给分超级好，十几个本科生4个4.3想想有多好，当然你的卷面应该只有总评的1/2吧。</p><p>真的特别推荐同学们选！太值了！</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-14154">
-            <span class="small localtime" style="display: none;">07/17/2019 14:39:13</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-14154">8</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(14154)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-14154">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-14154" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-14154-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-50667">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/3851>化院 20 ATP</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：一般</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-50667">
-            <p><div><p>本研同堂课，属于哪里不听挂哪里的难度，不过认真学是能够被掌握的。教学内容不包括蒙特卡罗方法。</p><p> </p><p>这不是物院统计力学，所以从考试风格看，对知识的掌握程度无需过于详细。有<strong>35分的填空选择</strong>是大出意外。徐老师的大题有一种提出课题进行研究的感觉，比较像上课。侯老师的大题比较像物化考试，套公式的那种。</p><p>复习时建议把配分函数的整个知识体系建成有序的框架，考虑用尽可能统一的公式去描述各个具体公式。但是，除了像配分函数与其自变量的联系这样的系统性关系以外，很多零散的公式背下来比较好。</p><p>做作业的具体数学推导一般还是很有干货的，最好不要抄。</p><p>教材强烈建议别看，去好好听课！</p><p>要想<strong>拿4.3是很困难的</strong>，可能是同比去年难度较低的原因。已知全班卷面最高分86，而81分是没有4.3的。但是<strong>低分段也会捞</strong>，据说老师认认真真搜了大多数人的草稿纸加了分。</p><p>两位老师都非常和蔼，推导详细，虽然不意味着不会出错，不过经常善于承认与改正。如果考试试卷出现错误，请勇于指出。</p><p> </p><p>感觉使用的最重要的数学方法包括：<strong>求导与一重定积分（到处都是）、泰勒展开（到处都是）、换元积分（到处都是）、瑕积分收敛的说理方法（到处都是）、均值的平方、平方的均值、方差、协方差、乘积的均值间的关系（到处都是）、cosh、tanh、sinh与exp（ising模型与平均场理论）、链式法则（配分函数推热力学平衡性质、非平衡体系）、</strong><span>∑</span><strong>与</strong><span>∏</span><strong>的交换（配分函数因子化）、多层求和的识别与展开（ising模型）、求和逼近积分（能谱的计算）、待定参数解方程法（重整化群）、高斯分布的性质（涨落）、狄拉克函数与sgn函数的变形（对关联函数、化学动力学）、傅里叶变换（偶有出现）、矩阵的特征方程与特征值（简易的量子力学）、矩阵初等变换（简易的量子力学）、矩阵的迹（简易的量子力学、ising模型）</strong>和其他方法等<strong>。</strong></p><h3>上面有没见过的数学用语吗？</h3><p><span>感觉使用的最重要的化学方法包括：<strong>画图</strong>、近似与选择性忽略、数量级估计</span></p><p> </p><p>建议先修课程的下限：数学分析B1、数学分析B2、概率论与数理统计、物理化学A1。</p><p><strong>很少用而且完全没考线性代数。几乎不用化学原理。几乎不用数理方程。几乎不用光学。</strong></p><p><strong>不需要复变函数。不需要物理化学A2。不需要力学与电磁学。不需要有理论力学或量子力学基础</strong>（亲身体验），但上课会教一点够用的。</p><p>由于这门课可以替代热统（不知道怎么回事），因此会有少、物、核的人过来卷。化院同学们做好准备。</p><p>----------------------------------------------------------------------------</p><p>刚看培养方案发现这门课又加回20化物的必修了</p><p>哈哈哈哈</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-50667">
-            <span class="small localtime" style="display: none;">07/12/2022 06:41:39</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/18/2022 14:01:46</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-50667">7</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(50667)">
-              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-50667">1</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-50667" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-50667-comments" class="panel panel-default" style="display:block">
-            <div class="panel-body">
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/4483">原生生物</a>：
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">06/23/2022 15:37:59</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-48397">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/6712">USTCscp</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-48397">
+<p></p><blockquote><p><img src="/uploads/images/b065d635245ff0f9e2655e3030b702607cfb239c.webp" style="height:266px; width:560px"/></p><p>这个是22年的考试成绩分布图，我的卷面是82，总评96，ありがとうございます。</p><p><a href="https://icourse.club/uploads/files/572d5e3a3201bb2fe8a48a9e7e6175a7d4b48719.pdf">统计力学期末整理 3.pdf</a>　　主要是群里的往年笔记，书本，也摘了另一位同学的部分笔记和我自己的。</p><p>我前一学期和寒假提前听了mit open course里面kardar的统计力学I，第三章的东西是很复杂的，做了许多物理上的近似，我想可以直接跳过第三章3.4the Boltzmann equation然后开始看ensemble的部分，往后面看。我当时是在第三章花了太长时间导致学习速度很慢（视频YouTube上有，还可以开实时字幕）（kardar的理论推导比较多）。</p><p>  考试考了化学平衡常数，巨正则系综方法求理想气体状态方程，光子气电子气状态方程，第二位力系数在简单模型中的应用（有约化分布函数g(r)算附近粒子数），关联函数以及涨落耗散定理的几种形式并解释。选择题作业认真写就会了，填空题考得比较细，前面10分系综的概念，基本柿子，简单的关联函数的，问了重整化里最简单的那个一维粗化细化公式，可惜我赌这个不考没复习。</p><p>  学习过程中同学们很好，很好啊。有个第八章化学反应速率的作业题目不会还有林哥哥打电话来教我，考前几天只有最后一晚和早上可以复习，我是结合着同学的笔记看看哪边漏复习了，全部公式给推导一遍，考试的时候大题基本就都会推导。（作业题里面可能有个用不是泰勒展开的展开做的题目，记得找对展开的公式，这个不重要只是当时我写好久）</p><p>  课本chandler的，讲的速度挺快，很多部分被略去了，还是可以自己看的，耐心看下去你就会发现老师上课讲的你可能提前会了。</p><p>习题课推荐去，透了点题但没完全透，知识点过了一遍。</p><p> 和物院的热统比起来有如下好处：作业极少且有答案（部分），没有期中考，直接系综开头。强烈推荐和小伙伴一起来玩耍！</p></blockquote>
+</div>
+<div class="bm-pd-md grey" id="review-48397">
+<span class="small localtime" style="display: none;">06/28/2022 14:00:40</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/28/2022 14:46:21</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-48397">9</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(48397)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-48397">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-48397" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-48397-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-14154">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/822">秋实</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2019春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-14154">
+<p></p><div><p>必须强吹一波，我来科大上过最好的课了。</p><p>作为化院的统计力学，从简单系综开始，到广义系综，中间穿插各种应用的例子；经典统计，黑体辐射，固体晶格振动热容，自由电子气理论；然后经典流体附带一点点结构因子的部分；接着非平衡统计基础，响应函数，涨落耗散定理，自扩散，布朗运动；最后量子统计，把非平衡部分用密度矩阵和量子力学算符重新写一遍。也算是雨露均沾，把统计力学的核心部分展示给了学生。</p><p>先是徐瑞雪老师上前两部分，徐老师的特点是她的思维比较敏捷，所以讲的很流畅，当然学生听不懂是可以中间打断的，全板书上课，会着重强调考试要考的内容（而且据说每年的考试题目都不怎么变），当然如果问一些弱点的问题可能会被老师怼，不过其实老师人还是蛮好的，最后都会给解决的，老师上课绝对没有一句题外话，都是课程相关，所以可能要求专心听课。</p><p>中间两部分是侯中怀老师上，老师本来就是搞统计力学的，所以上起来得心应手，也是全板书过程，不过就会从穿插一些不会考试的内容，比如蒙特卡洛模拟这些，当然非平衡部分本身比较难，所以可能要多花时间。</p><p>最后一部分是严以京老师上，老师水平高得不得了，内容也确实很难，考试会考到，但我觉得稍微理解加记忆一下，应付考试没什么问题，老师是PPT讲授。也会板书细节。严老师的书快出来了，大家可以买一波。</p><p>最后，给分超级好，十几个本科生4个4.3想想有多好，当然你的卷面应该只有总评的1/2吧。</p><p>真的特别推荐同学们选！太值了！</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-14154">
+<span class="small localtime" style="display: none;">07/17/2019 14:39:13</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-14154">8</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(14154)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-14154">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-14154" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-14154-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-50667">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/3851">化院 20 ATP</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-50667">
+<p></p><div><p>本研同堂课，属于哪里不听挂哪里的难度，不过认真学是能够被掌握的。教学内容不包括蒙特卡罗方法。</p><p> </p><p>这不是物院统计力学，所以从考试风格看，对知识的掌握程度无需过于详细。有<strong>35分的填空选择</strong>是大出意外。徐老师的大题有一种提出课题进行研究的感觉，比较像上课。侯老师的大题比较像物化考试，套公式的那种。</p><p>复习时建议把配分函数的整个知识体系建成有序的框架，考虑用尽可能统一的公式去描述各个具体公式。但是，除了像配分函数与其自变量的联系这样的系统性关系以外，很多零散的公式背下来比较好。</p><p>做作业的具体数学推导一般还是很有干货的，最好不要抄。</p><p>教材强烈建议别看，去好好听课！</p><p>要想<strong>拿4.3是很困难的</strong>，可能是同比去年难度较低的原因。已知全班卷面最高分86，而81分是没有4.3的。但是<strong>低分段也会捞</strong>，据说老师认认真真搜了大多数人的草稿纸加了分。</p><p>两位老师都非常和蔼，推导详细，虽然不意味着不会出错，不过经常善于承认与改正。如果考试试卷出现错误，请勇于指出。</p><p> </p><p>感觉使用的最重要的数学方法包括：<strong>求导与一重定积分（到处都是）、泰勒展开（到处都是）、换元积分（到处都是）、瑕积分收敛的说理方法（到处都是）、均值的平方、平方的均值、方差、协方差、乘积的均值间的关系（到处都是）、cosh、tanh、sinh与exp（ising模型与平均场理论）、链式法则（配分函数推热力学平衡性质、非平衡体系）、</strong><span>∑</span><strong>与</strong><span>∏</span><strong>的交换（配分函数因子化）、多层求和的识别与展开（ising模型）、求和逼近积分（能谱的计算）、待定参数解方程法（重整化群）、高斯分布的性质（涨落）、狄拉克函数与sgn函数的变形（对关联函数、化学动力学）、傅里叶变换（偶有出现）、矩阵的特征方程与特征值（简易的量子力学）、矩阵初等变换（简易的量子力学）、矩阵的迹（简易的量子力学、ising模型）</strong>和其他方法等<strong>。</strong></p><h3>上面有没见过的数学用语吗？</h3><p><span>感觉使用的最重要的化学方法包括：<strong>画图</strong>、近似与选择性忽略、数量级估计</span></p><p> </p><p>建议先修课程的下限：数学分析B1、数学分析B2、概率论与数理统计、物理化学A1。</p><p><strong>很少用而且完全没考线性代数。几乎不用化学原理。几乎不用数理方程。几乎不用光学。</strong></p><p><strong>不需要复变函数。不需要物理化学A2。不需要力学与电磁学。不需要有理论力学或量子力学基础</strong>（亲身体验），但上课会教一点够用的。</p><p>由于这门课可以替代热统（不知道怎么回事），因此会有少、物、核的人过来卷。化院同学们做好准备。</p><p>----------------------------------------------------------------------------</p><p>刚看培养方案发现这门课又加回20化物的必修了</p><p>哈哈哈哈</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-50667">
+<span class="small localtime" style="display: none;">07/12/2022 06:41:39</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/18/2022 14:01:46</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-50667">7</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(50667)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-50667">1</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-50667" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-50667-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4483">原生生物</a>：
                   <span>ising害人 学概率论被这个东西创死过（悲
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/18/2022 18:37:29</span>
-                  </span>
-              </div>
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-33001">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/4386>Misaka19090</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2021春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-33001">
-            <p><div><p>卷子印刷清楚，考场舒服，灯光明亮，明年还来（笑</p><p>今年应该只有两个大二选了这门课，难度的确是非常大。</p><p>这门课与物院的热统不同，直接舍去了热统的热力学部分，上来就系综开头，所以第一节课上课前可能需要翻一翻物化I的笔记</p><p>然后，没有学过任何一点量子力学的同学极不建议先修此课程；没有学过任何一点理论力学的同学较不建议先修此课程</p><p>无论是徐老师的“一支笔，一张纸（手写板），一个世界”还是侯老师的“一支笔，一个黑板，一个哲理”我觉得都让人十分敬佩。如果说前半学期最让人叹为观止的是从系综理论推出理想气体状态方程与气体平动能的话，后半学期最让人叹为观止的可能是MFT和RG（在我看来十分玄妙）</p><p>当然了，也正因为直接系综起头的缘故，比起物院的课程直接超前了N个身位，哪怕是我这种菜鸡也能和和我同级的严班大佬讨论热统（对方这个学期先修了热统）。<span class="math-tex">\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</span></p><p>考试…应该是我学了的四大力学课程中最难的一个考试了。大量的概念题，推导，证明。想学好这门课的确需要花费很大的精力，而对于选了29.5学分天天挣扎在作业ddl的我来说，虽然从考完物化就开始复习但还是差的太多。</p><p>嗯，我和我物化II助教一起考的这个课，我觉得他肯定4.3，我肯定拿不到优秀。</p><p>这真的是一门很精彩，很浪漫，很Magical的课程，难，但又不是为了难而难。</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-33001">
-            <span class="small localtime" style="display: none;">07/08/2021 12:27:37</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-33001">4</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(33001)">
-              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-33001">4</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-33001" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-33001-comments" class="panel panel-default" style="display:block">
-            <div class="panel-body">
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/4376">yqm_2d_scientist</a>：
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/18/2022 18:37:29</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-33001">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/4386">Misaka19090</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2021春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-33001">
+<p></p><div><p>卷子印刷清楚，考场舒服，灯光明亮，明年还来（笑</p><p>今年应该只有两个大二选了这门课，难度的确是非常大。</p><p>这门课与物院的热统不同，直接舍去了热统的热力学部分，上来就系综开头，所以第一节课上课前可能需要翻一翻物化I的笔记</p><p>然后，没有学过任何一点量子力学的同学极不建议先修此课程；没有学过任何一点理论力学的同学较不建议先修此课程</p><p>无论是徐老师的“一支笔，一张纸（手写板），一个世界”还是侯老师的“一支笔，一个黑板，一个哲理”我觉得都让人十分敬佩。如果说前半学期最让人叹为观止的是从系综理论推出理想气体状态方程与气体平动能的话，后半学期最让人叹为观止的可能是MFT和RG（在我看来十分玄妙）</p><p>当然了，也正因为直接系综起头的缘故，比起物院的课程直接超前了N个身位，哪怕是我这种菜鸡也能和和我同级的严班大佬讨论热统（对方这个学期先修了热统）。<span class="math-tex">\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</span></p><p>考试…应该是我学了的四大力学课程中最难的一个考试了。大量的概念题，推导，证明。想学好这门课的确需要花费很大的精力，而对于选了29.5学分天天挣扎在作业ddl的我来说，虽然从考完物化就开始复习但还是差的太多。</p><p>嗯，我和我物化II助教一起考的这个课，我觉得他肯定4.3，我肯定拿不到优秀。</p><p>这真的是一门很精彩，很浪漫，很Magical的课程，难，但又不是为了难而难。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-33001">
+<span class="small localtime" style="display: none;">07/08/2021 12:27:37</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-33001">4</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(33001)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-33001">4</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-33001" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-33001-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4376">yqm_2d_scientist</a>：
                   <span>真的明年还来吗？ 明年我打算选这个！
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/08/2021 15:13:55</span>
-                  </span>
-              </div>
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/3179">神楽</a>：
-                  <span>回复 <a href="/user/4376">＠yqm_2d_scientist</a>: 冲冲冲，不要靠近热统，会变得不幸（）
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/08/2021 15:13:55</span>
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/08/2021 15:20:18</span>
-                  </span>
-              </div>
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/4386">Misaka19090</a>：
-                  <span>回复 <a href="/user/4376">＠yqm_2d_scientist</a>: 欢迎（ 我可能不会选课但肯定会去旁听xd
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/3179">神楽</a>：
+                  <span>回复 <a href="https://icourse.club/user/4376">＠yqm_2d_scientist</a>: 冲冲冲，不要靠近热统，会变得不幸（）
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/13/2021 18:06:39</span>
-                  </span>
-              </div>
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/4386">Misaka19090</a>：
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/08/2021 15:20:18</span>
+</span>
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4386">Misaka19090</a>：
+                  <span>回复 <a href="https://icourse.club/user/4376">＠yqm_2d_scientist</a>: 欢迎（ 我可能不会选课但肯定会去旁听xd
+</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/13/2021 18:06:39</span>
+</span>
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4386">Misaka19090</a>：
                   <span>出分了，3.0，明年一定重修
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/15/2021 09:36:07</span>
-                  </span>
-              </div>
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-19922">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/2449>ustc大学渣</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2020春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-19922">
-            <p><div><p>我是过来旁听的物院大二学生。</p><p>不用多说甚么，nb就完事了。各种吊打我院热统。作业还少，而且作业课堂上还各种提示（热统作业汪志诚全写也是服了）。学完基本上就可以上手科研了（仅仅是上手，非平衡统计力学还是博大精深的），和热统成为鲜明对比。</p><p>不过提一句Chandler的书可能不适合自学，写的迫真简略题目还比较难，自学可以康康Patheria或者黄克孙，如果说对统计力学非常非常感兴趣可以看Kardar的讲座，这个迫真对妮可所有课程形成降维打击。妮可有inspiring的课程迫真不多，即便有很多也被污名化比如wmw2333。</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-19922">
-            <span class="small localtime" style="display: none;">04/17/2020 17:53:49</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-19922">4</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(19922)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-19922">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-19922" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-19922-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-47824">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/3781>suyupilemao</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2021春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：很少</li>
-            <li>给分：一般</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-47824">
-            <p><div><p>根据上课内容整理了徐老师部分的讲义，希望对之后的同学有所帮助。</p>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/15/2021 09:36:07</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-19922">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/2449">ustc大学渣</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2020春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-19922">
+<p></p><div><p>我是过来旁听的物院大二学生。</p><p>不用多说甚么，nb就完事了。各种吊打我院热统。作业还少，而且作业课堂上还各种提示（热统作业汪志诚全写也是服了）。学完基本上就可以上手科研了（仅仅是上手，非平衡统计力学还是博大精深的），和热统成为鲜明对比。</p><p>不过提一句Chandler的书可能不适合自学，写的迫真简略题目还比较难，自学可以康康Patheria或者黄克孙，如果说对统计力学非常非常感兴趣可以看Kardar的讲座，这个迫真对妮可所有课程形成降维打击。妮可有inspiring的课程迫真不多，即便有很多也被污名化比如wmw2333。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-19922">
+<span class="small localtime" style="display: none;">04/17/2020 17:53:49</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-19922">4</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(19922)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-19922">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-19922" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-19922-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-47824">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/3781">suyupilemao</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2021春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-47824">
+<p></p><div><p>根据上课内容整理了徐老师部分的讲义，希望对之后的同学有所帮助。</p>
 <p>不过有一点需要提醒的是：统计力学中的难点是概念的理解而不是数学推导。</p>
 <p><a href="http://home.ustc.edu.cn/~suyupilemao/files/stamech.pdf" rel="nofollow">http://home.ustc.edu.cn/~suyupilemao/files/stamech.pdf</a></p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-47824">
-            <span class="small localtime" style="display: none;">06/24/2022 08:12:08</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/24/2022 08:15:55</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-47824">2</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(47824)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-47824">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-47824" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-47824-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-27649">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/419>极大理想</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2019春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-27649">
-            <p><div><p>当时脑子抽了选修这门课。虽然难，但是收获多，给分好！</p><p>徐老师讲前半部分，系综量子统计等；侯老师讲后半部分，流体非平衡涨落耗散等。今年严以京老师自告奋勇，讲了最后几次课，含时微扰，Marcus理论等，由于是英文上课听不懂，就是听天书！前两位老师都是板书讲的很好，上课记笔记就是了（我后半学期摸鱼睡觉靠着学姐的笔记活下来了）。这门课内容还是很多很难，需要自己去理解刷题，可惜自己太年轻。作业是课本后面的题目 ，老师一般给提示，不算很难。助教研究生没存在感，似乎不会统计力学，据我同学说改作业都是打勾给满分，最后还是把邱神的作业发给我们作为参考解答，都没有正式的解答。另外，黑心英语书店有这门课的手写讲义可以参考，感觉每年内容变化不大。</p><p>说下教材，是Chandler的《现代统计力学导论》（鞠国兴译），听说不适合入门，我就没看，看了一点Pathria的书，写的是真好，很清晰。当然统计物理的好书还是很多，不过基本都是英文的，比如Kardar的两卷，Greiner的热统等。</p><p>这课是本研同堂，对外校来的研究生来说理解起来应该会比较难，需要恶补很多知识，但我还是建议选！</p><p>考试好难（<s>据说题目每年不变</s>），前面两页选择填空，基本都是基本概念，比如各种系综定义，BEC等。解答题前面两个和作业很相似，有一道是写平衡常数的，后面几个不会，都是瞎写，最后一题严老师讲的，我直接缴枪投降。卷面肯定没有及格，据说调分就是卷面乘2，感谢徐女神给我优秀！不过学习了这门课感觉统计物理好有趣啊啊啊！特别推荐物院同学选修这门课来虐我们！</p><p>总之这门化学物理专业课选就是了，给分好，收获多！虽然平时学的很累，但是现在想起来还是很庆幸自己学过这门课！</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-27649">
-            <span class="small localtime" style="display: none;">02/06/2021 07:14:50</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-27649">2</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(27649)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-27649">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-27649" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-27649-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-12623">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/1024>沉晔</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2019春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-12623">
-            <p><div><p>之前一直听说这个课给分不好，而且很难。</p><p>难是真的难，但这个课真的有意思，而且感觉很有用。徐老师和候老师都是直接板书，尽管如此我还是上课一直听的云里雾里什么都没懂，不过一直在记笔记，最后复习的时候看着笔记勉勉强强感觉懂了点什么，此外参考了一部分侯老师网站上讲义的内容，有的推导在侯老师讲义上更详细。</p><p>除了徐老师和侯老师，严以京老师今年还来讲了几节课，一上来就高量什么的，一个字也没听懂…</p><p>期末两页填空选择，六道大题，依稀记得有化学平衡，算能态密度，玻色子和费米子的相关计算，其他的回忆不起来了。最后一题考了量子统计的FDT（严以京老师讲的部分），我一个字都没写，因为完全没想到会让默写FDT，只复习了后面相关的证明内容。</p><p>此外，给分是真的好，今年班上十几个本科生，给了4个4.3。</p><p>总的来讲，作为三系的杠把子课程，我觉得这门课真的好。（虽然我还是没学懂吧）</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-12623">
-            <span class="small localtime" style="display: none;">06/21/2019 03:03:02</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-12623">2</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(12623)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-12623">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-12623" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-12623-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-52243">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/5953>ZXYGoGoGo</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-52243">
-            <p><div><p>    吹爆！！</p><p>    听课的时候可以感觉到课堂上的推导都是老师自己推导过的，所以对知识的脉络特别清晰，光这一点就不知道比一些上课只会念PPT的老师高到那里去了</p><p>    看到已经有大佬把课堂知识整理的很好了，我就不多赘述了，放一份自己的笔记（笔记比较大，所以拆成了很多分上传）（复习的时候发现笔记中有一些笔误，仅供大家学习的时候参考）</p><p> </p><p><a href="/uploads/files/8e1a3b847015331ad891b1e95cf657882b6b2d29.pdf">统计力学笔记_部分13.pdf</a> <a href="/uploads/files/76be24e69f7b42652a6c96824f47e351499011e2.pdf">统计力学笔记_部分12.pdf</a> <a href="/uploads/files/c57e40c621a26050e9e40f13befc9900b95b9af3.pdf">统计力学笔记_部分11.pdf</a> <a href="/uploads/files/cbb3f62a9cbd75c25363e1e3ac301068d067e9cd.pdf">统计力学笔记_部分10.pdf</a> <a href="/uploads/files/9924115fa2583fd1af2d4f56894c6fc8df9d80d3.pdf">统计力学笔记_部分9.pdf</a> <a href="/uploads/files/f7ec83b02fb3c7cbc0ebcb8ca9246a2db280f8ae.pdf">统计力学笔记_部分8.pdf</a> <a href="/uploads/files/acaaeaafc2aad6c009c4993f4d57f497a8a8f7f4.pdf">统计力学笔记_部分7.pdf</a> <a href="/uploads/files/6d68d1c94ccb1d9d3b10b5585886fab0bc911af1.pdf">统计力学笔记_部分6.pdf</a> <a href="/uploads/files/01dcbe73f0bf5ebe3d489780e4bc1aba2efe37e2.pdf">统计力学笔记_部分5.pdf</a> <a href="/uploads/files/7eeeba0281cb46cea0d421ce7f36fc39980c99db.pdf">统计力学笔记_部分4.pdf</a> <a href="/uploads/files/bbdca4a1dc80b3053fea38667bc9649a4b77d174.pdf">统计力学笔记_部分3.pdf</a> <a href="/uploads/files/836ae57d98f7d7d0320c1380b5506c8f2720bf26.pdf">统计力学笔记_部分2.pdf</a> <a href="/uploads/files/3861bc60ce5331e074e4eb8161267b7bf21a4c04.pdf">统计力学笔记_部分1.pdf</a></p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-52243">
-            <span class="small localtime" style="display: none;">07/20/2022 05:20:52</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-52243">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(52243)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-52243">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-52243" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-52243-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-48347">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/4907>Knowhere</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-48347">
-            <p><div><p>前半个学期由徐老师来上，主要内容是系综理论及其应用，包括黑体辐射、晶体热容、自由电子气、BEC和理想气体等，这是一套非常完美的理论体系；后半学期由侯老师来上，包括相变理论(Ising模型)、经典流体和非平衡统计三部分，这部分内容比较难，需要课后再细细思索。整个学期下来能学到不少东西。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-47824">
+<span class="small localtime" style="display: none;">06/24/2022 08:12:08</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/24/2022 08:15:55</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-47824">2</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(47824)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-47824">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-47824" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-47824-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-27649">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/419">极大理想</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2019春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-27649">
+<p></p><div><p>当时脑子抽了选修这门课。虽然难，但是收获多，给分好！</p><p>徐老师讲前半部分，系综量子统计等；侯老师讲后半部分，流体非平衡涨落耗散等。今年严以京老师自告奋勇，讲了最后几次课，含时微扰，Marcus理论等，由于是英文上课听不懂，就是听天书！前两位老师都是板书讲的很好，上课记笔记就是了（我后半学期摸鱼睡觉靠着学姐的笔记活下来了）。这门课内容还是很多很难，需要自己去理解刷题，可惜自己太年轻。作业是课本后面的题目 ，老师一般给提示，不算很难。助教研究生没存在感，似乎不会统计力学，据我同学说改作业都是打勾给满分，最后还是把邱神的作业发给我们作为参考解答，都没有正式的解答。另外，黑心英语书店有这门课的手写讲义可以参考，感觉每年内容变化不大。</p><p>说下教材，是Chandler的《现代统计力学导论》（鞠国兴译），听说不适合入门，我就没看，看了一点Pathria的书，写的是真好，很清晰。当然统计物理的好书还是很多，不过基本都是英文的，比如Kardar的两卷，Greiner的热统等。</p><p>这课是本研同堂，对外校来的研究生来说理解起来应该会比较难，需要恶补很多知识，但我还是建议选！</p><p>考试好难（<s>据说题目每年不变</s>），前面两页选择填空，基本都是基本概念，比如各种系综定义，BEC等。解答题前面两个和作业很相似，有一道是写平衡常数的，后面几个不会，都是瞎写，最后一题严老师讲的，我直接缴枪投降。卷面肯定没有及格，据说调分就是卷面乘2，感谢徐女神给我优秀！不过学习了这门课感觉统计物理好有趣啊啊啊！特别推荐物院同学选修这门课来虐我们！</p><p>总之这门化学物理专业课选就是了，给分好，收获多！虽然平时学的很累，但是现在想起来还是很庆幸自己学过这门课！</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-27649">
+<span class="small localtime" style="display: none;">02/06/2021 07:14:50</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-27649">2</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(27649)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-27649">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-27649" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-27649-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-12623">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/1024">沉晔</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2019春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-12623">
+<p></p><div><p>之前一直听说这个课给分不好，而且很难。</p><p>难是真的难，但这个课真的有意思，而且感觉很有用。徐老师和候老师都是直接板书，尽管如此我还是上课一直听的云里雾里什么都没懂，不过一直在记笔记，最后复习的时候看着笔记勉勉强强感觉懂了点什么，此外参考了一部分侯老师网站上讲义的内容，有的推导在侯老师讲义上更详细。</p><p>除了徐老师和侯老师，严以京老师今年还来讲了几节课，一上来就高量什么的，一个字也没听懂…</p><p>期末两页填空选择，六道大题，依稀记得有化学平衡，算能态密度，玻色子和费米子的相关计算，其他的回忆不起来了。最后一题考了量子统计的FDT（严以京老师讲的部分），我一个字都没写，因为完全没想到会让默写FDT，只复习了后面相关的证明内容。</p><p>此外，给分是真的好，今年班上十几个本科生，给了4个4.3。</p><p>总的来讲，作为三系的杠把子课程，我觉得这门课真的好。（虽然我还是没学懂吧）</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-12623">
+<span class="small localtime" style="display: none;">06/21/2019 03:03:02</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-12623">2</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(12623)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-12623">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-12623" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-12623-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-52243">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/5953">ZXYGoGoGo</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-52243">
+<p></p><div><p>    吹爆！！</p><p>    听课的时候可以感觉到课堂上的推导都是老师自己推导过的，所以对知识的脉络特别清晰，光这一点就不知道比一些上课只会念PPT的老师高到那里去了</p><p>    看到已经有大佬把课堂知识整理的很好了，我就不多赘述了，放一份自己的笔记（笔记比较大，所以拆成了很多分上传）（复习的时候发现笔记中有一些笔误，仅供大家学习的时候参考）</p><p> </p><p><a href="https://icourse.club/uploads/files/8e1a3b847015331ad891b1e95cf657882b6b2d29.pdf">统计力学笔记_部分13.pdf</a> <a href="https://icourse.club/uploads/files/76be24e69f7b42652a6c96824f47e351499011e2.pdf">统计力学笔记_部分12.pdf</a> <a href="https://icourse.club/uploads/files/c57e40c621a26050e9e40f13befc9900b95b9af3.pdf">统计力学笔记_部分11.pdf</a> <a href="https://icourse.club/uploads/files/cbb3f62a9cbd75c25363e1e3ac301068d067e9cd.pdf">统计力学笔记_部分10.pdf</a> <a href="https://icourse.club/uploads/files/9924115fa2583fd1af2d4f56894c6fc8df9d80d3.pdf">统计力学笔记_部分9.pdf</a> <a href="https://icourse.club/uploads/files/f7ec83b02fb3c7cbc0ebcb8ca9246a2db280f8ae.pdf">统计力学笔记_部分8.pdf</a> <a href="https://icourse.club/uploads/files/acaaeaafc2aad6c009c4993f4d57f497a8a8f7f4.pdf">统计力学笔记_部分7.pdf</a> <a href="https://icourse.club/uploads/files/6d68d1c94ccb1d9d3b10b5585886fab0bc911af1.pdf">统计力学笔记_部分6.pdf</a> <a href="https://icourse.club/uploads/files/01dcbe73f0bf5ebe3d489780e4bc1aba2efe37e2.pdf">统计力学笔记_部分5.pdf</a> <a href="https://icourse.club/uploads/files/7eeeba0281cb46cea0d421ce7f36fc39980c99db.pdf">统计力学笔记_部分4.pdf</a> <a href="https://icourse.club/uploads/files/bbdca4a1dc80b3053fea38667bc9649a4b77d174.pdf">统计力学笔记_部分3.pdf</a> <a href="https://icourse.club/uploads/files/836ae57d98f7d7d0320c1380b5506c8f2720bf26.pdf">统计力学笔记_部分2.pdf</a> <a href="https://icourse.club/uploads/files/3861bc60ce5331e074e4eb8161267b7bf21a4c04.pdf">统计力学笔记_部分1.pdf</a></p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-52243">
+<span class="small localtime" style="display: none;">07/20/2022 05:20:52</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-52243">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(52243)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-52243">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-52243" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-52243-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-48347">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/4907">Knowhere</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-48347">
+<p></p><div><p>前半个学期由徐老师来上，主要内容是系综理论及其应用，包括黑体辐射、晶体热容、自由电子气、BEC和理想气体等，这是一套非常完美的理论体系；后半学期由侯老师来上，包括相变理论(Ising模型)、经典流体和非平衡统计三部分，这部分内容比较难，需要课后再细细思索。整个学期下来能学到不少东西。</p>
 <p>不过因为是化院的课，会出现一些很化学的内容，比如用配分函数算平衡常数、非平衡理论导出速率常数等。</p>
 <p>同时这门课还可以高级替代物院的热统A。相比于热统，这么课不需要再重复一遍热学，而且从系综理论讲起更具逻辑性、更便于理解，同时还有许多较为前沿的内容，还是很推荐来选的。</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-48347">
-            <span class="small localtime" style="display: none;">06/28/2022 09:09:33</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/28/2022 09:22:51</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-48347">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(48347)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-48347">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-48347" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-48347-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-22526">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/1482>USTC学水</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2020春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-22526">
-            <p><p>  之前的评论怎么被吞了……没的说，确实是精品好课，非常值得一选。国内这么好的统计力学课程屈指可数，就像楼上大神说的一样这门课基本展现了统计力学的精髓，能让人了解统计物理科研的大概样子（当然也就是了解了，毕竟真要上手还得跟着文献一起走推导）。另外说到给分，这两年确实变好了很多……今年考得难度应该偏小，侯老师考了很多基本概念的题目。奈何我复习重点错误导致这些题不会，连几个临界指数都忘了，吐血。徐老师那边还有一道九分题没来得及写，即使这样居然被捞到了4.0，算是出乎意料了。</p>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-22526">
-            <span class="small localtime" style="display: none;">09/15/2020 14:45:24</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-22526">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(22526)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-22526">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-22526" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-22526-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-50731">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-48347">
+<span class="small localtime" style="display: none;">06/28/2022 09:09:33</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">06/28/2022 09:22:51</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-48347">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(48347)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-48347">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-48347" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-48347-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-22526">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/1482">USTC学水</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2020春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-22526">
+<p></p><p>  之前的评论怎么被吞了……没的说，确实是精品好课，非常值得一选。国内这么好的统计力学课程屈指可数，就像楼上大神说的一样这门课基本展现了统计力学的精髓，能让人了解统计物理科研的大概样子（当然也就是了解了，毕竟真要上手还得跟着文献一起走推导）。另外说到给分，这两年确实变好了很多……今年考得难度应该偏小，侯老师考了很多基本概念的题目。奈何我复习重点错误导致这些题不会，连几个临界指数都忘了，吐血。徐老师那边还有一道九分题没来得及写，即使这样居然被捞到了4.0，算是出乎意料了。</p>
+</div>
+<div class="bm-pd-md grey" id="review-22526">
+<span class="small localtime" style="display: none;">09/15/2020 14:45:24</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-22526">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(22526)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-22526">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-22526" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-22526-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-50731">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
               
               匿名用户
               
             </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：一般</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-50731">
-            <p><p>感觉能说的都被大家说了。课讲得很好，收获也非常多。美中不足的是考试和化院其他物理课类似，依然是有很多对记忆力的考察，让我有些无语...</p>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-50731">
-            <span class="small localtime" style="display: none;">07/12/2022 09:26:13</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-50731">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(50731)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-50731">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-50731" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-50731-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-48366">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/5006>breakthesilence</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-48366">
-            <p><p>考前对着讲义或录播系统<s>预习</s>复习一遍体验很好，逻辑很连贯，完整推一遍讲义的话考试就没啥问题。两个老师讲的也都很清楚。</p>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-48366">
-            <span class="small localtime" style="display: none;">06/28/2022 10:04:13</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-48366">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(48366)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-48366">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-48366" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-48366-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-22212">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/3571>银河的歌谣</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2020春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-22212">
-            <p><p>课程和老师的水平都很高，就我是不会物理的迫真学渣。楼上大神说的 Pathria 是看不懂的，另外找了本 Greiner 热统，从热力学势开始恶补，终于在考前 3 天补到伊辛模型。这门课对没学过四大/小力学的同学而言是很困难的，上课基本大眼瞪小眼，下课吐血恶补。但好在老师们讲得很详细，细细地记下笔记，回头再学也不至于摸不着头脑。读着参考书，也算是慢慢摸到了门路。只不过最后留给自己备考的时间不多，题没能刷到位，背了概念和公式就上了考场。果然还是觉得 Chandler 的书用作入门太难了，题目也不适合我们基础薄弱的同学。大家学习的时候一定要多多搜集参考书、多做练习，推公式倒也没那么重要了，重要的是对概念的理解和对方法的实践。</p>
-</p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-22212">
-            <span class="small localtime" style="display: none;">09/14/2020 08:04:08</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-22212">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(22212)">
-              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-22212">2</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-22212" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-22212-comments" class="panel panel-default" style="display:block">
-            <div class="panel-body">
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/1482">USTC学水</a>：
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：一般</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-50731">
+<p></p><p>感觉能说的都被大家说了。课讲得很好，收获也非常多。美中不足的是考试和化院其他物理课类似，依然是有很多对记忆力的考察，让我有些无语...</p>
+</div>
+<div class="bm-pd-md grey" id="review-50731">
+<span class="small localtime" style="display: none;">07/12/2022 09:26:13</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-50731">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(50731)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-50731">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-50731" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-50731-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-48366">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/5006">breakthesilence</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-48366">
+<p></p><p>考前对着讲义或录播系统<s>预习</s>复习一遍体验很好，逻辑很连贯，完整推一遍讲义的话考试就没啥问题。两个老师讲的也都很清楚。</p>
+</div>
+<div class="bm-pd-md grey" id="review-48366">
+<span class="small localtime" style="display: none;">06/28/2022 10:04:13</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-48366">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(48366)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-48366">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-48366" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-48366-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-22212">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/3571">银河的歌谣</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2020春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-22212">
+<p></p><p>课程和老师的水平都很高，就我是不会物理的迫真学渣。楼上大神说的 Pathria 是看不懂的，另外找了本 Greiner 热统，从热力学势开始恶补，终于在考前 3 天补到伊辛模型。这门课对没学过四大/小力学的同学而言是很困难的，上课基本大眼瞪小眼，下课吐血恶补。但好在老师们讲得很详细，细细地记下笔记，回头再学也不至于摸不着头脑。读着参考书，也算是慢慢摸到了门路。只不过最后留给自己备考的时间不多，题没能刷到位，背了概念和公式就上了考场。果然还是觉得 Chandler 的书用作入门太难了，题目也不适合我们基础薄弱的同学。大家学习的时候一定要多多搜集参考书、多做练习，推公式倒也没那么重要了，重要的是对概念的理解和对方法的实践。</p>
+</div>
+<div class="bm-pd-md grey" id="review-22212">
+<span class="small localtime" style="display: none;">09/14/2020 08:04:08</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-22212">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(22212)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-22212">2</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-22212" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-22212-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/1482">USTC学水</a>：
                   <span>考的都是公式和概念…那你应该考得很好吧
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">09/14/2020 08:23:31</span>
-                  </span>
-              </div>
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/3571">银河的歌谣</a>：
-                  <span>回复 <a href="/user/1482">＠USTC学水</a>: 成绩出来我震惊了，有种我不配的虚幻感觉。
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">09/14/2020 08:23:31</span>
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">09/16/2020 03:07:21</span>
-                  </span>
-              </div>
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-1512">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/225>我永远喜欢豆腐脑（甜的）</a>
-              
-            </span>
-
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/3571">银河的歌谣</a>：
+                  <span>回复 <a href="https://icourse.club/user/1482">＠USTC学水</a>: 成绩出来我震惊了，有种我不配的虚幻感觉。
+</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">09/16/2020 03:07:21</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-1512">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/225">我永远喜欢豆腐脑（甜的）</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2016春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-1512">
+<p></p><div><p>两个老师都会在黑板上写好多好多的板书，上课只要抄笔记就好了。</p><p>侯老师的<a href="http://staff.ustc.edu.cn/~hzhlj/teaching.html">主页</a>上还有他手写的讲义，可以参考一下。</p><p>对比了一下去年的笔记觉得侯老师讲的内容没有比较大的变化...然而徐老师补充了一些内容比如BEC。</p><p>作业题基本都是书后面的习题。考试非常良心，都是上课讲过的那些推导。</p><p>总之认真听的话收获还是非常大的，然而我既没有认真听也没有真诚地写作业...</p><p>最后感谢徐女神的及格之恩...</p></div>
+</div>
+<div class="bm-pd-md grey" id="review-1512">
+<span class="small localtime" style="display: none;">12/12/2016 03:44:56</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-1512">0</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(1512)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-1512">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-1512" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-1512-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 右边栏 -->
+<div class="col-md-4 rl-pd-lg">
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/7121d6952d7c09451884dd42bda85e2609c05207.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/583/">侯中怀</a></h3>
+<p></p>
+<p>教师主页：
             
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2016春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-1512">
-            <p><div><p>两个老师都会在黑板上写好多好多的板书，上课只要抄笔记就好了。</p><p>侯老师的<a href="http://staff.ustc.edu.cn/~hzhlj/teaching.html">主页</a>上还有他手写的讲义，可以参考一下。</p><p>对比了一下去年的笔记觉得侯老师讲的内容没有比较大的变化...然而徐老师补充了一些内容比如BEC。</p><p>作业题基本都是书后面的习题。考试非常良心，都是上课讲过的那些推导。</p><p>总之认真听的话收获还是非常大的，然而我既没有认真听也没有真诚地写作业...</p><p>最后感谢徐女神的及格之恩...</p></div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-1512">
-            <span class="small localtime" style="display: none;">12/12/2016 03:44:56</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-1512">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(1512)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-1512">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5645/#review-1512" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-1512-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-        
-      </div>
-
-
-
-      <!-- 右边栏 -->
-
-      <div class="col-md-4 rl-pd-lg">
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/7121d6952d7c09451884dd42bda85e2609c05207.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/583/">侯中怀</a></h3>
-          <p></p>
-          <p>教师主页：
-            
-            <a href="http://staff.ustc.edu.cn/~hzhlj/education.html" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> 戳这里</a>
-            
-          </p>
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/456850baf99ff25947a46984585d58b5c2e293b2.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/587/">徐瑞雪</a></h3>
-          <p></p>
-          <p>教师主页：
+            <a href="http://staff.ustc.edu.cn/~hzhlj/education.html" target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-link"></span> 戳这里</a>
+</p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/456850baf99ff25947a46984585d58b5c2e293b2.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/587/">徐瑞雪</a></h3>
+<p></p>
+<p>教师主页：
             暂无
           </p>
-        </div>
-        
-        
-
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">其他老师的「统计力学」课</h5>
+</div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">其他老师的「统计力学」课
           
           
           
           
           <div class="ud-pd-sm">
-            <a href="/course/10000/">未知</a>
-            
-            <span class="small grey align-bottom  float-right">2005春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5643/">陈旸</a>
-            
-            <span class="small grey align-bottom  float-right">2013春 2012春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5644/">严以京, 侯中怀, 徐瑞雪</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13966/">侯中怀, 徐瑞雪, 江慧军</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-        </div>
-
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">侯中怀老师的其他课</h5>
+<a href="https://icourse.club/course/10000/">未知</a>
+<span class="small grey align-bottom float-right">2005春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5643/">陈旸</a>
+<span class="small grey align-bottom float-right">2013春 2012春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5644/">严以京, 侯中怀, 徐瑞雪</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13966/">侯中怀, 徐瑞雪, 江慧军</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">侯中怀老师的其他课
           
           
           
           
           <div class="ud-pd-sm">
-            <a href="/course/13433/">理论与计算化学III</a>
-            
-            <span>10.0</span>
-            <span class="grey">(2)</span>
-            
-            <span class="small grey align-bottom  float-right">2020春 2019春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13498/">量子物理</a>
-            
-            <span>8.5</span>
-            <span class="grey">(11)</span>
-            
-            <span class="small grey align-bottom  float-right">2022秋 2021秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20279/">理论与计算化学(III)</a>
-            
-            <span>8.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春 2021春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5644/">统计力学</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/1119/">化学物理进展</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/1080/">化学原理H（2）</a>
-            
-            <span class="small grey align-bottom  float-right">2015夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/3145/">新生“科学与社会”研讨课</a>
-            
-            <span class="small grey align-bottom  float-right">2016春 2015秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4218/">物理化学 II</a>
-            
-            <span class="small grey align-bottom  float-right">2012秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4264/">物理化学I</a>
-            
-            <span class="small grey align-bottom  float-right">2013秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5595/">结构化学</a>
-            
-            <span class="small grey align-bottom  float-right">2005秋 2004秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5602/">结构化学(A)</a>
-            
-            <span class="small grey align-bottom  float-right">2013秋 2012秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6674/">量子化学</a>
-            
-            <span class="small grey align-bottom  float-right">2015春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6693/">量子物理</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋 2014秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6694/">量子物理</a>
-            
-            <span class="small grey align-bottom  float-right">2015秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13702/">量子物理</a>
-            
-            <span class="small grey align-bottom  float-right">2016秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13966/">统计力学</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">徐瑞雪老师的其他课</h5>
+<a href="https://icourse.club/course/13433/">理论与计算化学III</a>
+<span>10.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2020春 2019春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13498/">量子物理</a>
+<span>8.5</span>
+<span class="grey">(11)</span>
+<span class="small grey align-bottom float-right">2022秋 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20279/">理论与计算化学(III)</a>
+<span>8.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022春 2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5644/">统计力学</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1119/">化学物理进展</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1080/">化学原理H（2）</a>
+<span class="small grey align-bottom float-right">2015夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/3145/">新生“科学与社会”研讨课</a>
+<span class="small grey align-bottom float-right">2016春 2015秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4218/">物理化学 II</a>
+<span class="small grey align-bottom float-right">2012秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4264/">物理化学I</a>
+<span class="small grey align-bottom float-right">2013秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5595/">结构化学</a>
+<span class="small grey align-bottom float-right">2005秋 2004秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5602/">结构化学(A)</a>
+<span class="small grey align-bottom float-right">2013秋 2012秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6674/">量子化学</a>
+<span class="small grey align-bottom float-right">2015春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6693/">量子物理</a>
+<span class="small grey align-bottom float-right">2016秋 2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6694/">量子物理</a>
+<span class="small grey align-bottom float-right">2015秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13702/">量子物理</a>
+<span class="small grey align-bottom float-right">2016秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13966/">统计力学</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">徐瑞雪老师的其他课
           
           
           
           
           <div class="ud-pd-sm">
-            <a href="/course/14207/">复变函数B</a>
-            
-            <span>9.0</span>
-            <span class="grey">(10)</span>
-            
-            <span class="small grey align-bottom  float-right">2020秋 2019秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20954/">复变函数(化学)</a>
-            
-            <span>8.3</span>
-            <span class="grey">(6)</span>
-            
-            <span class="small grey align-bottom  float-right">2022秋 2021秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4225/">物理化学(1)(H)</a>
-            
-            <span class="small grey align-bottom  float-right">2010秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4481/">现代统计力学导论</a>
-            
-            <span class="small grey align-bottom  float-right">2014夏 2013夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5644/">统计力学</a>
-            
-            <span class="small grey align-bottom  float-right">2014春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4264/">物理化学I</a>
-            
-            <span class="small grey align-bottom  float-right">2013秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/13966/">统计力学</a>
-            
-            <span class="small grey align-bottom  float-right">2017春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4214/">物理化学</a>
-            
-            <span class="small grey align-bottom  float-right">2005春 2004春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4217/">物理化学 I</a>
-            
-            <span class="small grey align-bottom  float-right">2012春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4226/">物理化学(1)(H)</a>
-            
-            <span class="small grey align-bottom  float-right">2011秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4238/">物理化学A（上）</a>
-            
-            <span class="small grey align-bottom  float-right">2010春 2009春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4247/">物理化学A（下）</a>
-            
-            <span class="small grey align-bottom  float-right">2008秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4265/">物理化学I</a>
-            
-            <span class="small grey align-bottom  float-right">2017秋 2016秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4266/">物理化学I</a>
-            
-            <span class="small grey align-bottom  float-right">2014秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4482/">现代统计力学导论</a>
-            
-            <span class="small grey align-bottom  float-right">2011夏</span>
-          </div>
-          
-          
-        </div>
-        
-      </div>
-    </div> <!-- row -->
-  </div>  <!-- float-element  -->
-</div>  <!-- container -->
-
-<a id="gotop" href="#">
-  <span>▲</span>
+<a href="https://icourse.club/course/14207/">复变函数B</a>
+<span>9.0</span>
+<span class="grey">(10)</span>
+<span class="small grey align-bottom float-right">2020秋 2019秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20954/">复变函数(化学)</a>
+<span>8.3</span>
+<span class="grey">(6)</span>
+<span class="small grey align-bottom float-right">2022秋 2021秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4225/">物理化学(1)(H)</a>
+<span class="small grey align-bottom float-right">2010秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4481/">现代统计力学导论</a>
+<span class="small grey align-bottom float-right">2014夏 2013夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5644/">统计力学</a>
+<span class="small grey align-bottom float-right">2014春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4264/">物理化学I</a>
+<span class="small grey align-bottom float-right">2013秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/13966/">统计力学</a>
+<span class="small grey align-bottom float-right">2017春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4214/">物理化学</a>
+<span class="small grey align-bottom float-right">2005春 2004春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4217/">物理化学 I</a>
+<span class="small grey align-bottom float-right">2012春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4226/">物理化学(1)(H)</a>
+<span class="small grey align-bottom float-right">2011秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4238/">物理化学A（上）</a>
+<span class="small grey align-bottom float-right">2010春 2009春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4247/">物理化学A（下）</a>
+<span class="small grey align-bottom float-right">2008秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4265/">物理化学I</a>
+<span class="small grey align-bottom float-right">2017秋 2016秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4266/">物理化学I</a>
+<span class="small grey align-bottom float-right">2014秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4482/">现代统计力学导论</a>
+<span class="small grey align-bottom float-right">2011夏</span>
+</div>
+</h4></div>
+</div>
+</div> <!-- row -->
+</div> <!-- float-element  -->
+</div> <!-- container -->
+<a href="#" id="gotop">
+<span>▲</span>
 </a>
-
-
-  <div id="push"></div>
-  </div><!-- ./wrap -->
+<div id="push"></div>
+</div><!-- ./wrap -->
 <div class="container" id="footer">
-    <div class="ud-pd-sm">
-      <a class="right-pd-md" href='/about/'>关于我们</a>
-      <a class="right-pd-md" href='/community-rules/'>社区规范</a>
-      <a class="right-pd-md" href='/report-review/'>投诉点评</a>
-      <a class="right-pd-md" href='/stats/'>站点统计</a>
-      <a class="right-pd-md" href='/stats/rankings/'>排行榜</a>
-      <a class="right-pd-md" href='/announcements/'>公告栏</a>
-      <a class="right-pd-md hidden" href='/copyright/'>版权与隐私</a>
-      <a class="right-pd-md hidden" href='/report-bug/'>发现漏洞</a>
-      
-      <span class="float-right hidden">
-        <a class="right-pd-sm">中文</a>
-        <a class="left-pd-sm">English</a>
-      </span>
-    </div>
-    <span class="footer-text text-muted">Copyright &copy; 2022 USTC评课社区</span>
+<div class="ud-pd-sm">
+<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
+<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
+<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
+<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
+<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
+<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
+<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
+<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
+<span class="float-right hidden">
+<a class="right-pd-sm">中文</a>
+<a class="left-pd-sm">English</a>
+</span>
+</div>
+<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
 </div><!-- end container -->
 </body>
-
-
-
-
-  <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/clipboard.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
-  <script>
- $.ajaxSetup({
-     beforeSend: function(xhr, settings) {
-         if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
-             xhr.setRequestHeader("X-CSRFToken", "Ijg2NGUxYWJkYzY4NzA2MTFkY2ZiZmM5YTE4MGYwZTUwZGI5ZTQ1OTUi.Ytly_A.Mwpzoy7tj_CAMga0V5OjWlo8oas")
-         }
-     }
- });
-
- // display local time
- function toHourMinutes(pubTime) {
-   var hours = pubTime.getHours().toString();
-   if (hours.length == 1) {
-     hours = '0' + hours;
-   }
-   var minutes = pubTime.getMinutes().toString();
-   if (minutes.length == 1) {
-     minutes = '0' + minutes;
-   }
-   return hours + ':' + minutes;
- }
-
- function toYearMonthDate(pubTime) {
-   var year = pubTime.getFullYear().toString();
-   var month = (pubTime.getMonth() + 1).toString();
-   var day = pubTime.getDate().toString();
-   return year + '年' + month + '月' + day + '日';
- }
- 
- function updateLocalTime() {
-   $('.localtime').each(function(index) {
-     if ($(this).css('display') != 'none') {
-       return;
-     }
-     var utcTime = $(this).text();
-     var pubTime = new Date(utcTime + ' UTC');
-     if (!pubTime) {
-       $(this).text(pubTime);
-       $(this).show();
-       return;
-     }
-     var now = new Date();
-     if (pubTime.getFullYear() == now.getFullYear() && pubTime.getMonth() == now.getMonth() && pubTime.getDate() == now.getDate()) {
-       $(this).text('今天 ' + toHourMinutes(pubTime));
-     } else {
-       var yesterday = new Date();
-       yesterday.setDate(yesterday.getDate() - 1); // JavaScript can handle date roll overs
-       if (pubTime.getFullYear() == yesterday.getFullYear() && pubTime.getMonth() == yesterday.getMonth() && pubTime.getDate() == yesterday.getDate()) {
-         $(this).text('昨天 ' + toHourMinutes(pubTime));
-       } else {
-         $(this).text(toYearMonthDate(pubTime) + ' ' + toHourMinutes(pubTime));
-       }
-     }
-     $(this).show();
-   });
- }
-
- updateLocalTime();
+<!-- Placed at the end of the document so the pages load faster -->
 
 
- new ClipboardJS('.review-links');
- $('.review-links').tooltip();
-</script>
-  <script>
-   $('#signin').on('shown.bs.modal', function () {
-     $('#inputEmail').focus()
-   });
 
-   function signin_alert(msg, type) {
-     if (!type)
-       type = "danger";
-     $('#signin-alert').attr("class", "alert alert-" + type);
-     $('#signin-alert').html(msg);
-     $('#signin-alert').show();
-   }
 
-   $('#signin-form').submit(function(e) {
-     e.preventDefault();
-     var formdata = {}
-     $('#signin-form input').each(function() {
-       formdata[$(this).attr("name")] = $(this).val();
-     });
-     $.ajax({
-       type: "POST",
-       url: "/signin/?next=%2Fcourse%2F5645%2F&ajax=True",
-       data: formdata,
-       dataType: "json",
-       success: function(res) {
-         if (res.status == 200) {
-           if (res.next)
-             window.location.href = res.next;
-           else
-             signin_alert(res.msg, "success");
-         } else {
-           signin_alert(res.msg);
-         }
-       },
-       error: function(e) {
-         signin_alert('天了噜! 服务器正在睡觉，请稍后再试。', "warning");
-       }
-     })
-   });
 
-   function read_notification(count) {
-     if (count == 0)
-         return;
-     $.ajax({
-        type: "POST",
-        url: "/api/notifications/",
-     });
-   }
-  </script>
 
-  
-<script>
- $('#myTab a').click(function (e) {
-   e.preventDefault()
-   $(this).tab('show')
- })
 
- var action_data = {
-   'follow': {
-     'enabled': false,
-     'count': 17,
-     'do_url': "/course/5645/follow/",
-     'undo_url': "/course/5645/unfollow/",
-   },
-   'downvote': {
-     'enabled': false,
-     'count': 0,
-     'do_url': "/course/5645/downvote/",
-     'undo_url': "/course/5645/undo-downvote/",
-     'conflict': 'upvote',
-   },
-   'upvote': {
-     'enabled': false,
-     'count': 8,
-     'do_url': "/course/5645/upvote/",
-     'undo_url': "/course/5645/undo-upvote/",
-     'conflict': 'downvote',
-   },
-   'join': {
-     'enabled': false,
-     'do_url': "/course/5645/join/",
-     'undo_url': "/course/5645/quit/",
-   },
- }
-
- $(function() {
-   for (action in action_data) {
-
-     if (! $('.btn-' + action).length)
-       continue;
-
-     (function(action) {
-       var d = action_data[action];
-
-       var do_btn = $('.btn-' + action).filter('.btn-do');
-       var undo_btn = $('.btn-' + action).filter('.btn-undo');
-
-       function update_count(count) {
-         d.count = count;
-         $('.btn-' + action + ' .count').text(count);
-       }
-       function http_post_wrapper(url) {
-         $.post(url, null, function(o) {
-           if (o.count)
-             update_count(o.count);
-           if (!o.ok)
-             alert('操作失败，请重试');
-           d.in_progress = false;
-         }, 'json')
-         .fail(function() {
-           alert('操作失败，请重试');
-           d.in_progress = false;
-         });
-       }
-
-       do_btn.click(function() {
-         
-         $('#signin').modal('show');
-         
-       });
-
-       undo_btn.click(function() {
-         
-         $('#signin').modal('show');
-         
-       });
-
-       update_count(d.count);
-
-       if (d.enabled) {
-         undo_btn.show();
-         do_btn.hide();
-       } else {
-         do_btn.show();
-         undo_btn.hide();
-       }
-     })(action);
-   }
-   $('#action-btn-group').show();
- });
-
- function delete_review(review_id, is_admin)
- {
-     if (is_admin) {
-         if (!confirm('你正在作为管理员，删除其他用户的点评！建议使用屏蔽而非删除功能，确定删除吗？')) {
-             return;
-         }
-     } else {
-         if (!confirm('你真的要删除此点评吗？删除的点评是不可恢复的！')) {
-             return;
-         }
-     }
-     $.post("/review/delete/", { id: review_id }, function(o) {
-         if (o.ok)
-            window.location.href = "/course/5645/";
-         else
-            alert(o.message);
-     }, 'json')
-     .fail(function() {
-         alert('删除点评失败，请重试');
-     });
- }
-
- $('.showmore-shadow').click(function(e) {
-   $('.showmore-text').css('max-height', 'none');
-   $('.showmore-wrapper').hide();
- });
-
- if ($('.showmore-text').height() >= 750) {
-   $('.showmore-text').css('max-height', '400px');
-   $('.showmore-wrapper').show();
- }
-
- // go to top floating button from Freemind theme of Hexo
- $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
-     var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
-     if(scrollt>200){  //判断滚动后高度超过200px
-         $("#gotop").fadeIn(400); //淡出
- 		if($(window).width() >= 1200){
- 			$(".navbar").stop().fadeTo(400, 0.2);
- 		}
-     }else{
-         $("#gotop").fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动
-         if($(window).width() >= 1200){
- 			$(".navbar").stop().fadeTo(400, 1);
-         }
-     }
- });
- $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部        
- 	$("html,body").animate({scrollTop:"0px"},200);
- });
-
-</script>
-
-<script>
- function show_review_comments(review_id)
- {
-   if (document.getElementById('review-'+ review_id +'-comments').style.display=="block") {
-       document.getElementById('review-'+ review_id +'-comments').style.display="none";
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('grey');
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('blue');
-     }
-   else {
-       document.getElementById('review-'+ review_id +'-comments').style.display="block";
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('blue');
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('grey');
-   }
- }
-
- function get_upvote_review_elem(review_id)
- {
-     var elem = $('#review-upvote-count-' + review_id);
-     if (!elem) return null;
-     if (elem.hasClass('in_progress')) {
-       alert('操作正在进行中，请稍候再试');
-       return null;
-     }
-     elem.addClass('in_progress');
-     return elem;
- }
-
- function upvote_review(review_id)
- {
-     var elem = get_upvote_review_elem(review_id);
-     if (!elem) return;
-     elem.text(parseInt(elem.text()) + 1);
-     elem.parent().attr('href', 'javascript:cancel_upvote_review("' + review_id + '")');
-     elem.parent().find('span.glyphicon').removeClass('grey');
-     elem.parent().find('span.glyphicon').addClass('blue');
-
-     $.post("/api/review/upvote/", { review_id: review_id }, function(o) {
-       if (typeof o.count != "undefined") {
-         elem.text(o.count);
-       }
-       elem.removeClass('in_progress');
-     }, 'json')
-     .fail(function() {
-       elem.text(parseInt(elem.text()) - 1);
-       alert('点赞失败，请重试');
-     });
- }
- 
- function cancel_upvote_review(review_id)
- {
-     var elem = get_upvote_review_elem(review_id);
-     if (!elem) return;
-     elem.text(parseInt(elem.text()) - 1);
-     elem.parent().attr('href', 'javascript:upvote_review("' + review_id + '")');
-     elem.parent().find('span.glyphicon').removeClass('blue');
-     elem.parent().find('span.glyphicon').addClass('grey');
-
-     $.post("/api/review/cancel_upvote/", { review_id: review_id }, function(o) {
-       if (typeof o.count != "undefined") {
-         elem.text(o.count);
-       }
-       elem.removeClass('in_progress');
-     }, 'json')
-     .fail(function() {
-       elem.text(parseInt(elem.text()) + 1);
-       alert('取消点赞失败，请重试');
-     });
- }
-
- function reload_comments(review_id)
- {
-     $.get("/review/comments/",
-        { review_id: review_id},
-        function(html) {
-            $('#review-' + review_id + '-comments').replaceWith(html);
-            $('#review-' + review_id + '-comments').show();
-            updateLocalTime();
-        }, 'html')
-     .fail(function() {
-        alert('重新加载评论区出错，请刷新页面');
-     });
- }
-
- function submit_comment(review_id)
- {
-     content = $('#review-comment-input-' + review_id).val().trim();
-     if (content == '') {
-         alert('请输入评论内容');
-         return;
-     }
-     $.post("/api/review/new_comment/", {
-         review_id: review_id,
-         content: content
-     }, function(o) {
-         if (o.ok) {
-             reload_comments(review_id);
-         } else {
-             alert(o.message);
-         }
-     }, 'json')
-     .fail(function() {
-         alert('提交评论失败，请重试');
-     });
- }
-
- function delete_comment(review_id, comment_id)
- {
-     if (!confirm('你真的要删除此评论吗？')) {
-         return;
-     }
-     $.post("/api/review/delete_comment/", { comment_id: comment_id },
-         function(o) {
-            if (o.ok) {
-               reload_comments(review_id);
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('删除评论失败，请重试');
-     });
- }
-
- function reply_comment(review_id, reply_to)
- {
-     var elem = $('#review-comment-input-' + review_id);
-     elem.focus();
-     elem.val('');
-     elem.val('回复 @' + reply_to + ': ');
- }
-
- function block_review(review_id)
- {
-     $.post("/api/review/block/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('屏蔽成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('屏蔽失败，请重试');
-     });
- }
-
- function unblock_review(review_id)
- {
-     $.post("/api/review/unblock/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('解除屏蔽成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('解除屏蔽失败，请重试');
-     });
- }
-
- function hide_review(review_id)
- {
-     $.post("/api/review/hide/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('隐藏点评成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('隐藏点评失败，请重试');
-     });
- }
-
- function unhide_review(review_id)
- {
-     $.post("/api/review/unhide/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('解除隐藏点评成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('解除隐藏点评失败，请重试');
-     });
- }
-
- $('.review-filter-rule').each(function (index) {
-     var id = $(this).attr('id')
-     var prefix = 'review-filter-rule-'
-     var num_id = parseInt(id.substr(prefix.length))
-     var review_id = 'review-content-' + num_id.toString()
-     var original_text = $('#' + review_id).html()
-     console.log(original_text)
-     console.log($(this).text())
-
-     var regex_str = $(this).text()
-     var regex_match_and_replace = regex_str.split('\n')
-     var regex_match = regex_match_and_replace[0]
-     var regex_replace = regex_match_and_replace.length == 2 ? regex_match_and_replace[1] : ''
-     var regex = new RegExp(regex_match, 'g')
-     var replace_text = original_text.replace(regex, regex_replace)
-     $('#' + review_id).html(replace_text)
- })
-
- $('.review-content').each(function(index) {
-     var regex = new RegExp('(脑瘫玩意|傻逼|我艹你妈|艹你妈)', 'g')
-     var regex_replace = '<span data-toggle="tooltip" data-placement="top" title="本点评存在违反社区规范的内容，予以部分屏蔽" style="background:black;color:black;">请文明用语</span>'
-     var replace_text = $(this).html().replace(regex, regex_replace)
-     $(this).html(replace_text)
- })
-
- $('.teacher-review-label').tooltip()
-</script>
 
 </html>

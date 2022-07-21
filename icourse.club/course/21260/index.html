@@ -1,1429 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" property="og:description" content="8.5 分，4 人评价">
-    <meta name="keywords" content="USTC,评课,课程">
-    <meta name="author" content="jenny42,aaron1992,boj">
-    <link rel="icon" href="/static/image/favicon.ico">
-
-    <title>数字集成电路设计（白雪飞, 徐奇） - USTC评课社区</title>
-
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/style.css?ver=20220706" rel="stylesheet">
-
-    
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="8.5 分，4 人评价" name="description" property="og:description"/>
+<meta content="USTC,评课,课程" name="keywords"/>
+<meta content="jenny42,aaron1992,boj" name="author"/>
+<link href="/static/image/favicon.ico" rel="icon"/>
+<title>数字集成电路设计（白雪飞, 徐奇） - USTC评课社区</title>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-
+</head>
 <body>
-  <div id="wrap">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        
-        <button type="button" class="mobile btn btn-default navbar-btn pull-right right-mg-md" style="outline:none" data-toggle="modal" data-target="#signin">登录</button>
-        
-        <a class="navbar-brand" href="/">USTC评课社区</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav desktop">
-          <li ><a href="/latest_reviews">点评</a></li>
-	  <li ><a href="/course/">课程</a></li>
-          
-          <li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
-        </ul>
-
-	
-        <form class="navbar-form navbar-left desktop" action="/search/" method="get" role="search">
-	
-          <div class="form-group">
-            <input type="text" name="q" class="form-control" id="search" placeholder="搜索课程、老师" style="width: 235px" value="">
-          </div>
-          <span class="desktop-wide">
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey"></span></button>
-          </span>
-        </form>
-
-        <ul class="nav navbar-nav navbar-right desktop">
-          
-          <li><button type="button" class="btn btn-default navbar-btn left-mg-md" data-toggle="modal" data-target="#signin">登录</button></li>
-          
-        </ul>
-
-        
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  
-  <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-signin">
-      <div class="modal-content">
-        <form id="signin-form" class="form-signin">
-          <input type="hidden" name="csrf_token" value="ImRlOTg0MTAxNWNhMGY3MzM3MWQwY2Y5NDY2NjU2M2E2ZTA0ZmI4NTAi.YtlzJQ.lXWXGuldDaXt40Vnw0Hcz2QvkTQ" />
-          <div class="form-signin-heading">
-            <span class="h2">请登录</span>
-            <a class="btn btn-default float-right" href="/signup">注册</a>
-          </div>
-          <div id="signin-alert" role="alert" class="display: none"></div>
-          <label for="inputEmail" class="sr-only">用户名</label>
-          <input type="text" name="username" id="inputEmail" class="form-control" placeholder="用户名或邮箱" required autofocus>
-          <label for="inputPassword" class="sr-only">密码</label>
-          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="remember">记住我
-            </label>
-            <a class="float-right" href="/reset-password/">忘记密码</a>
-          </div>
-          <button class="btn btn-lg btn-blue btn-block" type="submit">登录</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  
-
-    <!-- banner -->
-    
-    <div class="container">
-      
-      <div class="text-center banner mobile">新增 <a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
-      
-
-      
-      <div class="text-center banner desktop">评课社区推出<a href="/announcements/"> 4个保护用户隐私的功能 </a></div>
-      
-    </div>
-    <!-- end banner -->
-    
-
-  
-
+<div id="wrap">
+<nav class="navbar navbar-default">
 <div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="mobile btn btn-default navbar-btn pull-right right-mg-md" data-target="#signin" data-toggle="modal" style="outline:none" type="button">登录</button>
+<a class="navbar-brand" href="https://icourse.club/">USTC评课社区</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav desktop">
+<li><a href="https://icourse.club/latest_reviews">点评</a></li>
+<li><a href="https://icourse.club/course/">课程</a></li>
+<li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+</ul>
+<form action="/search/" class="navbar-form navbar-left desktop" method="get" role="search">
+<div class="form-group">
+<input class="form-control" id="search" name="q" placeholder="搜索课程、老师" style="width: 235px" type="text" value=""/>
+</div>
+<span class="desktop-wide">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search grey"></span></button>
+</span>
+</form>
+<ul class="nav navbar-nav navbar-right desktop">
+<li><button class="btn btn-default navbar-btn left-mg-md" data-target="#signin" data-toggle="modal" type="button">登录</button></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
 
-  <div class="row float-element">
-    <div class="row">
-      <div class="col-md-8 inline-h3">
-        <span class="blue h3">数字集成电路设计</span><span class="h3 blue mobile">（白雪飞, 徐奇）</span>
-        <span class="small grey align-bottom left-pd-sm desktop">2022春 &nbsp;课程号：21900501</span>
-        <br><span class="small grey align-bottom mobile">2022春 &nbsp;课程号：21900501</span>
-
-        
-        <hr>
-        
-        <div class="ud-pd-sm blue">
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
-            
-          
-            
-            <span class="glyphicon glyphicon-star-half glyphicon-lg" aria-hidden="true"></span>
-            
-          
-          <span class="rl-pd-sm h4">8.5</span><span class="rl-pd-sm text-muted">(4人评价)</span>
-        </div>
-        
-        <ul class="text-muted list-inline list-unstyled ud-pd-sm">
-          <li class="right-mg-md">课程难度：中等</li>
-          <li class="right-mg-md">作业多少：很少</li>
-          <li class="right-mg-md">给分好坏：超好</li>
-          <li class="right-mg-md">收获大小：一般</li>
-        </ul>
-
-        <table class="table table-condensed no-border">
-          <tr>
-            <td><strong>选课类别：</strong>计划</td>
-            <td><strong>教学类型：</strong>理论课</td>
-          </tr>
-          <tr>
-            <td><strong>课程类别：</strong>本科计划内课程</td>
-            <td><strong>开课单位：</strong>微电子学院</td>
-          </tr>
-          <tr>
-            <td><strong>课程层次：</strong>专业核心</td>
-            <td><strong>学分：</strong>3.0</td>
-          </tr>
-          </tbody>
-        </table>
-
-        <div class="ud-pd-sm">
-          
-          <strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
-          
-        </div>
-
-        <div id="action-btn-group" class="ud-pd-md" style="display:none">
-          <button class="btn btn-white btn-flat btn-follow btn-do"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> 关注 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-follow btn-undo"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 已关注 <small>(<span class="count"></span>)</small></button>
-
-          <button class="btn btn-white btn-flat btn-upvote btn-do"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-upvote btn-undo"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
-
-          <button class="btn btn-white btn-flat btn-downvote btn-do"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
-          <button class="btn btn-blue btn-flat btn-downvote btn-undo"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
-
+<!-- banner -->
+<div class="container">
+<div class="text-center banner mobile">新增 <a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+<div class="text-center banner desktop">评课社区推出<a href="https://icourse.club/announcements/"> 4个保护用户隐私的功能 </a></div>
+</div>
+<!-- end banner -->
+<div class="container">
+<div class="row float-element">
+<div class="row">
+<div class="col-md-8 inline-h3">
+<span class="blue h3">数字集成电路设计</span><span class="h3 blue mobile">（白雪飞, 徐奇）</span>
+<span class="small grey align-bottom left-pd-sm desktop">2022春  课程号：21900501</span>
+<br/><span class="small grey align-bottom mobile">2022春  课程号：21900501</span>
+<hr/>
+<div class="ud-pd-sm blue">
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star glyphicon-lg"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half glyphicon-lg"></span>
+<span class="rl-pd-sm h4">8.5</span><span class="rl-pd-sm text-muted">(4人评价)</span>
+</div>
+<ul class="text-muted list-inline list-unstyled ud-pd-sm">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<table class="table table-condensed no-border">
+<tr>
+<td><strong>选课类别：</strong>计划</td>
+<td><strong>教学类型：</strong>理论课</td>
+</tr>
+<tr>
+<td><strong>课程类别：</strong>本科计划内课程</td>
+<td><strong>开课单位：</strong>微电子学院</td>
+</tr>
+<tr>
+<td><strong>课程层次：</strong>专业核心</td>
+<td><strong>学分：</strong>3.0</td>
+</tr>
+</table>
+<div class="ud-pd-sm">
+<strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
           
         </div>
-
-	
-	
-
-	<div class="solid ud-pd-md inline-h3">
-	  <span class="blue h3" id="review-anchor">点评</span>
-          
-          <a type="button" data-toggle="modal" data-target="#signin" class="btn btn-white float-right blue"><span class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm" aria-hidden="true"></span>写点评</a>
-          
-        </div>
-
-
-        
-        
-	
-
-	
-	<div class="ud-pd-sm">
-		<span class="right-pd-sm weight-heavy">排序</span>
-		<select name="sort_by" onchange="location=this.value">
-			
-			<option value="/course/21260/?sort_by=upvote#review-anchor" selected>点赞最多</option>
-			
-			<option value="/course/21260/?sort_by=pubtime_desc#review-anchor" >最新点评</option>
-			
-			<option value="/course/21260/?sort_by=pubtime#review-anchor" >最旧点评</option>
-			
-			<option value="/course/21260/?sort_by=score_desc#review-anchor" >评分: 高-低</option>
-			
-			<option value="/course/21260/?sort_by=score#review-anchor" >评分: 低-高</option>
-			
-		</select>
-		<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
-		<select name="term" onchange="location=this.value">
-			
-			
-			<option value="/course/21260/?sort_by=upvote&amp;term=20212#review-anchor" >
+<div class="ud-pd-md" id="action-btn-group" style="display:none">
+<button class="btn btn-white btn-flat btn-follow btn-do"><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span> 关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-follow btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-upvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-upvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-white btn-flat btn-downvote btn-do"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+<button class="btn btn-blue btn-flat btn-downvote btn-undo"><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+</div>
+<div class="solid ud-pd-md inline-h3">
+<span class="blue h3" id="review-anchor">点评</span>
+<a class="btn btn-white float-right blue" data-target="#signin" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm"></span>写点评</a>
+</div>
+<div class="ud-pd-sm">
+<span class="right-pd-sm weight-heavy">排序</span>
+<select name="sort_by" onchange="location=this.value">
+<option selected="" value="/course/21260/?sort_by=upvote#review-anchor">点赞最多</option>
+<option value="/course/21260/?sort_by=pubtime_desc#review-anchor">最新点评</option>
+<option value="/course/21260/?sort_by=pubtime#review-anchor">最旧点评</option>
+<option value="/course/21260/?sort_by=score_desc#review-anchor">评分: 高-低</option>
+<option value="/course/21260/?sort_by=score#review-anchor">评分: 低-高</option>
+</select>
+<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
+<select name="term" onchange="location=this.value">
+<option value="/course/21260/?sort_by=upvote&amp;term=20212#review-anchor">
 			2022春 (4)
 			</option>
-			
-		</select>
-		<br class="mobile">
-		<span class="right-pd-sm weight-heavy mobile">评分</span>
-		<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
-		<select name="rating" onchange="location=this.value">
-			<option value="/course/21260/?sort_by=upvote#review-anchor" selected>全部</option>
-			
-			<option value="/course/21260/?sort_by=upvote&amp;rating=5#review-anchor" >
+</select>
+<br class="mobile"/>
+<span class="right-pd-sm weight-heavy mobile">评分</span>
+<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
+<select name="rating" onchange="location=this.value">
+<option selected="" value="/course/21260/?sort_by=upvote#review-anchor">全部</option>
+<option value="/course/21260/?sort_by=upvote&amp;rating=5#review-anchor">
 				★★★★★ (2)
 			</option>
-			
-			<option value="/course/21260/?sort_by=upvote&amp;rating=4#review-anchor" >
+<option value="/course/21260/?sort_by=upvote&amp;rating=4#review-anchor">
 				★★★★ (2)
 			</option>
-			
-			<option value="/course/21260/?sort_by=upvote&amp;rating=3#review-anchor" >
+<option value="/course/21260/?sort_by=upvote&amp;rating=3#review-anchor">
 				★★★ (0)
 			</option>
-			
-			<option value="/course/21260/?sort_by=upvote&amp;rating=2#review-anchor" >
+<option value="/course/21260/?sort_by=upvote&amp;rating=2#review-anchor">
 				★★ (0)
 			</option>
-			
-			<option value="/course/21260/?sort_by=upvote&amp;rating=1#review-anchor" >
+<option value="/course/21260/?sort_by=upvote&amp;rating=1#review-anchor">
 				★ (0)
 			</option>
-			
-		</select>
-		<span class="rl-pd-sm text-muted">4条点评</span>
-	</div>
-	
-
-    
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-47828">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/4730>RisingUp</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-47828">
-            <p><div><p>这门课主要是作为数字集成电路的器件层、逻辑层、系统层的入门介绍。第一章是引论，将全书的内容分为小节简要介绍。第2、3章介绍了Mos晶体管原理和底层版图工艺制作，说的非常简略。4-7章我觉得是全书最重要的部分，介绍了四大设计注意事项：延时（重难点）、功耗、互联线、鲁棒性。第8章介绍spice电路模拟，有一次spice编程作业（考试不考）。第9章组合逻辑电路，介绍除了静态cmos门外的其他实现方式（很难说在2022年有没有用，不过毕竟是一个新的视角和技术努力）。第10章时序逻辑电路，介绍三种时序控制方式、约束条件、实现方式，概念很重要，不过内容不深。第11-13章是系统级的内容，数据通路（非常难，考前看了半天结果没怎么考。。。）、阵列（存储）、专用子系统（偏模拟）子系统。第14、15章是设计流程介绍，基本上没考（不做数集实验的同学，这个就相当于语文阅读理解，看完就忘。。。）。</p><p>平时作业非常少，但是考试怎么风格和难度跳跃有点大呢。。考试内容呢，填空题20分，会考概念填空，而且考点新奇，比如第一个晶体管的材质（第一章ppt前几页就有，幸好抄上了），不过分值不大，错了就错了。后面大题每题大约10分，除了前几题和最后一题延时挺正规，中间那几题就比较难，比如今年就考了booth编码和传输门逻辑。。。总体上由于没有样卷做示例，题型比较奇怪。</p><p>上课体验嘛。。。今年开课是1(3，4)和3(1，2)，周一到课率50%，周三早课到课率20%左右。这个不怪白老师，主要是课程密度实在太大，，，白老师上课会补充一些设计思想和示例，而且讲课非常清楚。但是3学分的课需要讲完600面大开本书，而且到处穿插着需要理解的知识点，这个实在让人有点吃不消，比如数据通路子系统里的加法器，这么复杂的内容，课后愣是花了一晚上才看懂加法器在干什么。建议白老师可以考虑把学分提高到4-6分，或者分离掉设计流程、工艺、mos原理等内容在别的课上，专注于设计思想和示例的传递，一定会优化听课体验。</p><p>2022.6.24 白老师说7.3之后再出分，希望白老师能捞一把</p><p>————————————————————————————————————————</p><p>已出分，和数电一样97hhh，谢谢白老师和助教！</p><p>学弟学妹们如果有对数字集成集成电路感兴趣的可以考虑选课，比物院某一门自称集成电路设计的课强。</p><p>建议选课前秋季学期先了解一下计算系统（不是那个ICS！），春季学期选这门加辅修COD，效果奇佳。</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-47828">
-            <span class="small localtime" style="display: none;">06/24/2022 08:44:10</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/08/2022 11:24:13</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-47828">2</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(47828)">
-              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-47828">2</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-47828" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-47828-comments" class="panel panel-default" style="display:block">
-            <div class="panel-body">
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/4517">jqtlg</a>：
+</select>
+<span class="rl-pd-sm text-muted">4条点评</span>
+</div>
+<div class="ud-pd-md dashed review" id="review-47828">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/4730">RisingUp</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-47828">
+<p></p><div><p>这门课主要是作为数字集成电路的器件层、逻辑层、系统层的入门介绍。第一章是引论，将全书的内容分为小节简要介绍。第2、3章介绍了Mos晶体管原理和底层版图工艺制作，说的非常简略。4-7章我觉得是全书最重要的部分，介绍了四大设计注意事项：延时（重难点）、功耗、互联线、鲁棒性。第8章介绍spice电路模拟，有一次spice编程作业（考试不考）。第9章组合逻辑电路，介绍除了静态cmos门外的其他实现方式（很难说在2022年有没有用，不过毕竟是一个新的视角和技术努力）。第10章时序逻辑电路，介绍三种时序控制方式、约束条件、实现方式，概念很重要，不过内容不深。第11-13章是系统级的内容，数据通路（非常难，考前看了半天结果没怎么考。。。）、阵列（存储）、专用子系统（偏模拟）子系统。第14、15章是设计流程介绍，基本上没考（不做数集实验的同学，这个就相当于语文阅读理解，看完就忘。。。）。</p><p>平时作业非常少，但是考试怎么风格和难度跳跃有点大呢。。考试内容呢，填空题20分，会考概念填空，而且考点新奇，比如第一个晶体管的材质（第一章ppt前几页就有，幸好抄上了），不过分值不大，错了就错了。后面大题每题大约10分，除了前几题和最后一题延时挺正规，中间那几题就比较难，比如今年就考了booth编码和传输门逻辑。。。总体上由于没有样卷做示例，题型比较奇怪。</p><p>上课体验嘛。。。今年开课是1(3，4)和3(1，2)，周一到课率50%，周三早课到课率20%左右。这个不怪白老师，主要是课程密度实在太大，，，白老师上课会补充一些设计思想和示例，而且讲课非常清楚。但是3学分的课需要讲完600面大开本书，而且到处穿插着需要理解的知识点，这个实在让人有点吃不消，比如数据通路子系统里的加法器，这么复杂的内容，课后愣是花了一晚上才看懂加法器在干什么。建议白老师可以考虑把学分提高到4-6分，或者分离掉设计流程、工艺、mos原理等内容在别的课上，专注于设计思想和示例的传递，一定会优化听课体验。</p><p>2022.6.24 白老师说7.3之后再出分，希望白老师能捞一把</p><p>————————————————————————————————————————</p><p>已出分，和数电一样97hhh，谢谢白老师和助教！</p><p>学弟学妹们如果有对数字集成集成电路感兴趣的可以考虑选课，比物院某一门自称集成电路设计的课强。</p><p>建议选课前秋季学期先了解一下计算系统（不是那个ICS！），春季学期选这门加辅修COD，效果奇佳。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-47828">
+<span class="small localtime" style="display: none;">06/24/2022 08:44:10</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/08/2022 11:24:13</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-47828">2</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(47828)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-47828">2</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-47828" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-47828-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4517">jqtlg</a>：
                   <span>我超，gd!
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/01/2022 07:05:40</span>
-                  </span>
-              </div>
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/5177">Matrix_wzk</a>：
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/01/2022 07:05:40</span>
+</span>
+</div>
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/5177">Matrix_wzk</a>：
                   <span>杨老板tql
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/19/2022 04:16:37</span>
-                  </span>
-              </div>
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-52154">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/5177>Matrix_wzk</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：一般</li>
-            <li class="right-mg-md">收获大小：一般</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：很少</li>
-            <li>给分：一般</li>
-            <li>收获：一般</li>
-          </ul>
-	  <div class="review-content" id="review-content-52154">
-            <p><div><p>提前选的课，最后给到88的总评也知足了。</p><p>作业不多，但挺花时间的，感觉一节课上完后去做作业还是啥都不会，需要自己再去翻书把这节课的内容重新看一次。但这门课我属实没学明白，作业有时候也是借RisingUp和南瓜两位同学抄的。</p><p>考试我只记得我做的挺憋屈的，考了一道boost编码（好像是这样），直接空在那了。</p><p>考点和平时作业有关但平时作业并不能涵盖所有考点，期末老师会给一个复习大纲（挺泛的）。复习大纲我放在下面，需要自取。</p><p>还是模集学得舒服（doge）</p><p><a href="/uploads/files/b22feebe8179403b04ad5c83069e59a140737387.pdf">2022数字集成电路设计复习提纲.pdf</a></p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-52154">
-            <span class="small localtime" style="display: none;">07/19/2022 04:24:20</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/19/2022 04:24:44</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-52154">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(52154)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-52154">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-52154" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-52154-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-49950">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/4705>南瓜</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：中等</li>
-            <li class="right-mg-md">作业多少：很少</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：一般</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：中等</li>
-            <li>作业：很少</li>
-            <li>给分：超好</li>
-            <li>收获：一般</li>
-          </ul>
-	  <div class="review-content" id="review-content-49950">
-            <p><div><p>物理人来修信院专业课，继模拟集成电路设计拿了4之后来锐评一下数字集成电路设计。</p><p>课程内容包括教材（CMOS超大规模集成电路设计（第四版）Weste，Harris著）的一共十五章的全部内容，会除去一些optional的内容，当然课上会简单提及Verilog，大概一节45min的课，作为数字电路实验的内容，但是不作为考试内容。</p><p>课程重点就是简单的逻辑电路表达式，Elmore延时，线性延时。（但是这只是重点，考点比这个诡异多了）</p><p>平时作业不多，但是做起来让人非常恶心，因为和上课内容很多都没有关系。这里建议去google搜索一下整本教材的答案。个人感觉对着答案理解一遍都比自己做一遍效果好。</p><p>上课方式为99%的PPT，1%的板书。前半学期还能听懂一点，后半学期已经完全懵逼了。PPT摘录了课本上的关键的图和精简的文字叙述，对于一些简单的总结非常简洁明了，复习起来非常方便。但是对于复杂的电路，模型，计算，显得非常不足。一学期教了600页的书，书上每一页都是密密麻麻的字，PPT再怎么浓缩也不能如此简略啊喂。于是越到后面越走马观花，到课率一节比一节低，到最后只有十几个人来上课，来的人基本也在看手机。只能说白老师不点名，确实是一大幸事。</p><p>自己速成了一个晚上加一个上午去考试，感觉比较有难度</p><p>自己填空很多没填出来（其实是小抄纸已经抄不下了），这里建议小抄纸可以用电脑排版，尽可能把PPT所有细节全部塞进去，考试里各种犄角旮旯的牛鬼蛇神都有。</p><p>大题也有好几个不会的，今年的大题出的感觉有那么亿点点诡异。现在还记得考了：给出逻辑式画静态CMOS电路并分析延时，看版图写逻辑式，一个比较复杂的Elmore延时计算（类似于（A+B）C）这种的）算上升下降的传播延时和污染延时，计算活动因子和功率，伪CMOS门的逻辑式，传输门的weak/strong 0/1，乘法器的基4Booth编码，给出了一个伪CMOS门分析功能，路径逻辑努力的计算那部分。难度并不是递增的hhh。这个倒数第二题白老师考场明说了比较难，然后这个基4Booth编码，我。。。乘法器的原理都挺偏门的，考个基4Booth编码，虽然在复习提纲上，但是我。。。</p><p>最后白老师给分肯定是相当良心的，成功被捞到了90，非常开心。</p><p>总体来说，这门课给人的学习感受其实不是很好，上课其实是坐牢，如果是必修课，那就自栽，如果对数字电路有兴趣的话，其实可以旁听一下，选课的话，非RisingUp这种物理大佬的话，得仔细考量考量，毕竟真心不如自己看书hhh。</p><p>PS：如果白老师能看到的话，建议教学内容可以进行大幅度压缩，其实这本书的序里面已经给出了本科生一学期内完成的课程建议了，这里可以再进行删减与优化，比如：除去所有optional的内容和网络资料，第8、14、15章可以略去。课上可以适当把课后一些不布置的习题作为例题讲解等等措施。</p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-49950">
-            <span class="small localtime" style="display: none;">07/08/2022 14:04:56</span>
-	    
-	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/08/2022 14:05:13</span><span class="small">）</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-49950">1</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(49950)">
-              <span class="glyphicon glyphicon-comment blue left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-49950">1</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-49950" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-49950-comments" class="panel panel-default" style="display:block">
-            <div class="panel-body">
-              
-              <div class="solid ud-pd-sm">
-                  <a href="/user/4730">RisingUp</a>：
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/19/2022 04:16:37</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-52154">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/5177">Matrix_wzk</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：一般</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：一般</li>
+<li>收获：一般</li>
+</ul>
+<div class="review-content" id="review-content-52154">
+<p></p><div><p>提前选的课，最后给到88的总评也知足了。</p><p>作业不多，但挺花时间的，感觉一节课上完后去做作业还是啥都不会，需要自己再去翻书把这节课的内容重新看一次。但这门课我属实没学明白，作业有时候也是借RisingUp和南瓜两位同学抄的。</p><p>考试我只记得我做的挺憋屈的，考了一道boost编码（好像是这样），直接空在那了。</p><p>考点和平时作业有关但平时作业并不能涵盖所有考点，期末老师会给一个复习大纲（挺泛的）。复习大纲我放在下面，需要自取。</p><p>还是模集学得舒服（doge）</p><p><a href="https://icourse.club/uploads/files/b22feebe8179403b04ad5c83069e59a140737387.pdf">2022数字集成电路设计复习提纲.pdf</a></p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-52154">
+<span class="small localtime" style="display: none;">07/19/2022 04:24:20</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/19/2022 04:24:44</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-52154">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(52154)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-52154">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-52154" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-52154-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-49950">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/4705">南瓜</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：中等</li>
+<li class="right-mg-md">作业多少：很少</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：一般</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：中等</li>
+<li>作业：很少</li>
+<li>给分：超好</li>
+<li>收获：一般</li>
+</ul>
+<div class="review-content" id="review-content-49950">
+<p></p><div><p>物理人来修信院专业课，继模拟集成电路设计拿了4之后来锐评一下数字集成电路设计。</p><p>课程内容包括教材（CMOS超大规模集成电路设计（第四版）Weste，Harris著）的一共十五章的全部内容，会除去一些optional的内容，当然课上会简单提及Verilog，大概一节45min的课，作为数字电路实验的内容，但是不作为考试内容。</p><p>课程重点就是简单的逻辑电路表达式，Elmore延时，线性延时。（但是这只是重点，考点比这个诡异多了）</p><p>平时作业不多，但是做起来让人非常恶心，因为和上课内容很多都没有关系。这里建议去google搜索一下整本教材的答案。个人感觉对着答案理解一遍都比自己做一遍效果好。</p><p>上课方式为99%的PPT，1%的板书。前半学期还能听懂一点，后半学期已经完全懵逼了。PPT摘录了课本上的关键的图和精简的文字叙述，对于一些简单的总结非常简洁明了，复习起来非常方便。但是对于复杂的电路，模型，计算，显得非常不足。一学期教了600页的书，书上每一页都是密密麻麻的字，PPT再怎么浓缩也不能如此简略啊喂。于是越到后面越走马观花，到课率一节比一节低，到最后只有十几个人来上课，来的人基本也在看手机。只能说白老师不点名，确实是一大幸事。</p><p>自己速成了一个晚上加一个上午去考试，感觉比较有难度</p><p>自己填空很多没填出来（其实是小抄纸已经抄不下了），这里建议小抄纸可以用电脑排版，尽可能把PPT所有细节全部塞进去，考试里各种犄角旮旯的牛鬼蛇神都有。</p><p>大题也有好几个不会的，今年的大题出的感觉有那么亿点点诡异。现在还记得考了：给出逻辑式画静态CMOS电路并分析延时，看版图写逻辑式，一个比较复杂的Elmore延时计算（类似于（A+B）C）这种的）算上升下降的传播延时和污染延时，计算活动因子和功率，伪CMOS门的逻辑式，传输门的weak/strong 0/1，乘法器的基4Booth编码，给出了一个伪CMOS门分析功能，路径逻辑努力的计算那部分。难度并不是递增的hhh。这个倒数第二题白老师考场明说了比较难，然后这个基4Booth编码，我。。。乘法器的原理都挺偏门的，考个基4Booth编码，虽然在复习提纲上，但是我。。。</p><p>最后白老师给分肯定是相当良心的，成功被捞到了90，非常开心。</p><p>总体来说，这门课给人的学习感受其实不是很好，上课其实是坐牢，如果是必修课，那就自栽，如果对数字电路有兴趣的话，其实可以旁听一下，选课的话，非RisingUp这种物理大佬的话，得仔细考量考量，毕竟真心不如自己看书hhh。</p><p>PS：如果白老师能看到的话，建议教学内容可以进行大幅度压缩，其实这本书的序里面已经给出了本科生一学期内完成的课程建议了，这里可以再进行删减与优化，比如：除去所有optional的内容和网络资料，第8、14、15章可以略去。课上可以适当把课后一些不布置的习题作为例题讲解等等措施。</p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-49950">
+<span class="small localtime" style="display: none;">07/08/2022 14:04:56</span>
+<span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">07/08/2022 14:05:13</span><span class="small">）</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-49950">1</span>
+</a>
+<a class="nounderline" href="javascript: show_review_comments(49950)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment blue left-pd-md"></span>
+<span id="review-comment-count-49950">1</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-49950" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-49950-comments" style="display:block">
+<div class="panel-body">
+<div class="solid ud-pd-sm">
+<a href="https://icourse.club/user/4730">RisingUp</a>：
                   <span>hhh
 </span>
-                  <span class="text-muted small float-right">
-                    
-                    
-                    <span class="localtime" style="display: none;">07/09/2022 02:55:21</span>
-                  </span>
-              </div>
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-	  
-      
-      
-        <div class="ud-pd-md dashed review" id="review-51173">
-          <div class="blue ud-pd-sm">
-            <span class="right-pd-sm px16">
-              
-              <a href=/user/3779>一叶知秋</a>
-              
-            </span>
-
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              
-            
-              
-              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
-              
-            
-
-            <span class="left-pd-md">2022春</span>
-
-            <span class="pull-right">
-              
-              
-            </span>
-          </div>
-                      
-            
-
-          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
-            <li class="right-mg-md">课程难度：困难</li>
-            <li class="right-mg-md">作业多少：中等</li>
-            <li class="right-mg-md">给分好坏：超好</li>
-            <li class="right-mg-md">收获大小：很多</li>
-          </ul>
-          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
-            <li>难度：困难</li>
-            <li>作业：中等</li>
-            <li>给分：超好</li>
-            <li>收获：很多</li>
-          </ul>
-	  <div class="review-content" id="review-content-51173">
-            <p><div><p>这门课是纯理论课，几乎不涉及Verilog，实验部分都包含在微电子专业基础实验里了；课程中间穿插了蛮多集成电路生产制造等方面的基础知识，而且不少内容感觉都是夏令营面试喜欢问的，个人觉得不管以后做不做数字集成电路设计都挺重要的。</p><p>课是白老师上。平时上课感觉还行吧，就是PPT上图太多，描述性文字太少，以至于光看PPT复习（尤其是后半学期）几乎看不懂，太抽象（上课如果不提前预习也容易跟不上，容易对着PPT上的图干瞪眼）。建议平时对着PPT上的内容多看看书，书上讲的还是比较详细的，例题也都看看，对知识点掌握挺有帮助。虽然模集程老师说数集课程难度不大，但yysy我并不这么觉得（捂脸），而且知识点贼多；前面学着还行，但到后面尤其是十一十二章我人都听傻了。</p><p>白老师不得不说，考试给分都很银杏。期末半开卷，考前会给知识点复习提纲。虽然平时学的知识点很多，提纲要点也比较碎，而且随便挑一个重点出来随便考考都可以很难，但实际期末试卷并不涉及特别复杂的内容，考题基本围绕前几章展开，题型也比较常规（就是Booth编码那道6分or8分大题是真不会）。课程优秀率最后应该也给满了。</p><p>讲白了，这门课平时好好学，多看看书，学明白了很有用；期末绝对不会为难你，正常复习，熟练掌握基础就能考一个不错的分数。</p><p> </p>
-</div></p>
-          </div>
-	  
-
-          <div class="bm-pd-md grey" id="review-51173">
-            <span class="small localtime" style="display: none;">07/13/2022 09:14:58</span>
-	    
-            
-            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
-            
-                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
-                <span id="review-upvote-count-51173">0</span>
-            </a>
-            <a class="nounderline" href="javascript: show_review_comments(51173)">
-              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
-              <span id="review-comment-count-51173">0</span>
-            </a>
-            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-51173" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
-            <span class="pull-right">
-              
-              
-              
-            </span>
-          </div>
-
-	  
-
-                    <div id="review-51173-comments" class="panel panel-default" style="display:none">
-            <div class="panel-body">
-              
-              
-              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
-              
-            </div>
-          </div>
-        </div>
-	  
-	  
-	  
-        
-        
-      </div>
-
-
-
-      <!-- 右边栏 -->
-
-      <div class="col-md-4 rl-pd-lg">
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/uploads/images/abb1aa92e925bc16a7098f9e036d61a44bc50a4b.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/962/">白雪飞</a></h3>
-          <p></p>
-          <p>教师主页：
-            暂无
-          </p>
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <img class="avatar-lg circle" src="/static/image/teacher.jpg"/>
-          
-          <h3 class="blue"><a href="/teacher/17438/">徐奇</a></h3>
-          <p></p>
-          <p>教师主页：
-            暂无
-          </p>
-        </div>
-        
-        
-
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">其他老师的「数字集成电路设计」课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18103/">白雪飞</a>
-            
-            <span>10.0</span>
-            <span class="grey">(2)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春</span>
-          </div>
-          
-          
-          
-          
-        </div>
-
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">白雪飞老师的其他课</h5>
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6232/">计算机程序设计A</a>
-            
-            <span>9.9</span>
-            <span class="grey">(33)</span>
-            
-            <span class="small grey align-bottom  float-right">2022秋 2021秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18103/">数字集成电路设计</a>
-            
-            <span>10.0</span>
-            <span class="grey">(2)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020春</span>
-          </div>
-          
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21259/">微电子专业基础实验</a>
-            
-            <span>7.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2022春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20486/">微电子专业基础实验</a>
-            
-            <span>1.0</span>
-            <span class="grey">(1)</span>
-            
-            <span class="small grey align-bottom  float-right">2021春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6196/">计算机文化基础与C语言上机</a>
-            
-            <span class="small grey align-bottom  float-right">2009秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6200/">计算机文化基础与C语言上机</a>
-            
-            <span class="small grey align-bottom  float-right">2008秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18102/">微电子专业基础实验</a>
-            
-            <span class="small grey align-bottom  float-right">2021春 2020秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/125/">C语言程序设计</a>
-            
-            <span class="small grey align-bottom  float-right">2009秋 2008秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/1966/">大规模集成电路工艺学</a>
-            
-            <span class="small grey align-bottom  float-right">2018秋 2017秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/4205/">片上系统设计</a>
-            
-            <span class="small grey align-bottom  float-right">2017春 2016春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/5937/">芯片设计前沿</a>
-            
-            <span class="small grey align-bottom  float-right">2012夏</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6186/">计算机文化基础</a>
-            
-            <span class="small grey align-bottom  float-right">2009秋 2008秋...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6211/">计算机文化基础与C语言上机</a>
-            
-            <span class="small grey align-bottom  float-right">2009秋 2008秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6275/">计算机网络技术及应用</a>
-            
-            <span class="small grey align-bottom  float-right">2003春</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/6787/">集成电路物理设计</a>
-            
-            <span class="small grey align-bottom  float-right">2019春 2018春...</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/18369/">大规模集成电路工艺学</a>
-            
-            <span class="small grey align-bottom  float-right">2019秋</span>
-          </div>
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/20788/">芯片设计实践</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋 2021秋</span>
-          </div>
-          
-          
-        </div>
-        
-        <div class="ud-pd-md dashed">
-          <h4 class="blue">徐奇老师的其他课</h5>
-          
-          
-          
-          
-          <div class="ud-pd-sm">
-            <a href="/course/21840/">集成电路自动化设计方法</a>
-            
-            <span class="small grey align-bottom  float-right">2022秋</span>
-          </div>
-          
-          
-        </div>
-        
-      </div>
-    </div> <!-- row -->
-  </div>  <!-- float-element  -->
-</div>  <!-- container -->
-
-<a id="gotop" href="#">
-  <span>▲</span>
+<span class="text-muted small float-right">
+<span class="localtime" style="display: none;">07/09/2022 02:55:21</span>
+</span>
+</div>
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+<div class="ud-pd-md dashed review" id="review-51173">
+<div class="blue ud-pd-sm">
+<span class="right-pd-sm px16">
+<a href="https://icourse.club/user/3779">一叶知秋</a>
+</span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+<span aria-hidden="true" class="glyphicon glyphicon-star-half"></span>
+<span class="left-pd-md">2022春</span>
+<span class="pull-right">
+</span>
+</div>
+<ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+<li class="right-mg-md">课程难度：困难</li>
+<li class="right-mg-md">作业多少：中等</li>
+<li class="right-mg-md">给分好坏：超好</li>
+<li class="right-mg-md">收获大小：很多</li>
+</ul>
+<ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+<li>难度：困难</li>
+<li>作业：中等</li>
+<li>给分：超好</li>
+<li>收获：很多</li>
+</ul>
+<div class="review-content" id="review-content-51173">
+<p></p><div><p>这门课是纯理论课，几乎不涉及Verilog，实验部分都包含在微电子专业基础实验里了；课程中间穿插了蛮多集成电路生产制造等方面的基础知识，而且不少内容感觉都是夏令营面试喜欢问的，个人觉得不管以后做不做数字集成电路设计都挺重要的。</p><p>课是白老师上。平时上课感觉还行吧，就是PPT上图太多，描述性文字太少，以至于光看PPT复习（尤其是后半学期）几乎看不懂，太抽象（上课如果不提前预习也容易跟不上，容易对着PPT上的图干瞪眼）。建议平时对着PPT上的内容多看看书，书上讲的还是比较详细的，例题也都看看，对知识点掌握挺有帮助。虽然模集程老师说数集课程难度不大，但yysy我并不这么觉得（捂脸），而且知识点贼多；前面学着还行，但到后面尤其是十一十二章我人都听傻了。</p><p>白老师不得不说，考试给分都很银杏。期末半开卷，考前会给知识点复习提纲。虽然平时学的知识点很多，提纲要点也比较碎，而且随便挑一个重点出来随便考考都可以很难，但实际期末试卷并不涉及特别复杂的内容，考题基本围绕前几章展开，题型也比较常规（就是Booth编码那道6分or8分大题是真不会）。课程优秀率最后应该也给满了。</p><p>讲白了，这门课平时好好学，多看看书，学明白了很有用；期末绝对不会为难你，正常复习，熟练掌握基础就能考一个不错的分数。</p><p> </p>
+</div>
+</div>
+<div class="bm-pd-md grey" id="review-51173">
+<span class="small localtime" style="display: none;">07/13/2022 09:14:58</span>
+<a class="nounderline" data-target="#signin" data-toggle="modal" href="#">
+<span aria-hidden="true" class="glyphicon glyphicon-thumbs-up grey left-pd-lg"></span>
+<span id="review-upvote-count-51173">0</span>
 </a>
-
-
-  <div id="push"></div>
-  </div><!-- ./wrap -->
+<a class="nounderline" href="javascript: show_review_comments(51173)">
+<span aria-hidden="true" class="glyphicon glyphicon-comment grey left-pd-md"></span>
+<span id="review-comment-count-51173">0</span>
+</a>
+<span class="left-pd-md small review-links" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/21260/#review-51173" data-placement="top" data-toggle="tooltip" data-trigger="click" style="cursor:pointer;" title="链接已复制">复制链接</span>
+<span class="pull-right">
+</span>
+</div>
+<div class="panel panel-default" id="review-51173-comments" style="display:none">
+<div class="panel-body">
+<p>立即<a data-target="#signin" data-toggle="modal" href="#">登录</a>，说说你的看法</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 右边栏 -->
+<div class="col-md-4 rl-pd-lg">
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/uploads/images/abb1aa92e925bc16a7098f9e036d61a44bc50a4b.webp"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/962/">白雪飞</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<img class="avatar-lg circle" src="/static/image/teacher.jpg"/>
+<h3 class="blue"><a href="https://icourse.club/teacher/17438/">徐奇</a></h3>
+<p></p>
+<p>教师主页：
+            暂无
+          </p>
+</div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">其他老师的「数字集成电路设计」课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/18103/">白雪飞</a>
+<span>10.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2021春 2020春</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">白雪飞老师的其他课
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/6232/">计算机程序设计A</a>
+<span>9.9</span>
+<span class="grey">(33)</span>
+<span class="small grey align-bottom float-right">2022秋 2021秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18103/">数字集成电路设计</a>
+<span>10.0</span>
+<span class="grey">(2)</span>
+<span class="small grey align-bottom float-right">2021春 2020春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/21259/">微电子专业基础实验</a>
+<span>7.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2022春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20486/">微电子专业基础实验</a>
+<span>1.0</span>
+<span class="grey">(1)</span>
+<span class="small grey align-bottom float-right">2021春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6196/">计算机文化基础与C语言上机</a>
+<span class="small grey align-bottom float-right">2009秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6200/">计算机文化基础与C语言上机</a>
+<span class="small grey align-bottom float-right">2008秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18102/">微电子专业基础实验</a>
+<span class="small grey align-bottom float-right">2021春 2020秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/125/">C语言程序设计</a>
+<span class="small grey align-bottom float-right">2009秋 2008秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/1966/">大规模集成电路工艺学</a>
+<span class="small grey align-bottom float-right">2018秋 2017秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/4205/">片上系统设计</a>
+<span class="small grey align-bottom float-right">2017春 2016春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/5937/">芯片设计前沿</a>
+<span class="small grey align-bottom float-right">2012夏</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6186/">计算机文化基础</a>
+<span class="small grey align-bottom float-right">2009秋 2008秋...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6211/">计算机文化基础与C语言上机</a>
+<span class="small grey align-bottom float-right">2009秋 2008秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6275/">计算机网络技术及应用</a>
+<span class="small grey align-bottom float-right">2003春</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/6787/">集成电路物理设计</a>
+<span class="small grey align-bottom float-right">2019春 2018春...</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/18369/">大规模集成电路工艺学</a>
+<span class="small grey align-bottom float-right">2019秋</span>
+</div>
+<div class="ud-pd-sm">
+<a href="https://icourse.club/course/20788/">芯片设计实践</a>
+<span class="small grey align-bottom float-right">2022秋 2021秋</span>
+</div>
+</h4></div>
+<div class="ud-pd-md dashed">
+<h4 class="blue">徐奇老师的其他课
+          
+          
+          
+          
+          <div class="ud-pd-sm">
+<a href="https://icourse.club/course/21840/">集成电路自动化设计方法</a>
+<span class="small grey align-bottom float-right">2022秋</span>
+</div>
+</h4></div>
+</div>
+</div> <!-- row -->
+</div> <!-- float-element  -->
+</div> <!-- container -->
+<a href="#" id="gotop">
+<span>▲</span>
+</a>
+<div id="push"></div>
+</div><!-- ./wrap -->
 <div class="container" id="footer">
-    <div class="ud-pd-sm">
-      <a class="right-pd-md" href='/about/'>关于我们</a>
-      <a class="right-pd-md" href='/community-rules/'>社区规范</a>
-      <a class="right-pd-md" href='/report-review/'>投诉点评</a>
-      <a class="right-pd-md" href='/stats/'>站点统计</a>
-      <a class="right-pd-md" href='/stats/rankings/'>排行榜</a>
-      <a class="right-pd-md" href='/announcements/'>公告栏</a>
-      <a class="right-pd-md hidden" href='/copyright/'>版权与隐私</a>
-      <a class="right-pd-md hidden" href='/report-bug/'>发现漏洞</a>
-      
-      <span class="float-right hidden">
-        <a class="right-pd-sm">中文</a>
-        <a class="left-pd-sm">English</a>
-      </span>
-    </div>
-    <span class="footer-text text-muted">Copyright &copy; 2022 USTC评课社区</span>
+<div class="ud-pd-sm">
+<a class="right-pd-md" href="https://icourse.club/about/">关于我们</a>
+<a class="right-pd-md" href="https://icourse.club/community-rules/">社区规范</a>
+<a class="right-pd-md" href="https://icourse.club/report-review/">投诉点评</a>
+<a class="right-pd-md" href="https://icourse.club/stats/">站点统计</a>
+<a class="right-pd-md" href="https://icourse.club/stats/rankings/">排行榜</a>
+<a class="right-pd-md" href="https://icourse.club/announcements/">公告栏</a>
+<a class="right-pd-md hidden" href="https://icourse.club/copyright/">版权与隐私</a>
+<a class="right-pd-md hidden" href="https://icourse.club/report-bug/">发现漏洞</a>
+<span class="float-right hidden">
+<a class="right-pd-sm">中文</a>
+<a class="left-pd-sm">English</a>
+</span>
+</div>
+<span class="footer-text text-muted">Copyright © 2022 USTC评课社区</span>
 </div><!-- end container -->
 </body>
-
-
-
-
-  <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/clipboard.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
-  <script>
- $.ajaxSetup({
-     beforeSend: function(xhr, settings) {
-         if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
-             xhr.setRequestHeader("X-CSRFToken", "ImRlOTg0MTAxNWNhMGY3MzM3MWQwY2Y5NDY2NjU2M2E2ZTA0ZmI4NTAi.YtlzJQ.lXWXGuldDaXt40Vnw0Hcz2QvkTQ")
-         }
-     }
- });
-
- // display local time
- function toHourMinutes(pubTime) {
-   var hours = pubTime.getHours().toString();
-   if (hours.length == 1) {
-     hours = '0' + hours;
-   }
-   var minutes = pubTime.getMinutes().toString();
-   if (minutes.length == 1) {
-     minutes = '0' + minutes;
-   }
-   return hours + ':' + minutes;
- }
-
- function toYearMonthDate(pubTime) {
-   var year = pubTime.getFullYear().toString();
-   var month = (pubTime.getMonth() + 1).toString();
-   var day = pubTime.getDate().toString();
-   return year + '年' + month + '月' + day + '日';
- }
- 
- function updateLocalTime() {
-   $('.localtime').each(function(index) {
-     if ($(this).css('display') != 'none') {
-       return;
-     }
-     var utcTime = $(this).text();
-     var pubTime = new Date(utcTime + ' UTC');
-     if (!pubTime) {
-       $(this).text(pubTime);
-       $(this).show();
-       return;
-     }
-     var now = new Date();
-     if (pubTime.getFullYear() == now.getFullYear() && pubTime.getMonth() == now.getMonth() && pubTime.getDate() == now.getDate()) {
-       $(this).text('今天 ' + toHourMinutes(pubTime));
-     } else {
-       var yesterday = new Date();
-       yesterday.setDate(yesterday.getDate() - 1); // JavaScript can handle date roll overs
-       if (pubTime.getFullYear() == yesterday.getFullYear() && pubTime.getMonth() == yesterday.getMonth() && pubTime.getDate() == yesterday.getDate()) {
-         $(this).text('昨天 ' + toHourMinutes(pubTime));
-       } else {
-         $(this).text(toYearMonthDate(pubTime) + ' ' + toHourMinutes(pubTime));
-       }
-     }
-     $(this).show();
-   });
- }
-
- updateLocalTime();
+<!-- Placed at the end of the document so the pages load faster -->
 
 
- new ClipboardJS('.review-links');
- $('.review-links').tooltip();
-</script>
-  <script>
-   $('#signin').on('shown.bs.modal', function () {
-     $('#inputEmail').focus()
-   });
 
-   function signin_alert(msg, type) {
-     if (!type)
-       type = "danger";
-     $('#signin-alert').attr("class", "alert alert-" + type);
-     $('#signin-alert').html(msg);
-     $('#signin-alert').show();
-   }
 
-   $('#signin-form').submit(function(e) {
-     e.preventDefault();
-     var formdata = {}
-     $('#signin-form input').each(function() {
-       formdata[$(this).attr("name")] = $(this).val();
-     });
-     $.ajax({
-       type: "POST",
-       url: "/signin/?next=%2Fcourse%2F21260%2F&ajax=True",
-       data: formdata,
-       dataType: "json",
-       success: function(res) {
-         if (res.status == 200) {
-           if (res.next)
-             window.location.href = res.next;
-           else
-             signin_alert(res.msg, "success");
-         } else {
-           signin_alert(res.msg);
-         }
-       },
-       error: function(e) {
-         signin_alert('天了噜! 服务器正在睡觉，请稍后再试。', "warning");
-       }
-     })
-   });
 
-   function read_notification(count) {
-     if (count == 0)
-         return;
-     $.ajax({
-        type: "POST",
-        url: "/api/notifications/",
-     });
-   }
-  </script>
 
-  
-<script>
- $('#myTab a').click(function (e) {
-   e.preventDefault()
-   $(this).tab('show')
- })
 
- var action_data = {
-   'follow': {
-     'enabled': false,
-     'count': 1,
-     'do_url': "/course/21260/follow/",
-     'undo_url': "/course/21260/unfollow/",
-   },
-   'downvote': {
-     'enabled': false,
-     'count': 0,
-     'do_url': "/course/21260/downvote/",
-     'undo_url': "/course/21260/undo-downvote/",
-     'conflict': 'upvote',
-   },
-   'upvote': {
-     'enabled': false,
-     'count': 1,
-     'do_url': "/course/21260/upvote/",
-     'undo_url': "/course/21260/undo-upvote/",
-     'conflict': 'downvote',
-   },
-   'join': {
-     'enabled': false,
-     'do_url': "/course/21260/join/",
-     'undo_url': "/course/21260/quit/",
-   },
- }
-
- $(function() {
-   for (action in action_data) {
-
-     if (! $('.btn-' + action).length)
-       continue;
-
-     (function(action) {
-       var d = action_data[action];
-
-       var do_btn = $('.btn-' + action).filter('.btn-do');
-       var undo_btn = $('.btn-' + action).filter('.btn-undo');
-
-       function update_count(count) {
-         d.count = count;
-         $('.btn-' + action + ' .count').text(count);
-       }
-       function http_post_wrapper(url) {
-         $.post(url, null, function(o) {
-           if (o.count)
-             update_count(o.count);
-           if (!o.ok)
-             alert('操作失败，请重试');
-           d.in_progress = false;
-         }, 'json')
-         .fail(function() {
-           alert('操作失败，请重试');
-           d.in_progress = false;
-         });
-       }
-
-       do_btn.click(function() {
-         
-         $('#signin').modal('show');
-         
-       });
-
-       undo_btn.click(function() {
-         
-         $('#signin').modal('show');
-         
-       });
-
-       update_count(d.count);
-
-       if (d.enabled) {
-         undo_btn.show();
-         do_btn.hide();
-       } else {
-         do_btn.show();
-         undo_btn.hide();
-       }
-     })(action);
-   }
-   $('#action-btn-group').show();
- });
-
- function delete_review(review_id, is_admin)
- {
-     if (is_admin) {
-         if (!confirm('你正在作为管理员，删除其他用户的点评！建议使用屏蔽而非删除功能，确定删除吗？')) {
-             return;
-         }
-     } else {
-         if (!confirm('你真的要删除此点评吗？删除的点评是不可恢复的！')) {
-             return;
-         }
-     }
-     $.post("/review/delete/", { id: review_id }, function(o) {
-         if (o.ok)
-            window.location.href = "/course/21260/";
-         else
-            alert(o.message);
-     }, 'json')
-     .fail(function() {
-         alert('删除点评失败，请重试');
-     });
- }
-
- $('.showmore-shadow').click(function(e) {
-   $('.showmore-text').css('max-height', 'none');
-   $('.showmore-wrapper').hide();
- });
-
- if ($('.showmore-text').height() >= 750) {
-   $('.showmore-text').css('max-height', '400px');
-   $('.showmore-wrapper').show();
- }
-
- // go to top floating button from Freemind theme of Hexo
- $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
-     var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
-     if(scrollt>200){  //判断滚动后高度超过200px
-         $("#gotop").fadeIn(400); //淡出
- 		if($(window).width() >= 1200){
- 			$(".navbar").stop().fadeTo(400, 0.2);
- 		}
-     }else{
-         $("#gotop").fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动
-         if($(window).width() >= 1200){
- 			$(".navbar").stop().fadeTo(400, 1);
-         }
-     }
- });
- $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部        
- 	$("html,body").animate({scrollTop:"0px"},200);
- });
-
-</script>
-
-<script>
- function show_review_comments(review_id)
- {
-   if (document.getElementById('review-'+ review_id +'-comments').style.display=="block") {
-       document.getElementById('review-'+ review_id +'-comments').style.display="none";
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('grey');
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('blue');
-     }
-   else {
-       document.getElementById('review-'+ review_id +'-comments').style.display="block";
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('blue');
-       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('grey');
-   }
- }
-
- function get_upvote_review_elem(review_id)
- {
-     var elem = $('#review-upvote-count-' + review_id);
-     if (!elem) return null;
-     if (elem.hasClass('in_progress')) {
-       alert('操作正在进行中，请稍候再试');
-       return null;
-     }
-     elem.addClass('in_progress');
-     return elem;
- }
-
- function upvote_review(review_id)
- {
-     var elem = get_upvote_review_elem(review_id);
-     if (!elem) return;
-     elem.text(parseInt(elem.text()) + 1);
-     elem.parent().attr('href', 'javascript:cancel_upvote_review("' + review_id + '")');
-     elem.parent().find('span.glyphicon').removeClass('grey');
-     elem.parent().find('span.glyphicon').addClass('blue');
-
-     $.post("/api/review/upvote/", { review_id: review_id }, function(o) {
-       if (typeof o.count != "undefined") {
-         elem.text(o.count);
-       }
-       elem.removeClass('in_progress');
-     }, 'json')
-     .fail(function() {
-       elem.text(parseInt(elem.text()) - 1);
-       alert('点赞失败，请重试');
-     });
- }
- 
- function cancel_upvote_review(review_id)
- {
-     var elem = get_upvote_review_elem(review_id);
-     if (!elem) return;
-     elem.text(parseInt(elem.text()) - 1);
-     elem.parent().attr('href', 'javascript:upvote_review("' + review_id + '")');
-     elem.parent().find('span.glyphicon').removeClass('blue');
-     elem.parent().find('span.glyphicon').addClass('grey');
-
-     $.post("/api/review/cancel_upvote/", { review_id: review_id }, function(o) {
-       if (typeof o.count != "undefined") {
-         elem.text(o.count);
-       }
-       elem.removeClass('in_progress');
-     }, 'json')
-     .fail(function() {
-       elem.text(parseInt(elem.text()) + 1);
-       alert('取消点赞失败，请重试');
-     });
- }
-
- function reload_comments(review_id)
- {
-     $.get("/review/comments/",
-        { review_id: review_id},
-        function(html) {
-            $('#review-' + review_id + '-comments').replaceWith(html);
-            $('#review-' + review_id + '-comments').show();
-            updateLocalTime();
-        }, 'html')
-     .fail(function() {
-        alert('重新加载评论区出错，请刷新页面');
-     });
- }
-
- function submit_comment(review_id)
- {
-     content = $('#review-comment-input-' + review_id).val().trim();
-     if (content == '') {
-         alert('请输入评论内容');
-         return;
-     }
-     $.post("/api/review/new_comment/", {
-         review_id: review_id,
-         content: content
-     }, function(o) {
-         if (o.ok) {
-             reload_comments(review_id);
-         } else {
-             alert(o.message);
-         }
-     }, 'json')
-     .fail(function() {
-         alert('提交评论失败，请重试');
-     });
- }
-
- function delete_comment(review_id, comment_id)
- {
-     if (!confirm('你真的要删除此评论吗？')) {
-         return;
-     }
-     $.post("/api/review/delete_comment/", { comment_id: comment_id },
-         function(o) {
-            if (o.ok) {
-               reload_comments(review_id);
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('删除评论失败，请重试');
-     });
- }
-
- function reply_comment(review_id, reply_to)
- {
-     var elem = $('#review-comment-input-' + review_id);
-     elem.focus();
-     elem.val('');
-     elem.val('回复 @' + reply_to + ': ');
- }
-
- function block_review(review_id)
- {
-     $.post("/api/review/block/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('屏蔽成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('屏蔽失败，请重试');
-     });
- }
-
- function unblock_review(review_id)
- {
-     $.post("/api/review/unblock/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('解除屏蔽成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('解除屏蔽失败，请重试');
-     });
- }
-
- function hide_review(review_id)
- {
-     $.post("/api/review/hide/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('隐藏点评成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('隐藏点评失败，请重试');
-     });
- }
-
- function unhide_review(review_id)
- {
-     $.post("/api/review/unhide/", { review_id: review_id },
-         function(o) {
-            if (o.ok) {
-               alert('解除隐藏点评成功，请刷新页面');
-            } else {
-               alert(o.message);
-            }
-     }, 'json')
-     .fail(function() {
-         alert('解除隐藏点评失败，请重试');
-     });
- }
-
- $('.review-filter-rule').each(function (index) {
-     var id = $(this).attr('id')
-     var prefix = 'review-filter-rule-'
-     var num_id = parseInt(id.substr(prefix.length))
-     var review_id = 'review-content-' + num_id.toString()
-     var original_text = $('#' + review_id).html()
-     console.log(original_text)
-     console.log($(this).text())
-
-     var regex_str = $(this).text()
-     var regex_match_and_replace = regex_str.split('\n')
-     var regex_match = regex_match_and_replace[0]
-     var regex_replace = regex_match_and_replace.length == 2 ? regex_match_and_replace[1] : ''
-     var regex = new RegExp(regex_match, 'g')
-     var replace_text = original_text.replace(regex, regex_replace)
-     $('#' + review_id).html(replace_text)
- })
-
- $('.review-content').each(function(index) {
-     var regex = new RegExp('(脑瘫玩意|傻逼|我艹你妈|艹你妈)', 'g')
-     var regex_replace = '<span data-toggle="tooltip" data-placement="top" title="本点评存在违反社区规范的内容，予以部分屏蔽" style="background:black;color:black;">请文明用语</span>'
-     var replace_text = $(this).html().replace(regex, regex_replace)
-     $(this).html(replace_text)
- })
-
- $('.teacher-review-label').tooltip()
-</script>
 
 </html>
