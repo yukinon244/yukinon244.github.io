@@ -1,7 +1,1519 @@
-<html>
-<head><title>503 Service Temporarily Unavailable</title></head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="og:description" content="9.2 分，6 人评价">
+    <meta name="keywords" content="USTC,评课,课程">
+    <meta name="author" content="jenny42,aaron1992,boj">
+    <link rel="icon" href="/static/image/favicon.ico">
+
+    <title>网络安全（曾凡平） - USTC评课社区</title>
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css?ver=20220706" rel="stylesheet">
+
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
 <body>
-<center><h1>503 Service Temporarily Unavailable</h1></center>
-<hr/><center>nginx/1.18.0</center>
+  <div id="wrap">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        
+        <button type="button" class="mobile btn btn-default navbar-btn pull-right right-mg-md" style="outline:none" data-toggle="modal" data-target="#signin">登录</button>
+        
+        <a class="navbar-brand" href="/">USTC评课社区</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav desktop">
+          <li ><a href="/latest_reviews">点评</a></li>
+	  <li ><a href="/course/">课程</a></li>
+          
+          <li><a href="https://pi-review.com/universities/257" target="_blank">导师</a></li>
+        </ul>
+
+	
+        <form class="navbar-form navbar-left desktop" action="/search/" method="get" role="search">
+	
+          <div class="form-group">
+            <input type="text" name="q" class="form-control" id="search" placeholder="搜索课程、老师" style="width: 235px" value="">
+          </div>
+          <span class="desktop-wide">
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey"></span></button>
+          </span>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right desktop">
+          
+          <li><button type="button" class="btn btn-default navbar-btn left-mg-md" data-toggle="modal" data-target="#signin">登录</button></li>
+          
+        </ul>
+
+        
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  
+  <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-signin">
+      <div class="modal-content">
+        <form id="signin-form" class="form-signin">
+          <input type="hidden" name="csrf_token" value="ImFjZmQwZmNmOGRlNzExOTcxMDUwZWM4Zjg2YzY3OGEyMTVhM2Y4Zjki.YuAKpw.Se-FBz0L6xhfAkgctJb4VPWRqzo" />
+          <div class="form-signin-heading">
+            <span class="h2">请登录</span>
+            <a class="btn btn-default float-right" href="/signup">注册</a>
+          </div>
+          <div id="signin-alert" role="alert" class="display: none"></div>
+          <label for="inputEmail" class="sr-only">用户名</label>
+          <input type="text" name="username" id="inputEmail" class="form-control" placeholder="用户名或邮箱" required autofocus>
+          <label for="inputPassword" class="sr-only">密码</label>
+          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="remember">记住我
+            </label>
+            <a class="float-right" href="/reset-password/">忘记密码</a>
+          </div>
+          <button class="btn btn-lg btn-blue btn-block" type="submit">登录</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- banner -->
+    
+    <div class="container">
+      
+      <div class="text-center banner mobile">评课社区 <a href="/community-rules/">社区规范</a> 和 <a href="/report-review/">投诉点评的流程</a></div>
+      
+
+      
+      <div class="text-center banner desktop">评课社区会根据 <a href="/community-rules/">社区规范</a> 和 <a href="/report-review/">投诉点评的流程</a> 来处理投诉</div>
+      
+    </div>
+    <!-- end banner -->
+    
+
+  
+
+<div class="container">
+
+  <div class="row float-element">
+    <div class="row">
+      <div class="col-md-8 inline-h3">
+        <span class="blue h3">网络安全</span><span class="h3 blue mobile">（曾凡平）</span>
+        <span class="small grey align-bottom left-pd-sm desktop">2021秋 2020秋 2019秋 2018秋 2017秋 2016秋 2015秋 2011秋 &nbsp;课程号：COMP6216P01</span>
+        <br><span class="small grey align-bottom mobile">2021秋 2020秋 2019秋 2018秋 2017秋 2016秋 2015秋 2011秋 &nbsp;课程号：COMP6216P01</span>
+
+        
+        <hr>
+        
+        <div class="ud-pd-sm blue">
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star glyphicon-lg" aria-hidden="true"></span>
+            
+          
+            
+            <span class="glyphicon glyphicon-star-half glyphicon-lg" aria-hidden="true"></span>
+            
+          
+          <span class="rl-pd-sm h4">9.2</span><span class="rl-pd-sm text-muted">(6人评价)</span>
+        </div>
+        
+        <ul class="text-muted list-inline list-unstyled ud-pd-sm">
+          <li class="right-mg-md">课程难度：中等</li>
+          <li class="right-mg-md">作业多少：中等</li>
+          <li class="right-mg-md">给分好坏：超好</li>
+          <li class="right-mg-md">收获大小：一般</li>
+        </ul>
+
+        <table class="table table-condensed no-border">
+          <tr>
+            <td><strong>选课类别：</strong>专业</td>
+            <td><strong>教学类型：</strong>理论课</td>
+          </tr>
+          <tr>
+            <td><strong>课程类别：</strong>研究生课程</td>
+            <td><strong>开课单位：</strong>计算机科学与技术系</td>
+          </tr>
+          <tr>
+            <td><strong>课程层次：</strong>硕士</td>
+            <td><strong>学分：</strong>3.0</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="ud-pd-sm">
+          
+          <strong>课程主页</strong>：暂无（如果你知道，劳烦告诉我们！）
+          
+        </div>
+
+        <div id="action-btn-group" class="ud-pd-md" style="display:none">
+          <button class="btn btn-white btn-flat btn-follow btn-do"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> 关注 <small>(<span class="count"></span>)</small></button>
+          <button class="btn btn-blue btn-flat btn-follow btn-undo"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 已关注 <small>(<span class="count"></span>)</small></button>
+
+          <button class="btn btn-white btn-flat btn-upvote btn-do"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 推荐 <small>(<span class="count"></span>)</small></button>
+          <button class="btn btn-blue btn-flat btn-upvote btn-undo"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 已推荐 <small>(<span class="count"></span>)</small></button>
+
+          <button class="btn btn-white btn-flat btn-downvote btn-do"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 不推荐 <small>(<span class="count"></span>)</small></button>
+          <button class="btn btn-blue btn-flat btn-downvote btn-undo"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 取消不推荐 <small>(<span class="count"></span>)</small></button>
+
+          
+        </div>
+
+	
+	<div class="ud-pd-md">
+	  <div class="solid ud-pd-sm inline-h3">
+          <span class="blue h3">简介</span>
+          <span class="text-muted pull-right small" style="padding-top: 1em;">
+             
+             
+             <span class="glyphicon glyphicon-time grey left-pd-sm" aria-hidden="true" ></span>
+             最后更新：<span class="localtime" style="display: none;">01/21/2021 11:00:38</span>
+             
+          </span>
+	  </div>
+      <div class="showmore-text" id="course-intro">
+	    <p>本课程从网络对抗的角度，详细论述网络安全的基本原理、技术和最新研究成果。主要内容包括：网络信息安全概念，网络对抗的历史、现状和发展趋势，目标探测与防范技术，拒绝服务攻击与防范，网络入侵攻击与防范，漏洞分析与利用技术，计算机病毒攻击与防范，防火墙技术原理与应用，入侵检测技术原理与应用，加密与认证技术，物联网安全等内容。本课程在保持网络对抗理论与技术体系完整性的同时，着重培养网络对抗的实际能力。</p>
+      </div>
+      <div class="showmore-wrapper">
+        <div class="showmore-shadow">
+          <div class="showmore-btn-wrapper">
+            <button class="showmore-btn">展开全部课程简介 <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div>
+	</div>
+	
+	
+
+	<div class="solid ud-pd-md inline-h3">
+	  <span class="blue h3" id="review-anchor">点评</span>
+          
+          <a type="button" data-toggle="modal" data-target="#signin" class="btn btn-white float-right blue"><span class="glyphicon glyphicon-pencil glyphicon-sm right-pd-sm" aria-hidden="true"></span>写点评</a>
+          
+        </div>
+
+
+        
+        
+	
+
+	
+	<div class="ud-pd-sm">
+		<span class="right-pd-sm weight-heavy">排序</span>
+		<select name="sort_by" onchange="location=this.value">
+			
+			<option value="/course/5815/?sort_by=upvote#review-anchor" selected>点赞最多</option>
+			
+			<option value="/course/5815/?sort_by=pubtime_desc#review-anchor" >最新点评</option>
+			
+			<option value="/course/5815/?sort_by=pubtime#review-anchor" >最旧点评</option>
+			
+			<option value="/course/5815/?sort_by=score_desc#review-anchor" >评分: 高-低</option>
+			
+			<option value="/course/5815/?sort_by=score#review-anchor" >评分: 低-高</option>
+			
+		</select>
+		<span class="left-pd-sm right-pd-sm weight-heavy">学期</span>
+		<select name="term" onchange="location=this.value">
+			
+			<option value="/course/5815/?sort_by=upvote#review-anchor" selected>全部</option>
+			
+			
+			<option value="/course/5815/?sort_by=upvote&amp;term=20211#review-anchor" >
+			2021秋 (3)
+			</option>
+			
+			<option value="/course/5815/?sort_by=upvote&amp;term=20201#review-anchor" >
+			2020秋 (3)
+			</option>
+			
+		</select>
+		<br class="mobile">
+		<span class="right-pd-sm weight-heavy mobile">评分</span>
+		<span class="left-pd-sm right-pd-sm weight-heavy desktop">评分</span>
+		<select name="rating" onchange="location=this.value">
+			<option value="/course/5815/?sort_by=upvote#review-anchor" selected>全部</option>
+			
+			<option value="/course/5815/?sort_by=upvote&amp;rating=5#review-anchor" >
+				★★★★★ (5)
+			</option>
+			
+			<option value="/course/5815/?sort_by=upvote&amp;rating=4#review-anchor" >
+				★★★★ (1)
+			</option>
+			
+			<option value="/course/5815/?sort_by=upvote&amp;rating=3#review-anchor" >
+				★★★ (0)
+			</option>
+			
+			<option value="/course/5815/?sort_by=upvote&amp;rating=2#review-anchor" >
+				★★ (0)
+			</option>
+			
+			<option value="/course/5815/?sort_by=upvote&amp;rating=1#review-anchor" >
+				★ (0)
+			</option>
+			
+		</select>
+		<span class="rl-pd-sm text-muted">6条点评</span>
+	</div>
+	
+
+    
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-45063">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/1624>冰川酒造</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021秋</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：中等</li>
+            <li class="right-mg-md">给分好坏：一般</li>
+            <li class="right-mg-md">收获大小：一般</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：中等</li>
+            <li>给分：一般</li>
+            <li>收获：一般</li>
+          </ul>
+	  <div class="review-content" id="review-content-45063">
+            <p><p>水课，分好拿，事也少（事少这方面仁者见仁），适合不愿意为课程付出太多时间的同学选。因为基本每周都有实验，所以适合有点基础的同学（主要是汇编和os），但实验都不难其实。考试半开卷，虽然有些没抄上但是水一水就过去了。</p>
+</p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-45063">
+            <span class="small localtime" style="display: none;">04/15/2022 05:32:24</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-45063">1</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(45063)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-45063">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5815/#review-45063" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-45063-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-39363">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/2392>daiaqswde</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021秋</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：简单</li>
+            <li class="right-mg-md">作业多少：中等</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：一般</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：简单</li>
+            <li>作业：中等</li>
+            <li>给分：超好</li>
+            <li>收获：一般</li>
+          </ul>
+	  <div class="review-content" id="review-content-39363">
+            <p><div><p>本科学过信息安全导论的都懂，这是门好课。</p><p>布置了12次作业，几乎每周都有，近一半是实验，比较简单，最后平时分拿满的人比较多，平时分占50%</p><p>考试今年（2021秋季学期）是半开卷（又改了，听说上学期开卷来着），一张 A4 纸，可惜我有不少没抄上去...填空里有一些有关“我国”的内容，记得不要在小抄里漏了...</p><p>填空题全面覆盖</p><p>简答题考了防火墙、入侵检测、恶意代码、“入侵了一个计算机后怎么留后门”（我还真不知道考的哪个知识点，貌似瞎写的写对了），还有一道忘了...</p><p>程序题考了缓冲区溢出的offset和字符串格式化攻击，只要认真做实验都能拿到</p><p>总评超好，全班没有人不及格，很适合作为选修课</p><p> </p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-39363">
+            <span class="small localtime" style="display: none;">01/13/2022 13:52:08</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-39363">1</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(39363)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-39363">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5815/#review-39363" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-39363-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-28419">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/4780>BeyondLinearity</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2020秋</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：很多</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：没有</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：很多</li>
+            <li>给分：超好</li>
+            <li>收获：没有</li>
+          </ul>
+	  <div class="review-content" id="review-content-28419">
+            <p><div><p>这门课的教材是曾老师自己编著的《网络信息安全》，PPT的内容也几乎都和这本书的内容相同。老师上课的时候很认真，会仔细地演示实验步骤等等。课件、作业和实验报告都是通过研究生信息平台来发布和提交，老师在每节课的最后也会说一下作业是什么。</p><p>成绩评定方式：<span>作业</span><span>30%+</span><span>实验报告</span><span>20%，</span><span>期末考试或课程报告</span><span>50%。</span></p><p>“作业”大多数是概念题，直接去PPT上找答案然后抄下来就可以了；但也有少数问题需要稍微思考思考，或者自己想办法去网上找答案，例如“在腾讯会议系统中，对称密码技术和公钥密码技术适合应用在哪几个阶段？说明理由”等等。</p><p>“实验报告”是一些和网络安全有关的小实验，有的实验需要在Windows上做，有的需要在Ubuntu上做，并且不同的实验对Windows或Ubuntu的版本有不同的要求，虚拟机的下载方式可以在老师的个人网站上找到，老师上课的时候也会专门告诉同学们可以去哪里下载虚拟机。</p><p>大多数实验都可以根据PPT上相关内容所叙述的步骤来完成，但是有些实验做起来还是有些吃力的，特别是对之前没认真研究过相关知识的同学来说。所以要完成实验的话建议还是上课的时候认真听老师讲课，上课之前可以先看一下这次的作业内容是什么，然后上课的时候有针对性地听一听即可。另外，老师有时也会透露作业的答案或是实验的步骤等等。</p><p>另外吐槽一下，这门课的作业和实验是真的多，差不多每节课都有作业，这学期总共布置了12次作业。</p><p>关于期末的考核方式，上课的时候有同学建议老师不考试，而是改成课程报告，然后老师表示“课程报告的话也太水了！”hhh</p><p>期末考试的题型是填空+简答+程序题，期末的时候，老师坚持要以闭卷的形式考试（填空和简答闭卷，程序题开卷，考试的时候先在规定的时间内做填空与简答，最后再开卷做程序题）。闭卷的话要记忆的内容确实很多，同学们都想改成开卷，老师一直没有同意。后来到了最后一节课的时候，这时候所有课程的考试日程安排基本都确定了，老师看了一下，然后说，“你们这些考试也安排得太密集了哈，那我们的课就改成开卷吧”。另外据老师说，上一届也是这样子，大家都要求开卷，老师最后就开卷了。</p><p>不过开卷的话肯定有一些题目是在书上找不到的，我反正很多题目都没找到答案，不过听别的同学聊天的时候，好像他们基本都找到了。。。</p><p>个人认为单纯从修学分的角度来说，这门课如果最终是开卷的话，还是一门值得选的课，虽然作业和实验很多，但是基本都可以从师兄师姐那里要到答案；但是如果最终是闭卷的话，就得慎重考虑了，要记忆的内容实在是很多，不过从另一方面来说，毕竟平时成绩占50分，所以如果只是为了及格的话，似乎最后也不用太认真复习。</p><p> </p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-28419">
+            <span class="small localtime" style="display: none;">03/04/2021 15:41:52</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-28419">1</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(28419)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-28419">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5815/#review-28419" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-28419-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-38837">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/5313>甜橙奶茶</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2021秋</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：很多</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：很多</li>
+            <li>给分：超好</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-38837">
+            <p><div><p>本学期很喜欢的一门课了。</p><p>先说在前面，这门课【全部满足以下条件】的同学不要选。</p><p>1、跨考同学，尤其是大跨的同学；2、对虚拟机和汇编语言等一窍不通； 3、也不愿意学虚拟机或汇编语言的使用（基本上不用写汇编语言啦，能看懂知道语句啥意思就行）</p><p>我相信同时满足以上条件的同学应该很少，也就是说对绝大部分同学来说我很推荐这门课。</p><p>作为一门选修课，这门课的作业算是特别多了，这学期有12次作业，实验就有6个，如果完全不参考以前师兄师姐的成果的话每次实验大概要做0.5~2天时间不等。（因为其中有一项实验是今年新加的，身边同学都做得挺久的）但是花费的时间很值得，是真的学到了东西。作业比较多，所以扣一分。</p><p>剩下的全是我要吹的点。首先，虽然实验多，但是如果当时没做完，随便有几个同学提个建议就会延后几天ddl了，并且学期末时会有几天允许补交作业，补交只扣一分。</p><p>作业这方面是反内卷之王，认真做的都有满分，实验报告朴素一点简明一点也没关系，今年大部分同学都是12次作业全部满分。</p><p>平时分占比50%！也就是说考试20分就可以及格了。平时分这50分里有45分是作业，5分是签到，本学期只签到了一次，老师随机签，所以建议很看重分数的同学还是去上课，不要赌。</p><p>期末考试以往是一半内容闭卷一半内容开卷，但是以往有同学反映如果前半部分提前写完的等收卷会无所适从，不好把握，所以今年改成半开卷，A4纸一张。考前花了一天半做完的吧，但是填空题还是考了一些特别细节的找不到的，好在平时分很奶，找不到也没关系。</p><p>老师和助教效率极高，周四晚上九点半考完，周五晚上就主动发邮件说要查分的联系他们了，过了几天成绩才上系统，可以说非常认真负责。</p><p>这门课均分85，没有60分以下的，作为一门选修课，给分这方面很好了。</p><p>综合评定为9分</p><p> </p><p> </p><p> </p>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-38837">
+            <span class="small localtime" style="display: none;">01/11/2022 09:56:44</span>
+	    
+	    <span class="small">（最后修改于</span> <span class="small localtime" style="display: none;">01/11/2022 16:51:54</span><span class="small">）</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-38837">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(38837)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-38837">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5815/#review-38837" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-38837-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-29621">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/4844>Andrew</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2020秋</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：简单</li>
+            <li class="right-mg-md">作业多少：中等</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：一般</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：简单</li>
+            <li>作业：中等</li>
+            <li>给分：超好</li>
+            <li>收获：一般</li>
+          </ul>
+	  <div class="review-content" id="review-content-29621">
+            <p><div><p>重点写在前面：如果这门课是你的专业选修课，那我强烈推荐你选它！！！平时分占50%，用心做了基本都能拿满，意味着期末考试你只要拿20卷面分就能及格，而期末考有40分是点击就送的填空题，抄抄书就好了。如果想拿高分还是有点难度的，因为有挺多代码题和论述题，需要有相关网络安全基础，以及上课提到的一些知识点才能做出来。我空了好几道题，最后总评88。</p><p>课程方面，这门课以曾老师自己编的《网络信息安全》为官方教材，图书馆有几本存货，需要早点去借，考前基本借不到。但是如果你考试只带这本书去的话，肯定搞不定，因为ppt里有很多额外内容。这里是资料包，包括ppt缩印版和我的历次作业报告。https://download.csdn.net/download/duotanguo2319/15814155?spm=1001.2014.3001.5501</p><p>实验报告需要在不同的系统环境下完成，其实大部分时间会花费在配置系统上，所以建议是同学们分工合作，通过学校的网盘分享安装好的虚拟机文件。</p><p>总而言之，这是一门非常推荐你作为专业选修课的研究生课程，特别是对于像我这种计算不太行或者没有计算机相关基础的人来说，比较友好。</p><p>另附缩印打印版ppt，节省大家时间去一个个合并ppt</p><p><a href="/uploads/files/d1637e23be3e9066c2ddffa8a801e241621f5c38.pdf">网络安全ppt缩印版.pdf</a></p><div id="gtx-trans" style="position: absolute; left: 361px; top: 159px;"><div class="gtx-trans-icon"> </div></div>
+</div></p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-29621">
+            <span class="small localtime" style="display: none;">03/15/2021 11:15:08</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-29621">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(29621)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-29621">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5815/#review-29621" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-29621-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+	  
+      
+      
+        <div class="ud-pd-md dashed review" id="review-28992">
+          <div class="blue ud-pd-sm">
+            <span class="right-pd-sm px16">
+              
+              <a href=/user/4849>不过是做题家罢了</a>
+              
+            </span>
+
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              
+            
+              
+              <span class="glyphicon glyphicon-star-half" aria-hidden="true"></span>
+              
+            
+
+            <span class="left-pd-md">2020秋</span>
+
+            <span class="pull-right">
+              
+              
+            </span>
+          </div>
+                      
+            
+
+          <ul class="text-muted list-inline list-unstyled top-pd-sm desktop">
+            <li class="right-mg-md">课程难度：中等</li>
+            <li class="right-mg-md">作业多少：中等</li>
+            <li class="right-mg-md">给分好坏：超好</li>
+            <li class="right-mg-md">收获大小：很多</li>
+          </ul>
+          <ul class="text-muted list-inline list-unstyled top-pd-sm mobile">
+            <li>难度：中等</li>
+            <li>作业：中等</li>
+            <li>给分：超好</li>
+            <li>收获：很多</li>
+          </ul>
+	  <div class="review-content" id="review-content-28992">
+            <p><p>实验比较多，期末开卷，老师讲课不咋地，但是个人以为这门课本来就是自学为主，实操第一，好在最后给分还不错</p>
+</p>
+          </div>
+	  
+
+          <div class="bm-pd-md grey" id="review-28992">
+            <span class="small localtime" style="display: none;">03/11/2021 03:01:01</span>
+	    
+            
+            <a class="nounderline" data-toggle="modal" data-target="#signin" href="#">
+            
+                <span class="glyphicon glyphicon-thumbs-up grey left-pd-lg" aria-hidden="true" ></span>
+                <span id="review-upvote-count-28992">0</span>
+            </a>
+            <a class="nounderline" href="javascript: show_review_comments(28992)">
+              <span class="glyphicon glyphicon-comment grey left-pd-md" aria-hidden="true"></span>
+              <span id="review-comment-count-28992">0</span>
+            </a>
+            <span class="left-pd-md small review-links" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-text="https://icourse.club/course/5815/#review-28992" data-toggle="tooltip" data-trigger="click" data-placement="top" title="链接已复制">复制链接</span>
+            <span class="pull-right">
+              
+              
+              
+            </span>
+          </div>
+
+	  
+
+                    <div id="review-28992-comments" class="panel panel-default" style="display:none">
+            <div class="panel-body">
+              
+              
+              <p>立即<a href="#" data-toggle="modal" data-target="#signin">登录</a>，说说你的看法</p>
+              
+            </div>
+          </div>
+        </div>
+	  
+	  
+	  
+        
+        
+      </div>
+
+
+
+      <!-- 右边栏 -->
+
+      <div class="col-md-4 rl-pd-lg">
+        
+        <div class="ud-pd-md dashed">
+          <img class="avatar-lg circle" src="/uploads/images/0238f30dfe66b5c89ca2c185c9be0660034a405a.jpg"/>
+          
+          <h3 class="blue"><a href="/teacher/1196/">曾凡平</a></h3>
+          <p></p>
+          <p>教师主页：
+            
+            <a href="http://staff.ustc.edu.cn/~billzeng/" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> 戳这里</a>
+            
+          </p>
+        </div>
+        
+        
+
+        <div class="ud-pd-md dashed">
+          <h4 class="blue">其他老师的「网络安全」课</h5>
+          
+          
+          
+        </div>
+
+        
+        <div class="ud-pd-md dashed">
+          <h4 class="blue">曾凡平老师的其他课</h5>
+          
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/6261/">计算机网络</a>
+            
+            <span>6.0</span>
+            <span class="grey">(1)</span>
+            
+            <span class="small grey align-bottom  float-right">2021春 2018春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/14366/">信息安全导论</a>
+            
+            <span>6.1</span>
+            <span class="grey">(29)</span>
+            
+            <span class="small grey align-bottom  float-right">2022春 2021春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/5407/">系统建模与仿真</a>
+            
+            <span class="small grey align-bottom  float-right">2013春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/543/">信息安全实验</a>
+            
+            <span class="small grey align-bottom  float-right">2016夏 2015秋...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/2730/">数字信号处理基础</a>
+            
+            <span class="small grey align-bottom  float-right">2011春 2010春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/2731/">数字信号处理基础</a>
+            
+            <span class="small grey align-bottom  float-right">2006春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/2732/">数字信号处理基础</a>
+            
+            <span class="small grey align-bottom  float-right">2005春</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/6156/">计算机控制</a>
+            
+            <span class="small grey align-bottom  float-right">2006春 2005春...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/6159/">计算机控制基础</a>
+            
+            <span class="small grey align-bottom  float-right">2011秋 2010秋...</span>
+          </div>
+          
+          
+          
+          <div class="ud-pd-sm">
+            <a href="/course/6164/">计算机控制技术</a>
+            
+            <span class="small grey align-bottom  float-right">2003春</span>
+          </div>
+          
+          
+        </div>
+        
+      </div>
+    </div> <!-- row -->
+  </div>  <!-- float-element  -->
+</div>  <!-- container -->
+
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+
+  <div id="push"></div>
+  </div><!-- ./wrap -->
+<div class="container" id="footer">
+    <div class="ud-pd-sm">
+      <a class="right-pd-md" href='/about/'>关于我们</a>
+      <a class="right-pd-md" href='/community-rules/'>社区规范</a>
+      <a class="right-pd-md" href='/report-review/'>投诉点评</a>
+      <a class="right-pd-md" href='/stats/'>站点统计</a>
+      <a class="right-pd-md" href='/stats/rankings/'>排行榜</a>
+      <a class="right-pd-md" href='/announcements/'>公告栏</a>
+      <a class="right-pd-md hidden" href='/copyright/'>版权与隐私</a>
+      <a class="right-pd-md hidden" href='/report-bug/'>发现漏洞</a>
+      
+      <span class="float-right hidden">
+        <a class="right-pd-sm">中文</a>
+        <a class="left-pd-sm">English</a>
+      </span>
+    </div>
+    <span class="footer-text text-muted">Copyright &copy; 2022 USTC评课社区</span>
+</div><!-- end container -->
 </body>
+
+
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/clipboard.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
+  <script>
+ $.ajaxSetup({
+     beforeSend: function(xhr, settings) {
+         if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+             xhr.setRequestHeader("X-CSRFToken", "ImFjZmQwZmNmOGRlNzExOTcxMDUwZWM4Zjg2YzY3OGEyMTVhM2Y4Zjki.YuAKpw.Se-FBz0L6xhfAkgctJb4VPWRqzo")
+         }
+     }
+ });
+
+ // display local time
+ function toHourMinutes(pubTime) {
+   var hours = pubTime.getHours().toString();
+   if (hours.length == 1) {
+     hours = '0' + hours;
+   }
+   var minutes = pubTime.getMinutes().toString();
+   if (minutes.length == 1) {
+     minutes = '0' + minutes;
+   }
+   return hours + ':' + minutes;
+ }
+
+ function toYearMonthDate(pubTime) {
+   var year = pubTime.getFullYear().toString();
+   var month = (pubTime.getMonth() + 1).toString();
+   var day = pubTime.getDate().toString();
+   return year + '年' + month + '月' + day + '日';
+ }
+ 
+ function updateLocalTime() {
+   $('.localtime').each(function(index) {
+     if ($(this).css('display') != 'none') {
+       return;
+     }
+     var utcTime = $(this).text();
+     var pubTime = new Date(utcTime + ' UTC');
+     if (!pubTime) {
+       $(this).text(pubTime);
+       $(this).show();
+       return;
+     }
+     var now = new Date();
+     if (pubTime.getFullYear() == now.getFullYear() && pubTime.getMonth() == now.getMonth() && pubTime.getDate() == now.getDate()) {
+       $(this).text('今天 ' + toHourMinutes(pubTime));
+     } else {
+       var yesterday = new Date();
+       yesterday.setDate(yesterday.getDate() - 1); // JavaScript can handle date roll overs
+       if (pubTime.getFullYear() == yesterday.getFullYear() && pubTime.getMonth() == yesterday.getMonth() && pubTime.getDate() == yesterday.getDate()) {
+         $(this).text('昨天 ' + toHourMinutes(pubTime));
+       } else {
+         $(this).text(toYearMonthDate(pubTime) + ' ' + toHourMinutes(pubTime));
+       }
+     }
+     $(this).show();
+   });
+ }
+
+ updateLocalTime();
+
+
+ new ClipboardJS('.review-links');
+ $('.review-links').tooltip();
+</script>
+  <script>
+   $('#signin').on('shown.bs.modal', function () {
+     $('#inputEmail').focus()
+   });
+
+   function signin_alert(msg, type) {
+     if (!type)
+       type = "danger";
+     $('#signin-alert').attr("class", "alert alert-" + type);
+     $('#signin-alert').html(msg);
+     $('#signin-alert').show();
+   }
+
+   $('#signin-form').submit(function(e) {
+     e.preventDefault();
+     var formdata = {}
+     $('#signin-form input').each(function() {
+       formdata[$(this).attr("name")] = $(this).val();
+     });
+     $.ajax({
+       type: "POST",
+       url: "/signin/?next=%2Fcourse%2F5815%2F&ajax=True",
+       data: formdata,
+       dataType: "json",
+       success: function(res) {
+         if (res.status == 200) {
+           if (res.next)
+             window.location.href = res.next;
+           else
+             signin_alert(res.msg, "success");
+         } else {
+           signin_alert(res.msg);
+         }
+       },
+       error: function(e) {
+         signin_alert('天了噜! 服务器正在睡觉，请稍后再试。', "warning");
+       }
+     })
+   });
+
+   function read_notification(count) {
+     if (count == 0)
+         return;
+     $.ajax({
+        type: "POST",
+        url: "/api/notifications/",
+     });
+   }
+  </script>
+
+  
+<script>
+ $('#myTab a').click(function (e) {
+   e.preventDefault()
+   $(this).tab('show')
+ })
+
+ var action_data = {
+   'follow': {
+     'enabled': false,
+     'count': 0,
+     'do_url': "/course/5815/follow/",
+     'undo_url': "/course/5815/unfollow/",
+   },
+   'downvote': {
+     'enabled': false,
+     'count': 1,
+     'do_url': "/course/5815/downvote/",
+     'undo_url': "/course/5815/undo-downvote/",
+     'conflict': 'upvote',
+   },
+   'upvote': {
+     'enabled': false,
+     'count': 5,
+     'do_url': "/course/5815/upvote/",
+     'undo_url': "/course/5815/undo-upvote/",
+     'conflict': 'downvote',
+   },
+   'join': {
+     'enabled': false,
+     'do_url': "/course/5815/join/",
+     'undo_url': "/course/5815/quit/",
+   },
+ }
+
+ $(function() {
+   for (action in action_data) {
+
+     if (! $('.btn-' + action).length)
+       continue;
+
+     (function(action) {
+       var d = action_data[action];
+
+       var do_btn = $('.btn-' + action).filter('.btn-do');
+       var undo_btn = $('.btn-' + action).filter('.btn-undo');
+
+       function update_count(count) {
+         d.count = count;
+         $('.btn-' + action + ' .count').text(count);
+       }
+       function http_post_wrapper(url) {
+         $.post(url, null, function(o) {
+           if (o.count)
+             update_count(o.count);
+           if (!o.ok)
+             alert('操作失败，请重试');
+           d.in_progress = false;
+         }, 'json')
+         .fail(function() {
+           alert('操作失败，请重试');
+           d.in_progress = false;
+         });
+       }
+
+       do_btn.click(function() {
+         
+         $('#signin').modal('show');
+         
+       });
+
+       undo_btn.click(function() {
+         
+         $('#signin').modal('show');
+         
+       });
+
+       update_count(d.count);
+
+       if (d.enabled) {
+         undo_btn.show();
+         do_btn.hide();
+       } else {
+         do_btn.show();
+         undo_btn.hide();
+       }
+     })(action);
+   }
+   $('#action-btn-group').show();
+ });
+
+ function delete_review(review_id, is_admin)
+ {
+     if (is_admin) {
+         if (!confirm('你正在作为管理员，删除其他用户的点评！建议使用屏蔽而非删除功能，确定删除吗？')) {
+             return;
+         }
+     } else {
+         if (!confirm('你真的要删除此点评吗？删除的点评是不可恢复的！')) {
+             return;
+         }
+     }
+     $.post("/review/delete/", { id: review_id }, function(o) {
+         if (o.ok)
+            window.location.href = "/course/5815/";
+         else
+            alert(o.message);
+     }, 'json')
+     .fail(function() {
+         alert('删除点评失败，请重试');
+     });
+ }
+
+ $('.showmore-shadow').click(function(e) {
+   $('.showmore-text').css('max-height', 'none');
+   $('.showmore-wrapper').hide();
+ });
+
+ if ($('.showmore-text').height() >= 750) {
+   $('.showmore-text').css('max-height', '400px');
+   $('.showmore-wrapper').show();
+ }
+
+ // go to top floating button from Freemind theme of Hexo
+ $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
+     var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+     if(scrollt>200){  //判断滚动后高度超过200px
+         $("#gotop").fadeIn(400); //淡出
+ 		if($(window).width() >= 1200){
+ 			$(".navbar").stop().fadeTo(400, 0.2);
+ 		}
+     }else{
+         $("#gotop").fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动
+         if($(window).width() >= 1200){
+ 			$(".navbar").stop().fadeTo(400, 1);
+         }
+     }
+ });
+ $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部        
+ 	$("html,body").animate({scrollTop:"0px"},200);
+ });
+
+</script>
+
+<script>
+ function show_review_comments(review_id)
+ {
+   if (document.getElementById('review-'+ review_id +'-comments').style.display=="block") {
+       document.getElementById('review-'+ review_id +'-comments').style.display="none";
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('grey');
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('blue');
+     }
+   else {
+       document.getElementById('review-'+ review_id +'-comments').style.display="block";
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').addClass('blue');
+       $('#review-comment-count-' + review_id).parent().find('span.glyphicon').removeClass('grey');
+   }
+ }
+
+ function get_upvote_review_elem(review_id)
+ {
+     var elem = $('#review-upvote-count-' + review_id);
+     if (!elem) return null;
+     if (elem.hasClass('in_progress')) {
+       alert('操作正在进行中，请稍候再试');
+       return null;
+     }
+     elem.addClass('in_progress');
+     return elem;
+ }
+
+ function upvote_review(review_id)
+ {
+     var elem = get_upvote_review_elem(review_id);
+     if (!elem) return;
+     elem.text(parseInt(elem.text()) + 1);
+     elem.parent().attr('href', 'javascript:cancel_upvote_review("' + review_id + '")');
+     elem.parent().find('span.glyphicon').removeClass('grey');
+     elem.parent().find('span.glyphicon').addClass('blue');
+
+     $.post("/api/review/upvote/", { review_id: review_id }, function(o) {
+       if (typeof o.count != "undefined") {
+         elem.text(o.count);
+       }
+       elem.removeClass('in_progress');
+     }, 'json')
+     .fail(function() {
+       elem.text(parseInt(elem.text()) - 1);
+       alert('点赞失败，请重试');
+     });
+ }
+ 
+ function cancel_upvote_review(review_id)
+ {
+     var elem = get_upvote_review_elem(review_id);
+     if (!elem) return;
+     elem.text(parseInt(elem.text()) - 1);
+     elem.parent().attr('href', 'javascript:upvote_review("' + review_id + '")');
+     elem.parent().find('span.glyphicon').removeClass('blue');
+     elem.parent().find('span.glyphicon').addClass('grey');
+
+     $.post("/api/review/cancel_upvote/", { review_id: review_id }, function(o) {
+       if (typeof o.count != "undefined") {
+         elem.text(o.count);
+       }
+       elem.removeClass('in_progress');
+     }, 'json')
+     .fail(function() {
+       elem.text(parseInt(elem.text()) + 1);
+       alert('取消点赞失败，请重试');
+     });
+ }
+
+ function reload_comments(review_id)
+ {
+     $.get("/review/comments/",
+        { review_id: review_id},
+        function(html) {
+            $('#review-' + review_id + '-comments').replaceWith(html);
+            $('#review-' + review_id + '-comments').show();
+            updateLocalTime();
+        }, 'html')
+     .fail(function() {
+        alert('重新加载评论区出错，请刷新页面');
+     });
+ }
+
+ function submit_comment(review_id)
+ {
+     content = $('#review-comment-input-' + review_id).val().trim();
+     if (content == '') {
+         alert('请输入评论内容');
+         return;
+     }
+     $.post("/api/review/new_comment/", {
+         review_id: review_id,
+         content: content
+     }, function(o) {
+         if (o.ok) {
+             reload_comments(review_id);
+         } else {
+             alert(o.message);
+         }
+     }, 'json')
+     .fail(function() {
+         alert('提交评论失败，请重试');
+     });
+ }
+
+ function delete_comment(review_id, comment_id)
+ {
+     if (!confirm('你真的要删除此评论吗？')) {
+         return;
+     }
+     $.post("/api/review/delete_comment/", { comment_id: comment_id },
+         function(o) {
+            if (o.ok) {
+               reload_comments(review_id);
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('删除评论失败，请重试');
+     });
+ }
+
+ function reply_comment(review_id, reply_to)
+ {
+     var elem = $('#review-comment-input-' + review_id);
+     elem.focus();
+     elem.val('');
+     elem.val('回复 @' + reply_to + ': ');
+ }
+
+ function block_review(review_id)
+ {
+     $.post("/api/review/block/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('屏蔽成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('屏蔽失败，请重试');
+     });
+ }
+
+ function unblock_review(review_id)
+ {
+     $.post("/api/review/unblock/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('解除屏蔽成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('解除屏蔽失败，请重试');
+     });
+ }
+
+ function hide_review(review_id)
+ {
+     $.post("/api/review/hide/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('隐藏点评成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('隐藏点评失败，请重试');
+     });
+ }
+
+ function unhide_review(review_id)
+ {
+     $.post("/api/review/unhide/", { review_id: review_id },
+         function(o) {
+            if (o.ok) {
+               alert('解除隐藏点评成功，请刷新页面');
+            } else {
+               alert(o.message);
+            }
+     }, 'json')
+     .fail(function() {
+         alert('解除隐藏点评失败，请重试');
+     });
+ }
+
+ $('.review-filter-rule').each(function (index) {
+     var id = $(this).attr('id')
+     var prefix = 'review-filter-rule-'
+     var num_id = parseInt(id.substr(prefix.length))
+     var review_id = 'review-content-' + num_id.toString()
+     var original_text = $('#' + review_id).html()
+     console.log(original_text)
+     console.log($(this).text())
+
+     var regex_str = $(this).text()
+     var regex_match_and_replace = regex_str.split('\n')
+     var regex_match = regex_match_and_replace[0]
+     var regex_replace = regex_match_and_replace.length == 2 ? regex_match_and_replace[1] : ''
+     var regex = new RegExp(regex_match, 'g')
+     var replace_text = original_text.replace(regex, regex_replace)
+     $('#' + review_id).html(replace_text)
+ })
+
+ $('.review-content').each(function(index) {
+     var regex = new RegExp('(脑瘫玩意|傻逼|我艹你妈|艹你妈)', 'g')
+     var regex_replace = '<span data-toggle="tooltip" data-placement="top" title="本点评存在违反社区规范的内容，予以部分屏蔽" style="background:black;color:black;">请文明用语</span>'
+     var replace_text = $(this).html().replace(regex, regex_replace)
+     $(this).html(replace_text)
+ })
+
+ $('.teacher-review-label').tooltip()
+</script>
+
 </html>
